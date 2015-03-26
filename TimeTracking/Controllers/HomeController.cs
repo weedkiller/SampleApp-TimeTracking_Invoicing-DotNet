@@ -38,22 +38,25 @@ namespace TimeTracking.Controllers
             }
         }
 
-        public ActionResult Time()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
+      
 
         public ActionResult Invoices()
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            multiplemodels = new Multiplemodels();
+            multiplemodels.OAuthorizationModel = new OAuthorizationdto();
+            multiplemodels.SyncObjectsModel = new Syncdto();
+            return View(multiplemodels);
         }
+        /// <summary>
+        /// Changes made
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Close()
         {
-            return View();
+            multiplemodels = new Multiplemodels();
+            multiplemodels.OAuthorizationModel = new OAuthorizationdto();
+            multiplemodels.SyncObjectsModel = new Syncdto();
+            return View(multiplemodels);
         }
         public ActionResult Sync(int id, bool isConnected)
         {
