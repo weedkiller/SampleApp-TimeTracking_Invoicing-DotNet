@@ -22,16 +22,16 @@ namespace TimeTracking.Controllers
         [HttpGet]
         public ActionResult Load(Int64 id)
         {
-            OAuthorizationdto oAuthInfo = new OAuthService(new OAuthorizationdto()).GetAccessToken(this);
+            //OAuthorizationdto oAuthInfo = new OAuthService(new OAuthorizationdto()).GetAccessToken(this);
             Syncdto syncDetails = id > 0 ? new SyncRepository().Get(this, id) : new Syncdto();
-            timeActivity.oAuthTokens = oAuthInfo;
+            timeActivity.oAuthTokens = syncDetails.OauthToken;
             timeActivity.Syncdto = syncDetails;
             timeActivity.EmployeeList = syncDetails.EmployeeList;
             timeActivity.CustomerList = syncDetails.CustomerList;
             timeActivity.ItemList = syncDetails.ItemList;
             timeActivityService = new TimeActivityService(timeActivity);
             timeActivity = timeActivityService.LoaddropdownList(timeActivity);
-             timeActivity.CompanyId = oAuthInfo.Realmid;
+            timeActivity.CompanyId = timeActivity.oAuthTokens.Realmid;
             timeActivityRepository = new TimeActivityRepository();
             timeActivityRepository.Save(this, timeActivity);
             multiplemodels = new Multiplemodels();
@@ -50,9 +50,7 @@ namespace TimeTracking.Controllers
             timeActivity.Description = description;
             timeActivity = timeActivityService.Save(timeActivity);
             timeActivityRepository = new TimeActivityRepository();
-            timeActivityRepository.Save(this, timeActivity);
-            //return RedirectResult("View", new { id = timeActivity.Id});
-            //return Json(Url.Action("View", "TimeActivity", new { id = timeActivity.Id}));   
+            timeActivity = timeActivityRepository.Save(this, timeActivity);
             return GetJsonObject(timeActivity, timeActivityRepository); 
         }
         /// <summary>
@@ -102,15 +100,5 @@ namespace TimeTracking.Controllers
                 return null;
             }
         }
-        //[HttpGet]
-        //public ActionResult View(Int64 id)
-        //{
-        //    timeActivity = id > 0 ? new TimeActivityRepository().Get(this, id) : new TimeActivitydto();
-        //    multiplemodels = new Multiplemodels();
-        //    multiplemodels.TimeActivityModel = timeActivity;
-        //    multiplemodels.SyncObjectsModel = timeActivity.Syncdto;
-        //    return View("TimeActivity", multiplemodels);
-           
-        //}
     }
 }

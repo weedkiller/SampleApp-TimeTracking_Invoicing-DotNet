@@ -162,6 +162,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InvoiceController.cs" />
     <Compile Include="Controllers\OauthController.cs" />
     <Compile Include="Controllers\SyncController.cs" />
     <Compile Include="Controllers\TimeActivityController.cs" />
@@ -174,7 +175,9 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\MigrationsContextFactory .cs" />
-    <Compile Include="Models\DTO\TimeActivity.cs" />
+    <Compile Include="Models\DTO\Invoicedto.cs" />
+    <Compile Include="Models\DTO\TimeActivitydto.cs" />
+    <Compile Include="Models\Repository\InvoiceRepository.cs" />
     <Compile Include="Models\Repository\OAuthRepository.cs" />
     <Compile Include="Models\Repository\TimeActivityRepository.cs" />
     <Compile Include="Models\Repository\SyncRepository.cs" />
@@ -182,6 +185,7 @@
     <Compile Include="Models\Multiplemodels.cs" />
     <Compile Include="Models\DTO\OAuthorizationdto.cs" />
     <Compile Include="Models\DTO\Syncdto.cs" />
+    <Compile Include="Models\Service\InvoiceService.cs" />
     <Compile Include="Models\Service\OAuthService.cs" />
     <Compile Include="Models\Service\SyncService.cs" />
     <Compile Include="Models\Service\TimeActivityService.cs" />
@@ -226,7 +230,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\TimeActivity\TimeActivity.cshtml" />
-    <Content Include="Views\Home\Invoices.cshtml" />
+    <Content Include="Views\Invoice\Invoices.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\Close.cshtml" />

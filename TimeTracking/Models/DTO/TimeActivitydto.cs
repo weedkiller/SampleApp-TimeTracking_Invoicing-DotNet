@@ -48,5 +48,7 @@ namespace TimeTracking.Models.DTO
         public string Date { get; set; }
         public string Hours { get; set; }
         public string QboId { get; set; }
+
+        public string Action { get; set; }
     }
 }
