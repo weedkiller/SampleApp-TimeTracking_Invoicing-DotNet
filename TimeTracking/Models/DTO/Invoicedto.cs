@@ -23,16 +23,16 @@ namespace TimeTracking.Models.DTO
 
         public List<Customer> CustomerList { get; set; }
         public string InvoiceStatus { get; set; }
-        public string invoiceListLength { get; set; }
+        public int InvoiceListLength { get; set; }
         public List<TimeActivityFill> InvoicePendingList { get; set; }
         public TimeActivityFill TimeActivityFill { get; set; }
         public List<InvoiceCreated> InvoiceCreated { get; set; }
         public string InvoicePending { get; set; }
         public int InvoicePendingLength { get; set; }
-
+        public bool UpdatePending { get; set; }
         public TimeActivitydto TimeActivityDto { get; set; }
 
-        public string InvoiceQboId { get; set; }
+        public Int64 InvoiceQboId { get; set; }
     }
     public class InvoiceCreated
     {

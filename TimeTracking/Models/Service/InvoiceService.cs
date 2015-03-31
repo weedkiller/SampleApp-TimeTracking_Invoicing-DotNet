@@ -31,7 +31,7 @@ namespace TimeTracking.Models.Service
             Invoice invoice = PopulateInvoiceParam(invoicedto, timeActivity);
             invoice = dataService.Add<Invoice>(invoice);
             invoicedto.Invoice = invoice;
-            invoicedto.InvoiceQboId = invoice.Id;
+            invoicedto.InvoiceQboId = Convert.ToInt64(invoice.Id);
             invoicedto.AlertMessage = string.Format("Invoice successfully created and pushed to QBO (QBO ID = {0})", invoice.Id);
             return invoicedto;
         }
@@ -112,12 +112,64 @@ namespace TimeTracking.Models.Service
                     sqlConnection.Close();
                 }
             }
+            if (invoicedto.InvoiceCreated==null)
+            {
+                invoicedto.InvoiceCreated = new List<InvoiceCreated>();
+            }
             invoicedto.InvoicePending = "Pending";
             invoicedto.InvoicePendingLength = timeActivityFillList.Count;
             invoicedto.InvoicePendingList = timeActivityFillList;
             return invoicedto;
         }
 
-        
+
+
+        internal Invoicedto UpdateDatabase(Invoicedto invoicedto)
+        {
+          
+            var qboId = invoicedto.QboId;
+            var invoiceQboId = invoicedto.InvoiceQboId;
+            string query = "UPDATE TimeActivity SET Invoice_QboId=@Invoice_QboId WHERE QboId=@QboId";
+            using (SqlCommand myCommand = new SqlCommand(query, new SqlConnection(invoicedto.ConnectionString)))
+            {
+                myCommand.Connection.Open();
+                myCommand.Parameters.AddWithValue("@Invoice_QboId", invoiceQboId);
+                myCommand.Parameters.AddWithValue("@QboId", qboId);
+                myCommand.ExecuteNonQuery();
+                myCommand.Connection.Close();
+            }
+            invoicedto.UpdatePending = true;
+            return invoicedto;
+        }
+
+        internal Invoicedto FillCreatedInvoice(Invoicedto invoicedto)
+        {
+            List<InvoiceCreated> invoiceCreatedList = new List<InvoiceCreated>();
+            using (SqlConnection sqlConnection = new SqlConnection(invoicedto.ConnectionString))
+            {
+                string oString = string.Format("select * from TimeActivity where RealmId='{0}' and Invoice_QboId='{1}'", invoicedto.CompanyId, invoicedto.InvoiceQboId);
+                SqlCommand oCmd = new SqlCommand(oString, sqlConnection);
+                sqlConnection.Open();
+                using (SqlDataReader oReader = oCmd.ExecuteReader())
+                {
+                    while (oReader.Read())
+                    {
+                        InvoiceCreated nvoiceCreated = new InvoiceCreated();
+                        nvoiceCreated.Employee = oReader["Employee"].ToString();
+                        nvoiceCreated.Customer = oReader["Customer"].ToString();
+                        nvoiceCreated.Item = oReader["Item"].ToString();
+                        nvoiceCreated.Date = Convert.ToDateTime(oReader["Date"].ToString()).ToShortDateString();
+                        nvoiceCreated.Hours = oReader["Hours"].ToString();
+                        nvoiceCreated.QboId = oReader["QboId"].ToString();
+                        invoiceCreatedList.Add(nvoiceCreated);
+                    }
+                    sqlConnection.Close();
+                }
+            }
+            invoicedto.InvoiceCreated = invoiceCreatedList;
+            invoicedto.InvoiceStatus = "Invoiced";
+            invoicedto.InvoiceListLength = invoiceCreatedList.Count;
+            return invoicedto;
+        }
     }
 }

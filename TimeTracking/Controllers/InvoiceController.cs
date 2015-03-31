@@ -43,14 +43,21 @@ namespace TimeTracking.Controllers
             invoicedto.QboId = qboId;
             invoiceService = new InvoiceService(invoicedto);
             invoicedto = invoiceService.GenerateInvoice(invoicedto);
+            invoicedto = invoiceService.UpdateDatabase(invoicedto);
+            invoicedto = invoiceService.FillCreatedInvoice(invoicedto);
             invoiceRepository = new InvoiceRepository();
             invoicedto = invoiceRepository.Save(this, invoicedto);
-           
-            return null;
+            object data = new
+            {
+                Id = invoicedto.Id
+            };
+            return Json(data, JsonRequestBehavior.AllowGet);
         }
         public ActionResult View(Int64 id)
         {
             Invoicedto invoicedto = id > 0 ? new InvoiceRepository().Get(this, id) : new Invoicedto();
+            invoiceService = new InvoiceService(invoicedto);
+            invoicedto = invoiceService.LoadPending(invoicedto);
             multiplemodels = new Multiplemodels();
             multiplemodels.TimeActivityModel = invoicedto.TimeActivityDto;
             multiplemodels.InvoiceModel = invoicedto;

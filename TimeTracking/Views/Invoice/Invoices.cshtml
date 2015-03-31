@@ -2,7 +2,6 @@
 @{
 
     ViewBag.Title = "Invoice";
-    
     long invoiceId = Model.InvoiceModel.Id;
 }
 @Scripts.Render("~/Scripts/jquery-1.10.2.min.js")
@@ -15,10 +14,30 @@
             data: { id: id, qboId: qboId },
             success: function (data) {
                 debugger;
-                //LoadResult(data);
+                window.location.href = "/Invoice/View/" + data.Id;
             }
         });
     }
+    function OpenInQbo(url) {
+        window.open(url, "popupWindow", "width=600,height=600,scrollbars=yes");
+    }
+    $(document).ready(function () {
+        
+        debugger;
+        $("#viewItem").click(function () {
+            var entityid = @Model.InvoiceModel.CompanyId;
+            if (@Model.InvoiceModel.InvoiceQboId>0) {
+                var qboid = @Model.InvoiceModel.InvoiceQboId;
+            }
+            OpenInQbo(getSingleEntityUrl("invoice",entityid,qboid));
+        });
+    });
+    var getQboDeepLinkURLRoot = function () {
+        return "https://" + "@Model.SyncObjectsModel.DeepLink" + "/login?";
+    };
+    var getSingleEntityUrl = function (entityType, entityId,qboId) {
+        return getQboDeepLinkURLRoot() + "pagereq=" + entityType + "?txnId=" + qboId + "&deeplinkcompanyid=" + entityId;
+    };
 </script>
 
 <div ng-class="row">
@@ -64,7 +83,7 @@
                                         <td>@Model.InvoiceModel.InvoicePendingList[i].Item</td>
                                         <td>@Model.InvoiceModel.InvoicePendingList[i].Date</td>
                                         <td>@Model.InvoiceModel.InvoicePendingList[i].Hours</td>
-                                        <td>@Html.ActionLink("Generate", "Save", "Invoice", new { id = invoiceId, qboId = @Model.InvoiceModel.InvoicePendingList[i].QboId }, new { @class = "btn btn-default btn-sm ng-binding" })</td>
+                                        @*<td>@Html.ActionLink("Generate", "Save", "Invoice", new { id = invoiceId, qboId = @Model.InvoiceModel.InvoicePendingList[i].QboId }, new { @class = "btn btn-default btn-sm ng-binding" })</td>*@
                                         <td><a class="btn btn-default btn-sm ng-binding" href="#" onclick="GenerateInvoice(@invoiceId,@Model.InvoiceModel.InvoicePendingList[i].QboId);">Generate</a></td>
                                     </tr>
                                 }
@@ -79,10 +98,10 @@
 
 
 </div>
-@*<div id="invCreated">
+<div id="invCreated">
     <div ng-class="row">
         <hr>
-        <h4><em>Total @Model.InvoiceModel.InvoicePending:@Model.InvoiceModel.InvoicePendingLength</em></h4>
+        <h4><em>Total @Model.InvoiceModel.InvoiceStatus:@Model.InvoiceModel.InvoiceListLength</em></h4>
         <hr>
     </div>
     <div ng-class="row">
@@ -103,14 +122,20 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @for (int i = 0; i < @Model.InvoiceModel.InvoicePendingList.Count; i++)
+                                @for (int i = 0; i < @Model.InvoiceModel.InvoiceCreated.Count; i++)
                                 {
                                     <tr >
-                                        <td>@Model.InvoiceModel.InvoicePendingList[i].Employee</td>
-                                        <td>@Model.InvoiceModel.InvoicePendingList[i].Item</td>
-                                        <td>@Model.InvoiceModel.InvoicePendingList[i].Date</td>
-                                        <td>@Model.InvoiceModel.InvoicePendingList[i].Hours</td>
-                                        <td>@Model.InvoiceModel.InvoicePendingList[i].Action</td>
+                                        <td>@Model.InvoiceModel.InvoiceCreated[i].Employee</td>
+                                        <td>@Model.InvoiceModel.InvoiceCreated[i].Item</td>
+                                        <td>@Model.InvoiceModel.InvoiceCreated[i].Date</td>
+                                        <td>@Model.InvoiceModel.InvoiceCreated[i].Hours</td>
+                                        <td>
+                                            <button type="button" class="btn btn-default btn-xs" style="margin-top: 10px"
+                                                    id="viewItem">
+                                                <span class="glyphicon glyphicon-eye-open"></span> View in QuickBooks
+                                            </button>
+                                            
+                                        </td>
                                     </tr>
                                 }
                               
@@ -123,4 +148,4 @@
     </div>
 
 
-</div>*@
+</div>
