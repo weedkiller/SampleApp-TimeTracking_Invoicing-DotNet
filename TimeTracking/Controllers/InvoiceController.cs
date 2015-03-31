@@ -40,7 +40,7 @@ namespace TimeTracking.Controllers
         public JsonResult Save(Int64 id, Int64 qboId)
         {
             Invoicedto invoicedto = id > 0 ? new InvoiceRepository().Get(this, id) : new Invoicedto();
-            invoicedto.QboId = qboId;
+            invoicedto.timeQboId = qboId;
             invoiceService = new InvoiceService(invoicedto);
             invoicedto = invoiceService.GenerateInvoice(invoicedto);
             invoicedto = invoiceService.UpdateDatabase(invoicedto);

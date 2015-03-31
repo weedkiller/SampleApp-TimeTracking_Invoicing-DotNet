@@ -75,7 +75,7 @@ namespace TimeTracking.Models.Service
 
         private TimeActivity GetCustomerId(Invoicedto invoicedto)
         {
-            string EXISTING_TimeActive_QUERY = string.Format("select * from timeactivity where Id = '{0}'", invoicedto.QboId);
+            string EXISTING_TimeActive_QUERY = string.Format("select * from timeactivity where Id = '{0}'", invoicedto.timeQboId);
             QueryService<TimeActivity> queryService = new QueryService<TimeActivity>(dataserviceFactory.getServiceContext);
             TimeActivity resultFound = queryService.ExecuteIdsQuery(EXISTING_TimeActive_QUERY).FirstOrDefault<TimeActivity>();
             return resultFound;
@@ -127,7 +127,7 @@ namespace TimeTracking.Models.Service
         internal Invoicedto UpdateDatabase(Invoicedto invoicedto)
         {
           
-            var qboId = invoicedto.QboId;
+            var qboId = invoicedto.timeQboId;
             var invoiceQboId = invoicedto.InvoiceQboId;
             string query = "UPDATE TimeActivity SET Invoice_QboId=@Invoice_QboId WHERE QboId=@QboId";
             using (SqlCommand myCommand = new SqlCommand(query, new SqlConnection(invoicedto.ConnectionString)))

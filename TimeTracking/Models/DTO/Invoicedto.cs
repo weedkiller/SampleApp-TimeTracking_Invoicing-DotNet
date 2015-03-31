@@ -16,7 +16,7 @@ namespace TimeTracking.Models.DTO
         public Invoice Invoice { get; set; }
         public List<Invoice> InvoiceList { get; set; }
         public long Id { get; set; }
-        public Int64 QboId { get; set; }
+        public Int64 timeQboId { get; set; }
         public string AlertMessage { get; set; }
         public string Description { get; set; }
         public string ConnectionString { get; set; }
