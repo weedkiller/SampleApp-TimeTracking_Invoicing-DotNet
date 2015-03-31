@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TimeTracking.Models;
+using TimeTracking.Models.DTO;
 using TimeTracking.Models.Repository;
 using TimeTracking.Models.Service;
 
@@ -19,6 +19,7 @@ namespace TimeTracking.Controllers
             multiplemodels = new Multiplemodels();
             multiplemodels.SyncObjectsModel = new Syncdto();
             multiplemodels.OAuthorizationModel = new OAuthorizationdto();
+            multiplemodels.TimeActivityModel = new TimeActivitydto();
             var oAuthModel = new OAuthService(multiplemodels.OAuthorizationModel).IsTokenAvailable(this);
             if (oAuthModel.IsConnected)
             {
@@ -45,6 +46,7 @@ namespace TimeTracking.Controllers
             multiplemodels = new Multiplemodels();
             multiplemodels.OAuthorizationModel = new OAuthorizationdto();
             multiplemodels.SyncObjectsModel = new Syncdto();
+            multiplemodels.TimeActivityModel = new TimeActivitydto();
             return View(multiplemodels);
         }
         /// <summary>
@@ -56,6 +58,7 @@ namespace TimeTracking.Controllers
             multiplemodels = new Multiplemodels();
             multiplemodels.OAuthorizationModel = new OAuthorizationdto();
             multiplemodels.SyncObjectsModel = new Syncdto();
+            multiplemodels.TimeActivityModel = new TimeActivitydto();
             return View(multiplemodels);
         }
         public ActionResult Sync(int id, bool isConnected)
@@ -66,6 +69,7 @@ namespace TimeTracking.Controllers
                 multiplemodels.SyncObjectsModel = new SyncRepository().Get(this, id);
                 multiplemodels.OAuthorizationModel = new OAuthorizationdto();
                 multiplemodels.OAuthorizationModel.IsConnected = isConnected;
+                multiplemodels.TimeActivityModel = new TimeActivitydto();
                 return View("Index", multiplemodels);
             }
             else

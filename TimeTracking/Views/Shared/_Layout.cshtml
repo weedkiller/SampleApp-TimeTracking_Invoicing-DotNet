@@ -10,6 +10,18 @@
     {
         syncIdentifier = 0;
     }
+    long timeIdentifier;
+    
+    if (Model.TimeActivityModel.Id >0)
+    {
+        timeIdentifier = Model.TimeActivityModel.Id;
+    }
+    else
+    {
+        timeIdentifier = 0;
+    }
+    string invoicestring = string.Empty;
+    
 }
 <!DOCTYPE html>
 <html>
@@ -19,7 +31,30 @@
     <title>@ViewBag.Title - Time Tracking Sample APP For Dummies</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/Scripts/jquery-1.10.2.min.js")
+    <script language="javascript">
+        var timeIdentifierScript = "";
+
+        $(document).ready(function () {
+        
+            debugger;
+            $("#aInvoice").click(function (e) {
+                e.preventDefault();
+                debugger;
+                if (timeIdentifierScript>0) {
+                    window.location.href = "/Invoice/Load/" + timeIdentifierScript;
+                }
+                else {
+                    timeIdentifierScript = @timeIdentifier;
+                    window.location.href = "/Invoice/Load/" + timeIdentifierScript;
+                }
+                
+            }
+            );
+        });
+    </script>
 </head>
+
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -35,7 +70,9 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Settings", "Index", "Home")</li>
                     <li>@Html.ActionLink("Time Entry", "Load", "TimeActivity", new { id = syncIdentifier }, null)</li>
-                    <li>@Html.ActionLink("Invoices", "Invoices", "Home")</li>
+                    @*<li>@Html.ActionLink("Invoices", "Load", "Invoice", new { id = timeIdentifier }, null)</li>*@
+                    <li><a href="#" id="aInvoice">Invoices</a></li>
+                    
                 </ul>
             </div>
         </div>

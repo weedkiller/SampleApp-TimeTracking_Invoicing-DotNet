@@ -33,10 +33,7 @@ namespace TimeTracking.Models.Repository
             timeController.TempData["TimeActivity"] = timeActivityRepository;
             return timeActivity;
         }
-        internal void SavetoDb(TimeActivitydto timeActivity)
-        {
-            throw new NotImplementedException();
-        }
+    
         private object ReturnListItem(TimeActivitydto timeActivitydto, string caseString)
         {
             switch (caseString)

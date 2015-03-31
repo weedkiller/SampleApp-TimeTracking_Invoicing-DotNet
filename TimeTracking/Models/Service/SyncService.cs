@@ -121,17 +121,20 @@ namespace TimeTracking.Models
         #region <<Sync>>
         public Syncdto SyncEmployees(object controller, Syncdto syncObjects)
         {
-
-            foreach (Employee emp in syncObjects.EmployeeList)
+            for (int i = 0; i < syncObjects.EmployeeList.Count; i++)
             {
-                string EXISTING_EMPLOYEE_QUERY = string.Format("select * from employee where active = true and givenName = '{0}' and familyName = '{1}'", emp.GivenName.Trim(), emp.FamilyName.Trim());
+                string EXISTING_EMPLOYEE_QUERY = string.Format("select * from employee where active = true and givenName = '{0}' and familyName = '{1}'", syncObjects.EmployeeList[i].GivenName.Trim(), syncObjects.EmployeeList[i].FamilyName.Trim());
                 QueryService<Employee> queryService = new QueryService<Employee>(dataserviceFactory.getServiceContext);
                 Employee resultFound = queryService.ExecuteIdsQuery(EXISTING_EMPLOYEE_QUERY).FirstOrDefault<Employee>();
                 if (resultFound == null)
                 {
-                    Employee entity = dataService.Add<Employee>(emp);
-                    syncObjects.QboId = entity.Id;
+                    Employee entity = dataService.Add<Employee>(syncObjects.EmployeeList[i]);
+                    syncObjects.EmployeeList[i] = entity;
                     syncObjects.IsEmployeeSync = true;
+                }
+                else
+                {
+                    syncObjects.EmployeeList[i] = resultFound;
                 }
             }
             syncObjects = syncRepository.Save(controller, syncObjects);
@@ -139,16 +142,20 @@ namespace TimeTracking.Models
         }
         internal Syncdto SyncCustomer(object controller, Syncdto syncObjects)
         {
-            foreach (Customer customerItem in syncObjects.CustomerList)
+            for (int i = 0; i < syncObjects.CustomerList.Count; i++)
             {
-                string EXISTING_CUSTOMER_QUERY = string.Format("select * from customer where active = true and givenName = '{0}' and familyName = '{1}'", customerItem.GivenName.Trim(), customerItem.FamilyName.Trim());
+                string EXISTING_CUSTOMER_QUERY = string.Format("select * from customer where active = true and givenName = '{0}' and familyName = '{1}'", syncObjects.CustomerList[i].GivenName.Trim(), syncObjects.CustomerList[i].FamilyName.Trim());
                 QueryService<Customer> queryService = new QueryService<Customer>(dataserviceFactory.getServiceContext);
                 Customer resultFound = queryService.ExecuteIdsQuery(EXISTING_CUSTOMER_QUERY).FirstOrDefault<Customer>();
                 if (resultFound == null)
                 {
-                    Customer entity = dataService.Add<Customer>(customerItem);
-                    syncObjects.QboId = entity.Id;
+                    Customer entity = dataService.Add<Customer>(syncObjects.CustomerList[i]);
+                    syncObjects.CustomerList[i] = entity;
                     syncObjects.IsCustomerSync = true;
+                }
+                else
+                {
+                    syncObjects.CustomerList[i] = resultFound;
                 }
             }
             syncObjects = syncRepository.Save(controller, syncObjects);

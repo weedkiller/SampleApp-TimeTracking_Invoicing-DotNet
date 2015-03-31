@@ -13,5 +13,7 @@ namespace TimeTracking.Models
         public TimeActivitydto TimeActivityModel { get; set; }
         public bool IsTimeentry { get; set; }
         public bool IsInvoice { get; set; }
+
+        public Invoicedto InvoiceModel { get; set; }
     }
 }
