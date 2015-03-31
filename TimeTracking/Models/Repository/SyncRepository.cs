@@ -18,6 +18,7 @@ namespace TimeTracking.Models.Repository
         {
             syncController = controller as System.Web.Mvc.Controller;
             Dictionary<Int64, Syncdto> syncRepo = syncController.TempData["Sync"] as Dictionary<Int64, Syncdto>;
+            syncController.TempData.Keep();
             return syncRepo[id];
 
         }
@@ -28,6 +29,7 @@ namespace TimeTracking.Models.Repository
             syncObjects.Id = random.Next(1,100);
             syncRepo.Add(syncObjects.Id, syncObjects);
             syncController.TempData["Sync"] = syncRepo;
+            syncController.TempData.Keep();
             return syncObjects;
         }
     }

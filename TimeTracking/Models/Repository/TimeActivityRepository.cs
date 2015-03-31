@@ -21,6 +21,7 @@ namespace TimeTracking.Models.Repository
         {
             timeController = controller as System.Web.Mvc.Controller;
             Dictionary<Int64, TimeActivitydto> timeRepo = timeController.TempData["TimeActivity"] as Dictionary<Int64, TimeActivitydto>;
+            timeController.TempData.Keep();
             return timeRepo[id];
 
         }
@@ -31,6 +32,7 @@ namespace TimeTracking.Models.Repository
             timeActivity.Id = random.Next(1,100);
             timeActivityRepository.Add(timeActivity.Id, timeActivity);
             timeController.TempData["TimeActivity"] = timeActivityRepository;
+            timeController.TempData.Keep();
             return timeActivity;
         }
     

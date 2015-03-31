@@ -19,6 +19,7 @@ namespace TimeTracking.Models.Repository
             oAuthcontroller = controller as System.Web.Mvc.Controller;
             string secretKey = oAuthcontroller.TempData["secretKey"] as string;
             Dictionary<string, OAuthorizationdto> oAuthRepo = oAuthcontroller.TempData["OAuthorization"] as Dictionary<string, OAuthorizationdto>;
+            oAuthcontroller.TempData.Keep();
             return oAuthRepo[secretKey];
 
         }
@@ -34,6 +35,7 @@ namespace TimeTracking.Models.Repository
             oAuthcontroller.TempData["secretKey"] = secretKey;
             oAuthRepo.Add(secretKey, oAuthorizationdto);
             oAuthcontroller.TempData["OAuthorization"] = oAuthRepo;
+            oAuthcontroller.TempData.Keep();
             return true;
         }
     }

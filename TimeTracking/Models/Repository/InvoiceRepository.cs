@@ -23,12 +23,14 @@ namespace TimeTracking.Models.Repository
             invoicedto.Id = random.Next(1, 100);
             invoiceRepository.Add(invoicedto.Id, invoicedto);
             invoiceController.TempData["Invoice"] = invoiceRepository;
+            invoiceController.TempData.Keep();
             return invoicedto;
         }
         internal Invoicedto Get(object controller, Int64 id)
         {
             invoiceController = controller as System.Web.Mvc.Controller;
             Dictionary<Int64, Invoicedto> invoiceRepo = invoiceController.TempData["Invoice"] as Dictionary<Int64, Invoicedto>;
+            invoiceController.TempData.Keep();
             return invoiceRepo[id];
         }
        
