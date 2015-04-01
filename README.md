@@ -24,7 +24,6 @@ Time Tracking and Invoicing DotNet Sample App
 * [High Level Workflow](#high-level-workflow)
 * [Project Structure](#project-structure)
 * [How To Guides](#how-to-guides)
-* [Watch & Learn](#watch--learn)
 * [More Information](#more-information)
 
 
@@ -88,9 +87,7 @@ The following How-To guides related to implementation tasks necessary to produce
 
 ## Watch & Learn
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=I_KgAmtMtLk
-" target="_blank"><img src="http://img.youtube.com/vi/I_KgAmtMtLk/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+Need to be implemented.
 
 ## More Information
 
