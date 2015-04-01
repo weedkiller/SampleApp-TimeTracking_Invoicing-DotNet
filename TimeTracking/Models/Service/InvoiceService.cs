@@ -12,11 +12,13 @@ using TimeTracking.Models.Repository;
 
 namespace TimeTracking.Models.Service
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class InvoiceService
     {
          DataserviceFactory dataserviceFactory = null;
         DataService dataService = null;
-
         private InvoiceRepository invoiceRepository = null;
         public InvoiceService(Invoicedto invoicedto)
         {
@@ -24,7 +26,11 @@ namespace TimeTracking.Models.Service
             dataService = dataserviceFactory.getDataService();
             invoiceRepository = new InvoiceRepository();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="invoicedto"></param>
+        /// <returns></returns>
         internal Invoicedto GenerateInvoice(Invoicedto invoicedto)
         {
             TimeActivity timeActivity = GetCustomerId(invoicedto);
@@ -35,7 +41,12 @@ namespace TimeTracking.Models.Service
             invoicedto.AlertMessage = string.Format("Invoice successfully created and pushed to QBO (QBO ID = {0})", invoice.Id);
             return invoicedto;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="invoicedto"></param>
+        /// <param name="timeActivity"></param>
+        /// <returns></returns>
         private Invoice PopulateInvoiceParam(Invoicedto invoicedto, TimeActivity timeActivity)
         {
             Invoice invoice = new Invoice();
@@ -70,9 +81,11 @@ namespace TimeTracking.Models.Service
             invoice.AllowOnlineACHPaymentSpecified = true;
             return invoice;
         }
-
-
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="invoicedto"></param>
+        /// <returns></returns>
         private TimeActivity GetCustomerId(Invoicedto invoicedto)
         {
             string EXISTING_TimeActive_QUERY = string.Format("select * from timeactivity where Id = '{0}'", invoicedto.timeQboId);
@@ -80,14 +93,22 @@ namespace TimeTracking.Models.Service
             TimeActivity resultFound = queryService.ExecuteIdsQuery(EXISTING_TimeActive_QUERY).FirstOrDefault<TimeActivity>();
             return resultFound;
         }
-       
-
+       /// <summary>
+       /// 
+       /// </summary>
+       /// <param name="type"></param>
+       /// <param name="dueDays"></param>
+       /// <returns></returns>
         private string findTerm(string type, int dueDays)
         {
             ReadOnlyCollection<Term> terms = dataService.FindAll<Term>(new Term());
             return terms.Where(x => x.Type == type && x.ItemsElementName.Contains(ItemsChoiceType.DueDays) && x.AnyIntuitObjects.Contains(dueDays)).First().Id;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="invoicedto"></param>
+        /// <returns></returns>
         internal Invoicedto LoadPending(Invoicedto invoicedto)
         {
             List<TimeActivityFill> timeActivityFillList = new List<TimeActivityFill>();
@@ -121,9 +142,11 @@ namespace TimeTracking.Models.Service
             invoicedto.InvoicePendingList = timeActivityFillList;
             return invoicedto;
         }
-
-
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="invoicedto"></param>
+        /// <returns></returns>
         internal Invoicedto UpdateDatabase(Invoicedto invoicedto)
         {
           
@@ -141,7 +164,11 @@ namespace TimeTracking.Models.Service
             invoicedto.UpdatePending = true;
             return invoicedto;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="invoicedto"></param>
+        /// <returns></returns>
         internal Invoicedto FillCreatedInvoice(Invoicedto invoicedto)
         {
             List<InvoiceCreated> invoiceCreatedList = new List<InvoiceCreated>();

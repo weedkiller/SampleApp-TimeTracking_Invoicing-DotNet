@@ -25,7 +25,10 @@ namespace TimeTracking.Controllers
             if (!syncService.IsEmpSync(syncObjects, syncService).IsEmployeeSync)
             {
                 syncObjects = syncService.GetDatafromDBEmployee(syncObjects);
-                syncObjects = syncService.SyncEmployees(this,syncObjects);
+                if (syncObjects.EmployeeList.Count>0)
+                {
+                    syncObjects = syncService.SyncEmployees(this, syncObjects);
+                }
             }
             return RedirectToAction("Sync", "Home", new { id = syncObjects.Id, isConnected = oAuthDetails.IsConnected });
         }
@@ -40,7 +43,10 @@ namespace TimeTracking.Controllers
             if (!syncService.IsCustSync(syncObjects, syncService).IsCustomerSync)
             {
                 syncObjects = syncService.GetDatafromDBCustomer(syncObjects);
-                syncObjects = syncService.SyncCustomer(this, syncObjects);
+                if (syncObjects.CustomerList.Count>0)
+                {
+                    syncObjects = syncService.SyncCustomer(this, syncObjects);
+                }
             }
             return RedirectToAction("Sync", "Home", new { id = syncObjects.Id, isConnected = oAuthDetails.IsConnected });
         }
@@ -55,7 +61,10 @@ namespace TimeTracking.Controllers
             if (!syncService.IsServiceItemSync(syncObjects, syncService).IsServiceItemSync)
             {
                 syncObjects = syncService.GetDatafromDBItem(syncObjects);
-                syncObjects = syncService.SyncServiceItems(this, syncObjects);
+                if (syncObjects.ItemList.Count>0)
+                {
+                    syncObjects = syncService.SyncServiceItems(this, syncObjects);
+                }
             }
             return RedirectToAction("Sync", "Home", new { id = syncObjects.Id, isConnected = oAuthDetails.IsConnected });
         }

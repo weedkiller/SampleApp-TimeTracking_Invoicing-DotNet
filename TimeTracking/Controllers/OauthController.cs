@@ -35,15 +35,17 @@ namespace TimeTracking.Controllers
             oAuthorizationdto.CallBackUrl = Request.Url.GetLeftPart(UriPartial.Authority) + "/Oauth/Response";
             return Redirect(oAuthService.GrantUrl(this));
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Response()
         {
-          
             oAuthorizationDB = new OAuthTokens();
             oAuthService = new OAuthService(oAuthorizationdto);
             oAuthorizationdto = oAuthService.GetRequestToken(this);
             if (Request.QueryString.HasKeys())
             {
-                // This value is used to Get Access Token.
                 oAuthorizationdto.OauthVerifyer = Request.QueryString["oauth_verifier"].ToString();
                 oAuthorizationDB.realmid = Convert.ToInt32(Request.QueryString["realmId"].ToString());
                 oAuthorizationdto.Realmid = oAuthorizationDB.realmid;
@@ -60,10 +62,5 @@ namespace TimeTracking.Controllers
             }
             return RedirectToAction("Close", "Home");
         }
-        /// <summary>
-        /// Gets the Access Token
-        /// </summary>
-        /// <returns>Returns OAuth Session</returns>
-
     }
 }

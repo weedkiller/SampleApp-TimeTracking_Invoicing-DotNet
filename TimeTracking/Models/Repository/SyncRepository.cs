@@ -6,6 +6,9 @@ using System.Web.Mvc;
 
 namespace TimeTracking.Models.Repository
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class SyncRepository
     {
         Dictionary<Int64, Syncdto> syncRepo = null;
@@ -20,8 +23,13 @@ namespace TimeTracking.Models.Repository
             Dictionary<Int64, Syncdto> syncRepo = syncController.TempData["Sync"] as Dictionary<Int64, Syncdto>;
             syncController.TempData.Keep();
             return syncRepo[id];
-
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="controller"></param>
+        /// <param name="syncObjects"></param>
+        /// <returns></returns>
         internal Syncdto Save(object controller, Syncdto syncObjects)
         {
             syncController = controller as Controller;

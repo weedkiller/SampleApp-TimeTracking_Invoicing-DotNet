@@ -7,6 +7,9 @@ using Intuit.Ipp.Data;
 using Intuit.Ipp.QueryFilter;
 namespace TimeTracking.Models
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Syncdto
     {
         public bool IsEmployeeSync { get; set; }

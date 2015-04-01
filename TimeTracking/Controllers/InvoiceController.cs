@@ -16,7 +16,13 @@ namespace TimeTracking.Controllers
         Invoicedto invoicedto = new Invoicedto();
         InvoiceRepository invoiceRepository = null;
         Multiplemodels multiplemodels = null;
+        
         // GET: Invoice
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult Load(Int64 id)
         {
@@ -36,6 +42,12 @@ namespace TimeTracking.Controllers
             multiplemodels.SyncObjectsModel = invoicedto.TimeActivityDto.Syncdto;
             return View("Invoices", multiplemodels);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="qboId"></param>
+        /// <returns></returns>
         [HttpPost]
         public JsonResult Save(Int64 id, Int64 qboId)
         {
@@ -53,6 +65,11 @@ namespace TimeTracking.Controllers
             };
             return Json(data, JsonRequestBehavior.AllowGet);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ActionResult View(Int64 id)
         {
             Invoicedto invoicedto = id > 0 ? new InvoiceRepository().Get(this, id) : new Invoicedto();

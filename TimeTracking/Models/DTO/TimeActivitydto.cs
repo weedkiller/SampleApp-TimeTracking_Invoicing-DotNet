@@ -8,6 +8,9 @@ using System.Web.Mvc;
 
 namespace TimeTracking.Models.DTO
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class TimeActivitydto
     {
         public List<Employee> EmployeeList { get; set; }

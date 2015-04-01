@@ -8,6 +8,12 @@ namespace TimeTracking.Models
 {
     public static class Utility
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="encryptText"></param>
+        /// <param name="securityKey"></param>
+        /// <returns></returns>
         public static string Decrypt(string encryptText, string securityKey)
         {
             TripleDESCryptoServiceProvider TripleDes = new TripleDESCryptoServiceProvider();
@@ -29,7 +35,12 @@ namespace TimeTracking.Models
             // Convert the plaintext stream to a string.
             return System.Text.Encoding.Unicode.GetString(ms.ToArray());
         }
-     
+     /// <summary>
+     /// 
+     /// </summary>
+     /// <param name="key"></param>
+     /// <param name="length"></param>
+     /// <returns></returns>
         private static  byte[] TruncateHash(string key, int length)
         {
 
@@ -43,6 +54,12 @@ namespace TimeTracking.Models
             Array.Resize(ref hash, length);
             return hash;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="plainText"></param>
+        /// <param name="securityKey"></param>
+        /// <returns></returns>
         public static string Encrypt(string plainText, string securityKey)
         {
             TripleDESCryptoServiceProvider TripleDes = new TripleDESCryptoServiceProvider();

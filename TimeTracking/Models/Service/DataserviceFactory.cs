@@ -9,6 +9,9 @@ using System.Web;
 
 namespace TimeTracking.Models
 {
+    /// <summary>
+    /// /
+    /// </summary>
     public class DataserviceFactory
     {
         private OAuthRequestValidator oAuthRequestValidator = null;
@@ -16,6 +19,10 @@ namespace TimeTracking.Models
         IntuitServicesType intuitServicesType = new IntuitServicesType();
         private ServiceContext serviceContext = null;
         public ServiceContext getServiceContext { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="oAuthorization"></param>
         public DataserviceFactory(OAuthorizationdto oAuthorization)
         {
             try
@@ -39,6 +46,10 @@ namespace TimeTracking.Models
                 throw ex;
             }
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public DataService getDataService()
         {
             return dataService;

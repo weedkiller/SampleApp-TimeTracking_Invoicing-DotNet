@@ -11,19 +11,30 @@ using TimeTracking.Models.Repository;
 
 namespace TimeTracking.Models.Service
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class TimeActivityService
     {
         
         DataserviceFactory dataserviceFactory = null;
         DataService dataService = null;
-
         private TimeActivityRepository timeActivityRepository = null;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="timeActivity"></param>
         public TimeActivityService(TimeActivitydto timeActivity)
         {
             dataserviceFactory = new DataserviceFactory(timeActivity.oAuthTokens);
             dataService = dataserviceFactory.getDataService();
             timeActivityRepository = new TimeActivityRepository();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="timeActivitydto"></param>
+        /// <returns></returns>
         internal TimeActivitydto LoaddropdownList(TimeActivitydto timeActivitydto)
         {
             timeActivitydto.Employee = timeActivitydto.EmployeeList
@@ -56,7 +67,11 @@ namespace TimeTracking.Models.Service
             timeActivitydto.FillTime = GetTimeActivityFromDb(timeActivitydto);
             return timeActivitydto;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="timeActivitydto"></param>
+        /// <returns></returns>
         private List<TimeActivityFill> GetTimeActivityFromDb(TimeActivitydto timeActivitydto)
         {
             List<TimeActivityFill> fillList = new List<TimeActivityFill>();
@@ -83,7 +98,11 @@ namespace TimeTracking.Models.Service
             }
             return fillList;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="timeActivitydto"></param>
+        /// <returns></returns>
         internal TimeActivitydto Save(TimeActivitydto timeActivitydto)
         {
             TimeActivity timeActivity = new TimeActivity();
@@ -129,12 +148,24 @@ namespace TimeTracking.Models.Service
             timeActivitydto.AlertMessage = string.Format("Time Activity successfully created and pushed to QBO (QBO ID = {0})", timeActivity.Id);
             return timeActivitydto;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="enumerable"></param>
+        /// <param name="p"></param>
+        /// <returns></returns>
         private SelectListItem GetSelectedItem(IEnumerable<SelectListItem> enumerable, string p)
         {
             var selected = enumerable.Where(x => x.Value == p).First();
             selected.Selected = true;
             return selected;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="list"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
         private decimal getRate(List<Item> list,string id)
         {
             var result = from item in list

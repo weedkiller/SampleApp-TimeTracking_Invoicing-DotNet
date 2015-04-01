@@ -6,9 +6,11 @@ using System.Web;
 
 namespace TimeTracking.Models.DTO
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Invoicedto
     {
-
         public OAuthorizationdto oAuthTokens { get; set; }
         public string CustomerId { get; set; }
         public DateTime TxnDate { get; set; }
@@ -20,7 +22,6 @@ namespace TimeTracking.Models.DTO
         public string AlertMessage { get; set; }
         public string Description { get; set; }
         public string ConnectionString { get; set; }
-
         public List<Customer> CustomerList { get; set; }
         public string InvoiceStatus { get; set; }
         public int InvoiceListLength { get; set; }

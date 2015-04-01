@@ -6,6 +6,9 @@ using TimeTracking.Models.DTO;
 
 namespace TimeTracking.Models
 {
+    /// <summary>
+    /// Need to optimize the algo. This is not a efficient approach
+    /// </summary>
     public class Multiplemodels
     {
         public OAuthorizationdto OAuthorizationModel { get; set; }
@@ -13,7 +16,6 @@ namespace TimeTracking.Models
         public TimeActivitydto TimeActivityModel { get; set; }
         public bool IsTimeentry { get; set; }
         public bool IsInvoice { get; set; }
-
         public Invoicedto InvoiceModel { get; set; }
     }
 }

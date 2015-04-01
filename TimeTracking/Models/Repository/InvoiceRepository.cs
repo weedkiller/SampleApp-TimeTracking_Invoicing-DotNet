@@ -7,6 +7,9 @@ using TimeTracking.Models.DTO;
 
 namespace TimeTracking.Models.Repository
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class InvoiceRepository
     {
         Dictionary<Int64, Invoicedto> invoiceRepository = null;
@@ -15,7 +18,12 @@ namespace TimeTracking.Models.Repository
         {
             invoiceRepository = new Dictionary<Int64, Invoicedto>();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="controller"></param>
+        /// <param name="invoicedto"></param>
+        /// <returns></returns>
         internal Invoicedto Save(object controller, Invoicedto invoicedto)
         {
             invoiceController = controller as Controller;
@@ -26,6 +34,12 @@ namespace TimeTracking.Models.Repository
             invoiceController.TempData.Keep();
             return invoicedto;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="controller"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
         internal Invoicedto Get(object controller, Int64 id)
         {
             invoiceController = controller as System.Web.Mvc.Controller;

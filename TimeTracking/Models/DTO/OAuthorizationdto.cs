@@ -11,6 +11,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Security.Cryptography;
 namespace TimeTracking.Models
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class OAuthorizationdto
     {
         #region <<DTO>>
@@ -97,6 +100,9 @@ namespace TimeTracking.Models
         #region <<Functions>>
         #endregion
     }
+    /// <summary>
+    /// 
+    /// </summary>
     public class OAuthTokens
     {
 
@@ -107,6 +113,9 @@ namespace TimeTracking.Models
         public string access_secret { get; set; }
         public string datasource { get; set; }
     }
+    /// <summary>
+    /// 
+    /// </summary>
     public class OAuthdataContext : DbContext
     {
         

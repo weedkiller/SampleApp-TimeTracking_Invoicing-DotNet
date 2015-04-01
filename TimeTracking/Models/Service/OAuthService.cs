@@ -8,16 +8,28 @@ using TimeTracking.Models;
 using TimeTracking.Models.Repository;
 namespace TimeTracking.Models.Service
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class OAuthService
     {
         private OAuthorizationdto oAuthorizationdto = null;
         private OAuthRepository oAuthRepository = null;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="oAuthDto"></param>
         public OAuthService(OAuthorizationdto oAuthDto)
         {
            
             oAuthorizationdto = oAuthDto;
             oAuthRepository = new OAuthRepository();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="oauthController"></param>
+        /// <returns></returns>
         public string GrantUrl(object oauthController)
         {
             oAuthorizationdto.Token = oAuthorizationdto.OAuthSession.GetRequestToken();
@@ -28,6 +40,11 @@ namespace TimeTracking.Models.Service
             oAuthRepository.Save(oauthController, oAuthorizationdto);
             return oAuthorizationdto.ResponseLink;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="oauthController"></param>
+        /// <returns></returns>
         public OAuthorizationdto IsTokenAvailable(object oauthController)
         {
             var oAuthDetails = new OAuthorizationdto();
@@ -47,14 +64,30 @@ namespace TimeTracking.Models.Service
             }
             return oAuthDetails;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="oauthController"></param>
+        /// <returns></returns>
         internal OAuthorizationdto GetRequestToken(object oauthController)
         {
             return oAuthRepository.Get(oauthController);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="oauthController"></param>
+        /// <returns></returns>
         internal OAuthorizationdto GetAccessToken(object oauthController)
         {
             return oAuthRepository.Get(oauthController);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="oauthController"></param>
+        /// <param name="oAuthorizationdto"></param>
+        /// <returns></returns>
         internal OAuthorizationdto GetAccessTokenFromServer(object oauthController,OAuthorizationdto oAuthorizationdto)
         {
             try

@@ -12,13 +12,19 @@ using TimeTracking.Models.Repository;
 
 namespace TimeTracking.Models
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class SyncService
     {
         DataserviceFactory dataserviceFactory = null;
         DataService dataService = null;
         Syncdto syncObjects = null;
         private SyncRepository syncRepository = null;
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="oAuthorization"></param>
         public SyncService(OAuthorizationdto oAuthorization)
         {
             dataserviceFactory = new DataserviceFactory(oAuthorization);
@@ -31,11 +37,21 @@ namespace TimeTracking.Models
         #endregion
         //
         #region <<DB>>
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="controller"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
         internal Syncdto GetSyncObjects(object controller, Int64 id)
         {
             return syncRepository.Get(controller, id);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="syncObjects"></param>
+        /// <returns></returns>
         internal Syncdto GetDatafromDBEmployee(Syncdto syncObjects)
         {
 
@@ -64,8 +80,11 @@ namespace TimeTracking.Models
             syncObjects.EmployeeList = empList;
             return syncObjects;
         }
-
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="syncObjects"></param>
+        /// <returns></returns>
         internal Syncdto GetDatafromDBCustomer(Syncdto syncObjects)
         {
 
@@ -92,6 +111,11 @@ namespace TimeTracking.Models
             syncObjects.CustomerList = custList;
             return syncObjects;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="syncObjects"></param>
+        /// <returns></returns>
         internal Syncdto GetDatafromDBItem(Syncdto syncObjects)
         {
 
@@ -140,6 +164,12 @@ namespace TimeTracking.Models
             syncObjects = syncRepository.Save(controller, syncObjects);
             return syncObjects;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="controller"></param>
+        /// <param name="syncObjects"></param>
+        /// <returns></returns>
         internal Syncdto SyncCustomer(object controller, Syncdto syncObjects)
         {
             for (int i = 0; i < syncObjects.CustomerList.Count; i++)
@@ -161,7 +191,12 @@ namespace TimeTracking.Models
             syncObjects = syncRepository.Save(controller, syncObjects);
             return syncObjects;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="controller"></param>
+        /// <param name="syncObjects"></param>
+        /// <returns></returns>
         internal Syncdto SyncServiceItems(object controller, Syncdto syncObjects)
         {
             foreach (Item ItemItem in syncObjects.ItemList)
@@ -179,99 +214,135 @@ namespace TimeTracking.Models
             syncObjects = syncRepository.Save(controller, syncObjects);
             return syncObjects;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="syncObjects"></param>
+        /// <param name="service"></param>
+        /// <returns></returns>
         public Syncdto IsServiceItemSync(Syncdto syncObjects, SyncService service)
         {
             Dictionary<string, bool> isSync = new Dictionary<string, bool>();
             var itemDataInDb = service.GetDatafromDBItem(syncObjects);
-            
-            for (int i = 0; i < itemDataInDb.ItemList.Count; i++)
+
+            if (itemDataInDb.ItemList.Count>0)
             {
-                string EXISTING_ITEM_QUERY = string.Format("select * from Item where active = true and name = '{0}'", itemDataInDb.ItemList[i].Name.Trim());
-                QueryService<Item> queryService = new QueryService<Item>(service.ServiceContext);
-                Item resultFound = queryService.ExecuteIdsQuery(EXISTING_ITEM_QUERY).FirstOrDefault<Item>();
-                if (resultFound != null)
+                for (int i = 0; i < itemDataInDb.ItemList.Count; i++)
                 {
-                    itemDataInDb.ItemList[i].Id = resultFound.Id;
-                    isSync.Add(itemDataInDb.ItemList[i].Name, true);
+                    string EXISTING_ITEM_QUERY = string.Format("select * from Item where active = true and name = '{0}'", itemDataInDb.ItemList[i].Name.Trim());
+                    QueryService<Item> queryService = new QueryService<Item>(service.ServiceContext);
+                    Item resultFound = queryService.ExecuteIdsQuery(EXISTING_ITEM_QUERY).FirstOrDefault<Item>();
+                    if (resultFound != null)
+                    {
+                        itemDataInDb.ItemList[i].Id = resultFound.Id;
+                        isSync.Add(itemDataInDb.ItemList[i].Name, true);
+                    }
+                    else
+                    {
+                        isSync.Add(itemDataInDb.ItemList[i].Name, false);
+                    }
+                }
+                if (isSync.Where(x => x.Value == false).Any())
+                {
+                    itemDataInDb.IsServiceItemSync = false;
+
                 }
                 else
                 {
-                    isSync.Add(itemDataInDb.ItemList[i].Name, false);
+                    itemDataInDb.IsServiceItemSync = true;
                 }
-            }
-            if (isSync.Where(x => x.Value == false).Any())
-            {
-                itemDataInDb.IsServiceItemSync = false;
-
             }
             else
             {
-                itemDataInDb.IsServiceItemSync = true;
+                itemDataInDb.IsServiceItemSync = false;
             }
             return itemDataInDb;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="syncObjects"></param>
+        /// <param name="service"></param>
+        /// <returns></returns>
         public Syncdto IsCustSync(Syncdto syncObjects, SyncService service)
         {
             Dictionary<string, bool> isSync = new Dictionary<string, bool>();
             var custDataInDb = service.GetDatafromDBCustomer(syncObjects);
-           
-            for (int i = 0; i < custDataInDb.CustomerList.Count; i++)
+
+            if (custDataInDb.CustomerList.Count > 0)
             {
-                string EXISTING_CUSTOMER_QUERY = string.Format("select * from customer where active = true and givenName = '{0}' and familyName = '{1}'", custDataInDb.CustomerList[i].GivenName.Trim(), custDataInDb.CustomerList[i].FamilyName.Trim());
-                QueryService<Customer> queryService = new QueryService<Customer>(service.ServiceContext);
-                Customer resultFound = queryService.ExecuteIdsQuery(EXISTING_CUSTOMER_QUERY).FirstOrDefault<Customer>();
-                if (resultFound != null)
+                for (int i = 0; i < custDataInDb.CustomerList.Count; i++)
                 {
-                    custDataInDb.CustomerList[i].Id = resultFound.Id;
-                    isSync.Add(custDataInDb.CustomerList[i].GivenName, true);
+                    string EXISTING_CUSTOMER_QUERY = string.Format("select * from customer where active = true and givenName = '{0}' and familyName = '{1}'", custDataInDb.CustomerList[i].GivenName.Trim(), custDataInDb.CustomerList[i].FamilyName.Trim());
+                    QueryService<Customer> queryService = new QueryService<Customer>(service.ServiceContext);
+                    Customer resultFound = queryService.ExecuteIdsQuery(EXISTING_CUSTOMER_QUERY).FirstOrDefault<Customer>();
+                    if (resultFound != null)
+                    {
+                        custDataInDb.CustomerList[i].Id = resultFound.Id;
+                        isSync.Add(custDataInDb.CustomerList[i].GivenName, true);
+                    }
+                    else
+                    {
+                        isSync.Add(custDataInDb.CustomerList[i].GivenName, false);
+                    }
+                }
+                if (isSync.Where(x => x.Value == false).Any())
+                {
+                    custDataInDb.IsCustomerSync = false;
                 }
                 else
                 {
-                    isSync.Add(custDataInDb.CustomerList[i].GivenName, false);
+                    custDataInDb.IsCustomerSync = true;
                 }
-            }
-            if (isSync.Where(x => x.Value == false).Any())
-            {
-                custDataInDb.IsCustomerSync = false;
             }
             else
             {
-                custDataInDb.IsCustomerSync = true;
+                custDataInDb.IsCustomerSync = false;
             }
             return custDataInDb;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="syncObjects"></param>
+        /// <param name="service"></param>
+        /// <returns></returns>
         public Syncdto IsEmpSync(Syncdto syncObjects, SyncService service)
         {
             Dictionary<string, bool> isSync = new Dictionary<string, bool>();
             var empDataInDb = service.GetDatafromDBEmployee(syncObjects);
-            for (int i = 0; i < empDataInDb.EmployeeList.Count; i++)
+            if (empDataInDb.EmployeeList.Count > 0)
             {
-                string EXISTING_EMPLOYEE_QUERY = string.Format("select * from employee where active = true and givenName='{0}' and familyName= '{1}'", empDataInDb.EmployeeList[i].GivenName.Trim(), empDataInDb.EmployeeList[i].FamilyName.Trim());
-
-                QueryService<Employee> queryService = new QueryService<Employee>(service.ServiceContext);
-                Employee resultFound = queryService.ExecuteIdsQuery(EXISTING_EMPLOYEE_QUERY).FirstOrDefault<Employee>();
-                if (resultFound != null)
+                for (int i = 0; i < empDataInDb.EmployeeList.Count; i++)
                 {
-                    empDataInDb.EmployeeList[i].Id = resultFound.Id;
-                    //indexIterator = i+1;
-                    isSync.Add(empDataInDb.EmployeeList[i].GivenName, true);
+                    string EXISTING_EMPLOYEE_QUERY = string.Format("select * from employee where active = true and givenName='{0}' and familyName= '{1}'", empDataInDb.EmployeeList[i].GivenName.Trim(), empDataInDb.EmployeeList[i].FamilyName.Trim());
+
+                    QueryService<Employee> queryService = new QueryService<Employee>(service.ServiceContext);
+                    Employee resultFound = queryService.ExecuteIdsQuery(EXISTING_EMPLOYEE_QUERY).FirstOrDefault<Employee>();
+                    if (resultFound != null)
+                    {
+                        empDataInDb.EmployeeList[i].Id = resultFound.Id;
+                        //indexIterator = i+1;
+                        isSync.Add(empDataInDb.EmployeeList[i].GivenName, true);
+                    }
+                    else
+                    {
+                        isSync.Add(empDataInDb.EmployeeList[i].GivenName, false);
+                    }
+                }
+                if (isSync.Where(x => x.Value == false).Any())
+                {
+                    empDataInDb.IsEmployeeSync = false;
                 }
                 else
                 {
-                    isSync.Add(empDataInDb.EmployeeList[i].GivenName, false);
+                    empDataInDb.IsEmployeeSync = true;
                 }
-            }
-            if (isSync.Where(x => x.Value == false).Any())
-            {
-                empDataInDb.IsEmployeeSync = false;
             }
             else
             {
-                empDataInDb.IsEmployeeSync = true;
+                empDataInDb.IsEmployeeSync = false;
             }
-
             return empDataInDb;
         }
         #endregion

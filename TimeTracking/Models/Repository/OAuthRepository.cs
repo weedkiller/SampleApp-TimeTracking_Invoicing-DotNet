@@ -6,6 +6,9 @@ using System.Web.Mvc;
 
 namespace TimeTracking.Models.Repository
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class OAuthRepository
     {
         Dictionary<string, OAuthorizationdto> oAuthRepo = null;
@@ -14,6 +17,11 @@ namespace TimeTracking.Models.Repository
         {
             oAuthRepo = new Dictionary<string, OAuthorizationdto>();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="controller"></param>
+        /// <returns></returns>
         internal OAuthorizationdto Get(object controller)
         {
             oAuthcontroller = controller as System.Web.Mvc.Controller;
@@ -23,6 +31,12 @@ namespace TimeTracking.Models.Repository
             return oAuthRepo[secretKey];
 
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="controller"></param>
+        /// <param name="oAuthorizationdto"></param>
+        /// <returns></returns>
         internal bool Save(object controller, OAuthorizationdto oAuthorizationdto)
         {
             oAuthcontroller = controller as System.Web.Mvc.Controller;

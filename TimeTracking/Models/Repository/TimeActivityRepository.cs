@@ -9,6 +9,9 @@ using TimeTracking.Models.DTO;
 
 namespace TimeTracking.Models.Repository
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class TimeActivityRepository
     {
         Dictionary<Int64, TimeActivitydto> timeActivityRepository = null;
@@ -17,6 +20,12 @@ namespace TimeTracking.Models.Repository
         {
             timeActivityRepository = new Dictionary<Int64, TimeActivitydto>();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="controller"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
         internal TimeActivitydto Get(object controller, Int64 id)
         {
             timeController = controller as System.Web.Mvc.Controller;
@@ -25,6 +34,12 @@ namespace TimeTracking.Models.Repository
             return timeRepo[id];
 
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="controller"></param>
+        /// <param name="timeActivity"></param>
+        /// <returns></returns>
         internal TimeActivitydto Save(object controller, TimeActivitydto timeActivity)
         {
             timeController = controller as Controller;

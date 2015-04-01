@@ -11,6 +11,9 @@ using TimeTracking.Models.Service;
 
 namespace TimeTracking.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class TimeActivityController : BaseController
     {
         // GET: TimeActivity
@@ -18,11 +21,14 @@ namespace TimeTracking.Controllers
         TimeActivitydto timeActivity = new TimeActivitydto();
         TimeActivityRepository timeActivityRepository = null;
         Multiplemodels multiplemodels = null;
-        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult Load(Int64 id)
         {
-            //OAuthorizationdto oAuthInfo = new OAuthService(new OAuthorizationdto()).GetAccessToken(this);
             Syncdto syncDetails = id > 0 ? new SyncRepository().Get(this, id) : new Syncdto();
             timeActivity.oAuthTokens = syncDetails.OauthToken;
             timeActivity.Syncdto = syncDetails;
@@ -39,6 +45,15 @@ namespace TimeTracking.Controllers
             multiplemodels.SyncObjectsModel = syncDetails;
             return View("TimeActivity", multiplemodels);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="empSelect"></param>
+        /// <param name="cusSelect"></param>
+        /// <param name="itemSelect"></param>
+        /// <param name="description"></param>
+        /// <returns></returns>
         [HttpPost]
         public JsonResult Save(Int64 id, string empSelect, string cusSelect, string itemSelect, string description)
         {
@@ -72,6 +87,12 @@ namespace TimeTracking.Controllers
             }
             return null;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="timeActivity"></param>
+        /// <param name="timeActivityRepository"></param>
+        /// <returns></returns>
         private JsonResult GetJsonObject(TimeActivitydto timeActivity,TimeActivityRepository timeActivityRepository)
         {
             try

@@ -14,6 +14,10 @@ namespace TimeTracking.Controllers
     {
         Multiplemodels multiplemodels = null;
         SyncRepository syncRepo = new SyncRepository();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
             multiplemodels = new Multiplemodels();
@@ -38,9 +42,10 @@ namespace TimeTracking.Controllers
                 return View(multiplemodels);
             }
         }
-
-      
-
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <returns></returns>
         public ActionResult Invoices()
         {
             multiplemodels = new Multiplemodels();

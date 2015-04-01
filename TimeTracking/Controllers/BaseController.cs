@@ -8,6 +8,10 @@ namespace TimeTracking.Controllers
 {
     public class BaseController : Controller
     {
+        /// <summary>
+        /// Need to implement
+        /// </summary>
+        /// <returns></returns>
         public virtual ActionResult Time()
         {
             return PartialView("_Layout");
