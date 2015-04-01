@@ -82,7 +82,7 @@ Pending....
 
 The following How-To guides related to implementation tasks necessary to produce a production-ready Intuit Partner Platform app (e.g. OAuth, OpenId, etc) are available:
 
-* [OAuth How To Guide (Java)](https://github.com/IntuitDeveloper/SampleApp-TimeTracking_Invoicing-Java/wiki/OAuth-How-To-Guide-(Java))
+* [OAuth How To Guide (DotNet)](Pending)
 
 
 ## Watch & Learn
