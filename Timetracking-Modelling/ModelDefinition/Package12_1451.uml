@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="bb86577d-6262-487a-9b23-fbd5627dee2e"
+  name="DataService"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="89005a8f-e193-44ee-b8cd-9703d5089af9"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DIntuit.Ipp.DataService"
+      tag="ViewCode" />
+  </referencesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="3de6995f-e8a3-4085-b020-0425a89d2d48">
+      <profileInstance
+        Id="92af64c8-73e2-44bd-9876-7da21e1c2fd7"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="5ca7c334-1838-416f-b2dc-c5d8ea203a89"
+        name="DataService"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="9627bb9f-7d9c-4244-a34e-06ec8291bd3d"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2Fpackages%2FIppDotNetSdkForQuickBooksApiV3.2.2.0%2Flib%2FIntuit.Ipp.DataService.dll Namespace%3DIntuit.Ipp.DataService Type%3DDataService"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="7795358b-45a6-4def-b829-f922c5ccd720"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5741df02-755d-4e99-9bcd-35e299876e50">
+                <propertyInstance
+                  Id="878952d7-edce-472f-a597-1311cc7367e3"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="19b6fc58-fc69-4f73-96f0-5ddf3fd5213e">
+                <propertyInstance
+                  Id="11650079-37c0-4d0d-9fef-f7b4a74cd533"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7ed95370-0741-4763-bc3a-d1fc9d1174b9">
+                <propertyInstance
+                  Id="cc431082-9d63-4979-859d-dcee9a04bf3c"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="177a4859-c98a-427b-a0ca-cbddd5035a3b">
+                <propertyInstance
+                  Id="bc1b7249-b7a4-4fc5-b5f8-eee65abede46"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e623c556-5e09-47c7-b31f-5812fecf50ec">
+                <propertyInstance
+                  Id="79b3523f-c198-4b70-ad4b-ac478d7dba94"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

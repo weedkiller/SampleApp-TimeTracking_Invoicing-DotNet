@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="1f7d633a-b110-4be2-89cb-f17bf0748aad"
+  name="Mvc"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="4e1f1f9a-b243-4992-8e1f-cc150f6ff6cd"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem.Web.Mvc"
+      tag="ViewCode" />
+  </referencesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="e89edc70-f3bb-42ed-abcb-46edb6463886">
+      <profileInstance
+        Id="a7d4ba83-a148-4bde-8d1f-0c448c92ff2a"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="550e7ee7-d12e-4449-ad6c-cdac607cd003"
+        name="ActionResult"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="22a3497e-5c40-47c3-b8a1-da46c8ccc1c5"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2Fpackages%2FMicrosoft.AspNet.Mvc.5.2.2%2Flib%2Fnet45%2FSystem.Web.Mvc.dll Namespace%3DSystem.Web.Mvc Type%3DActionResult"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="81cb2170-5b96-4664-a5b6-ee796076cb3a"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="82b8cf2d-aad8-45ae-b5ac-e66a8be2ecbe">
+                <propertyInstance
+                  Id="e985b513-d0ef-45f5-b318-27a6fe4e6dee"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c94940bf-3d7c-4e64-a85b-c9508e86861f">
+                <propertyInstance
+                  Id="34d5ef58-ae90-40e0-b1bd-90612008b247"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3c3d29e2-627c-4eee-82a8-3fbec89d55e2">
+                <propertyInstance
+                  Id="57c23363-cbb3-45a3-bc3a-5cd4f4b626c4"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="898fa8a0-2e4b-4b96-bbf2-2b8d8ffe0d76">
+                <propertyInstance
+                  Id="b1182918-bd61-43e9-8848-3b50ca4e6ec3"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a77e36a2-7c10-4b67-b5de-82654f952f8f">
+                <propertyInstance
+                  Id="cb267712-afe7-42a9-b34a-3e6a0cf44ffe"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ce0142f8-5271-476c-a43e-1ddc7d9de41f"
+        name="Controller"
+        visibility="Private"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="df91a554-ec07-453c-a10f-1d45012cd8e2"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2Fpackages%2FMicrosoft.AspNet.Mvc.5.2.2%2Flib%2Fnet45%2FSystem.Web.Mvc.dll Namespace%3DSystem.Web.Mvc Type%3DController"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a1829c92-a4f3-45e4-b82a-769597e5d23b"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f1493144-656d-408c-ab7d-f99ddbdead86">
+                <propertyInstance
+                  Id="f55a1b94-ed9c-41e6-9690-aaa90e7eeeb4"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dc22f7a3-f92f-4c1b-a4f6-d7c60721cf6c">
+                <propertyInstance
+                  Id="2b2f400f-8e78-4b47-8779-2a7c99bcd06d"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3c576c12-1a89-4244-9176-c0f49b9c36f5">
+                <propertyInstance
+                  Id="c9bb755c-4750-43e5-b286-42cb3c82be01"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7aca01e7-8748-4fb5-a2ae-c7e9f1ebfacf">
+                <propertyInstance
+                  Id="ba4872a4-3aba-4ae2-90dc-7ac619299f68"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9385f43a-395a-438e-a86d-8e9b692c6f96">
+                <propertyInstance
+                  Id="e9b87dd0-16e5-4fa8-ae7b-370c0f2c3908"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="afadb5bf-2eec-44be-9b00-0e7453caea4d"
+        name="JsonResult"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="390bc9bd-48b0-4ba2-81dd-1961493f0ac8"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2Fpackages%2FMicrosoft.AspNet.Mvc.5.2.2%2Flib%2Fnet45%2FSystem.Web.Mvc.dll Namespace%3DSystem.Web.Mvc Type%3DJsonResult"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="7a195c65-8ba1-4132-ac46-ad65382251ef"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2506f877-abd4-4986-a789-20d08208ab02">
+                <propertyInstance
+                  Id="ae6a4b11-8d54-481d-aad9-c22d963ffab5"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1fd27bc5-4f86-4eca-b26d-33cc0135c81f">
+                <propertyInstance
+                  Id="335c2f67-0595-46e4-8882-e8016041e516"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a212d9dc-af12-4c00-8eb2-ea43aa4cdb79">
+                <propertyInstance
+                  Id="7320759d-3e21-4918-a51c-b36e6d3ec156"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="77f38755-1afc-4a59-b9e3-d5981d1c2ba1">
+                <propertyInstance
+                  Id="c5f86501-1211-4388-abe6-4ead9c6205ac"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5fa7f17c-d288-4d65-be19-357f15575581">
+                <propertyInstance
+                  Id="a30e7d1b-41c5-4702-8ccb-10da96ea51c2"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="2b951138-865c-45ef-8145-e17ca8a30dac"
+            isSubstitutable="false">
+            <classMoniker
+              Id="550e7ee7-d12e-4449-ad6c-cdac607cd003"
+              LastKnownName="ActionResult"
+              LastKnownLocation="Package4_1451.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9b636db7-fee7-4ec0-ae9f-f426fe1a9f44"
+        name="RedirectResult"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="68ffcae9-7779-451f-b943-df07ec37de3a"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2Fpackages%2FMicrosoft.AspNet.Mvc.5.2.2%2Flib%2Fnet45%2FSystem.Web.Mvc.dll Namespace%3DSystem.Web.Mvc Type%3DRedirectResult"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="6750758e-b31d-44f1-be20-878fdc0d7d2c"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d33fe221-cfda-4621-9341-c1ec437e94b8">
+                <propertyInstance
+                  Id="59bc0e65-d8d8-42bc-be28-64a4588ee7df"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="01227831-b5f7-4fe5-95c9-3a0fb7ba5a01">
+                <propertyInstance
+                  Id="a597770e-defe-4800-9bae-104d3a642b47"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1e7d6fbf-51cc-450b-a3ed-f6015d6c6ff7">
+                <propertyInstance
+                  Id="acd4d09c-9969-4435-ba43-fa009fda17f6"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8ccab71c-6b5a-469f-868f-2e4526639655">
+                <propertyInstance
+                  Id="552cbc5b-6ae8-4a4e-b350-f848073eccfb"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3080f028-cd1e-455d-8fde-f08ef17c2961">
+                <propertyInstance
+                  Id="64d10d40-c6ec-40ac-98ae-93416cc8628b"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="7d774d27-2e7a-41c8-ac46-1959c0a266c0"
+            isSubstitutable="false">
+            <classMoniker
+              Id="550e7ee7-d12e-4449-ad6c-cdac607cd003"
+              LastKnownName="ActionResult"
+              LastKnownLocation="Package4_1451.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2bc6e708-4c85-4f23-bbe6-99f4eb2f28dc"
+        name="SelectListItem"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="1a454c2f-0fa8-4085-829d-18950cb4e3f7"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2Fpackages%2FMicrosoft.AspNet.Mvc.5.2.2%2Flib%2Fnet45%2FSystem.Web.Mvc.dll Namespace%3DSystem.Web.Mvc Type%3DSelectListItem"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="7dc7bcfe-39ba-4799-a5eb-82284800c212"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="66753c33-b5cf-4a15-b35d-6e2d4a11a971">
+                <propertyInstance
+                  Id="34643898-d8ce-4c61-b98e-10b0bb8979c8"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f2349111-1a76-4522-b99b-7b24175ec079">
+                <propertyInstance
+                  Id="ed2f201f-fdc1-4d6b-a04c-95247e3be968"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bfdf8fb1-9737-4593-a576-74cc466c58b1">
+                <propertyInstance
+                  Id="515abe28-a379-4fa1-a623-b68bcb84cc29"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ac6779da-8452-4506-a93e-111115bc3133">
+                <propertyInstance
+                  Id="eb6c5590-c9bf-448a-8eb3-b4f562f08373"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="386dc6e9-e007-4b7f-bfb5-64a424f3d71e">
+                <propertyInstance
+                  Id="9a76a6a2-e67a-4f7d-afb4-09d895db206a"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

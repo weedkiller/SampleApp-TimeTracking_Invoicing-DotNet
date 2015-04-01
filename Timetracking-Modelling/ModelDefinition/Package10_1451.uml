@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="ba3188b7-6353-44b5-9fd8-cce20432e94c"
+  name="Ipp"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="fffa6518-7f5d-4a24-9eb8-bc5c440ad560"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DIntuit.Ipp"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="533a9ac7-8201-493f-95b8-af28398d37bd"
+        LastKnownName="Core"
+        LastKnownLocation="Package11_1451.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="bb86577d-6262-487a-9b23-fbd5627dee2e"
+        LastKnownName="DataService"
+        LastKnownLocation="Package12_1451.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="ebdac88f-d870-457d-b653-36a5051e4f0b"
+        LastKnownName="Data"
+        LastKnownLocation="Package21_1451.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="8fe1ee12-46f4-4c3f-8d7b-0f71d0ca8d48"
+        LastKnownName="Security"
+        LastKnownLocation="Package22_1451.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

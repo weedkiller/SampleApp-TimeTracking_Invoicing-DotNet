@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="cb7f4697-b092-4a19-8977-2b9aa08e0211"
+  name="Entity"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="5cce500c-aa39-47ab-9e8f-69dbc5916e76"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem.Data.Entity"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="92f7f0cf-3544-4e72-9c1e-b7090e69889d"
+        name="DbSet&lt;OAuthTokens‎&gt;"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="05a27d50-9322-46cf-b224-c4f68b95f4f8"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="45bbef21-b2fd-41bb-9df6-7b84d21eeafb">
+                <propertyInstance
+                  Id="cdac2c3b-a11f-4355-bddf-dedbad1fdc28"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5d2d5f15-dd91-475d-941d-cc80a4b687f8">
+                <propertyInstance
+                  Id="18974b8b-42d1-472d-bd08-77e2c8f63f19"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="99f869fe-82d3-4807-a6a7-0f9d054e0f93">
+                <propertyInstance
+                  Id="815ab367-076b-463e-8782-cf933f633129"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9c76380c-2193-4674-bb32-482c9d6fa1b4">
+                <propertyInstance
+                  Id="fe30b74b-48f2-4dcf-8070-95e9e709986e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4c2a0f25-30c5-4997-b3aa-7937e5e4c9a3">
+                <propertyInstance
+                  Id="a0eefd17-677c-46b2-a01f-920b1f182d68"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="acaf87a5-3d65-48fe-b5fa-fa8bfc6bda6d">
+            <redefinableTemplateSignatureMoniker
+              Id="ea3e8b58-561b-4fc8-a9aa-5912390800e7"
+              LastKnownLocation="Package14_1451.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="7c7a3a80-354b-48be-892a-6a97bedfb2fc">
+                  <actuals>
+                    <classMoniker
+                      Id="46d4c7d7-af24-481f-8be8-ef432019f819"
+                      LastKnownName="OAuthTokens"
+                      LastKnownLocation="Package5_1451.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="614c1e50-01b0-4a6a-9051-8ee38b91f459"
+                      LastKnownLocation="Package14_1451.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5e26fdf1-5d32-4128-940a-4285a25be378"
+        name="DbSet"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="c0a84cb6-4cae-4c3d-bbc5-bfdd6e6d365c"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2Fpackages%2FEntityFramework.5.0.0%2Flib%2Fnet45%2FEntityFramework.dll Namespace%3DSystem.Data.Entity Type%3D(Name%3DDbSet GenericParameterCount%3D1)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="0d0b56f0-94d6-45db-9a60-cf617b00edc1"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="be18b745-45cc-423b-a4d0-ab32eb46d655">
+                <propertyInstance
+                  Id="d3263ea6-17a2-4598-ad5e-7332148deb6d"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="27a4b8af-c282-46cb-8dec-ba3993daea67">
+                <propertyInstance
+                  Id="06f667ae-91a8-4f46-a4ed-c7f8995e6757"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ba502ca0-2fe3-4139-87f8-9a5d9871fe8e">
+                <propertyInstance
+                  Id="441137ae-920c-478d-b0bf-2d9ce6514a15"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d99321ff-aaeb-4f10-90b2-c49d04f28e67">
+                <propertyInstance
+                  Id="cd370b31-9902-425d-b0ba-29e88d0e6c14"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="864b393c-255f-4655-8ab5-f90d76ec6b5d">
+                <propertyInstance
+                  Id="4240748c-ed46-4f0e-8194-ee9569b95361"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="ea3e8b58-561b-4fc8-a9aa-5912390800e7"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="614c1e50-01b0-4a6a-9051-8ee38b91f459">
+                <referencesInternal>
+                  <reference
+                    Id="f2bc0374-1420-4e63-89c8-4b4e10b69faf"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2Fpackages%2FEntityFramework.5.0.0%2Flib%2Fnet45%2FEntityFramework.dll Namespace%3DSystem.Data.Entity Type%3D(Name%3DDbSet GenericParameterCount%3D1) ParameterIdentifier%3D0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="825bf658-e704-42b9-98ca-dcf5dce397d5"
+                    name="TEntity"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="bdcd036d-1826-4792-b809-9b0313892f2b"
+        name="DbContext"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="909bcd4e-281c-4b16-b74c-b08f4a848b4c"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2Fpackages%2FEntityFramework.5.0.0%2Flib%2Fnet45%2FEntityFramework.dll Namespace%3DSystem.Data.Entity Type%3DDbContext"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="95863c7d-9089-417c-8a6a-ab958ce32b56"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7ba8ef09-7c64-4490-a6d8-98af44c2460b">
+                <propertyInstance
+                  Id="e0af1917-e860-4cd3-bc68-710bf92a6f6d"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="148837e2-55ec-486e-b582-df5d29e54ea3">
+                <propertyInstance
+                  Id="1d74f922-a4ea-4303-a374-d1d39045a7b3"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b33470c8-f998-4320-b900-750b560da58a">
+                <propertyInstance
+                  Id="7918ecbf-e207-47a4-94cf-6964836eb4fb"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="981289a1-c100-4ef9-8f20-c58b6428955e">
+                <propertyInstance
+                  Id="1fec9e72-28ed-4ad1-aa35-c8695ab0c4e4"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="31df2486-cf06-4126-a65d-ad6f28080b0e">
+                <propertyInstance
+                  Id="02a70fc7-79a1-4a80-8520-10667335bde2"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12.75, 8.5" name="Timetracking-Class">
+  <logicalClassDesignerModelMoniker Id="1db44351-feb1-432b-8c5e-e38f2ae23795" />
+  <nestedChildShapes>
+    <classShape Id="227219c2-1954-463a-9dcc-f154f678df19" absoluteBounds="9.5, 3.5, 1.875, 2.1487730896472925" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
+      <classMoniker Id="dd287a17-32e5-46b6-bbcb-ee6b04860ad5" LastKnownName="DataserviceFactory" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="a45e877e-cbbe-4709-bd83-2b9a7d9af2b1" absoluteBounds="9.515, 4.015335639317831, 1.8450000000000002, 1.0019530927141505" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="c36e3f7f-1f98-4310-bbdb-62350328503a" absoluteBounds="9.515, 5.0272887320319812, 1.8450000000000002, 0.52148435761531187" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <packageShape Id="38ea4e99-6b6a-4804-8ac0-4d7f81421772" absoluteBounds="2.375, 0.875, 2.5, 1.75" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="f8ea0e60-22ab-4d97-aa1d-2f889ed72e48" LastKnownName="Controllers" />
+    </packageShape>
+    <packageShape Id="b59c78f4-bee1-424f-97ac-795ad8d0991d" absoluteBounds="6.25, 0.875, 2.875, 1.875" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="05dc5f94-1544-4801-bb04-c4b80f1d35b8" LastKnownName="Models" />
+    </packageShape>
+    <packageShape Id="0439f58f-3b60-46b2-9b30-4b06cb4a012b" absoluteBounds="10, 0.875, 2.5, 1.75" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="5b649ae0-1fe2-4b07-953c-baa07c92c862" LastKnownName="Repository" />
+    </packageShape>
+    <packageShape Id="19f3ae20-e67e-4966-9789-2d94812b2776" absoluteBounds="4.375, 3.375, 3.875, 2.125" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="9829914a-1eb6-4060-af02-8fa6c4b2c9e7" LastKnownName="Service" />
+    </packageShape>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>

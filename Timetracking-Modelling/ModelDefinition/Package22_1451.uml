@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="8fe1ee12-46f4-4c3f-8d7b-0f71d0ca8d48"
+  name="Security"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="931cdaee-3e28-47d9-bba0-5a09ff1bb400"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DIntuit.Ipp.Security"
+      tag="ViewCode" />
+  </referencesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="58832711-896a-41e9-bba2-4491af50080e">
+      <profileInstance
+        Id="6efd1656-7f4b-4aa3-ae4f-b8d3be83a64e"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="0d27b542-8be8-45b4-b4da-c1786d48e50a"
+        name="OAuthRequestValidator"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="5c54befb-4742-4aaa-891f-11912608b3d2"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2Fpackages%2FIppDotNetSdkForQuickBooksApiV3.2.2.0%2Flib%2FIntuit.Ipp.Security.dll Namespace%3DIntuit.Ipp.Security Type%3DOAuthRequestValidator"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="1628f2bc-1e0f-4688-a776-dd3974266859"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8b553ff8-a3be-4318-8e3f-9cfd016b86b7">
+                <propertyInstance
+                  Id="10f30cde-a628-4415-8e67-8fa09b803517"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f628d1f6-d2b6-409b-9bfa-f6b61661f0f7">
+                <propertyInstance
+                  Id="84bae3f3-1e44-4cd5-ac0b-727edf183502"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ec60db64-0070-4bdf-9c48-18d949f48cf3">
+                <propertyInstance
+                  Id="c6bf158e-b6e7-4e2a-ad30-6d8d6731c4c0"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0a0a47e4-2eb8-45b2-8c8b-2fb187ed02b6">
+                <propertyInstance
+                  Id="87ac895f-0385-4e1c-b109-1ea1e84d8596"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="72046182-483e-425c-bee3-b8d22394e712">
+                <propertyInstance
+                  Id="19049067-1726-4fc1-8fdd-389d511c90f6"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

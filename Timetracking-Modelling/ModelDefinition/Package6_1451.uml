@@ -1,0 +1,2208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="50824ced-df34-4f8b-b63a-7526b129bc46"
+  name="Repository"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="b10d940a-f120-4004-b5a1-594c34b433dd"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DTimeTracking.Models.Repository"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="52f6cd95-d3a0-492a-84bb-24ce362f3a49"
+        name="SyncRepository"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="e4567cae-4af0-4faf-83ca-560392daebb2"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DSyncRepository"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="661cad30-b719-4ff6-9d2e-c05f75e7f684"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e9f16f56-82b0-4abb-afdd-81395ce1531b">
+                <propertyInstance
+                  Id="631e3b41-87b4-41a9-b0aa-1cf45010bd78"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="763590ba-1c0e-4f8c-9a15-2efb833f8edc">
+                <propertyInstance
+                  Id="ebcfcab7-ee8d-442b-9c05-1557dec3e76f"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d15f020e-decc-4527-a7a6-111a18987c48">
+                <propertyInstance
+                  Id="bf48ee5a-f455-4c57-a38d-652a4eec161d"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="636c59a2-0592-4739-a21f-d689524ae796">
+                <propertyInstance
+                  Id="a6865f1a-10ff-4855-b73c-7936b4d1eb70"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="24dbb33a-9902-4092-8031-64a97dbd34fc">
+                <propertyInstance
+                  Id="f67a393f-73d7-4e4d-adc7-f4e01904e045"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="dea34789-82c9-4349-b5e1-440e57755353"
+            name="syncRepo"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="5620f59c-625c-4ce9-b7e9-b34b8da36e36"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DSyncRepository Member%3DsyncRepo"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5594c340-c5cf-4c85-af30-52c160837576"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f4b0246f-d38b-49d2-8665-5f9cf727f74c">
+                    <propertyInstance
+                      Id="23af0dad-18a9-4a62-aab1-88fb96a7fcaa"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a9d8070c-b2af-4769-bc6f-cc678eac06d2">
+                    <propertyInstance
+                      Id="a9694155-2c94-4728-8d18-762044c7ff34"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="62a8b45a-4893-43fc-9214-c88e3024bac3">
+                    <propertyInstance
+                      Id="90689cba-98a9-4df1-9a57-7d5484303320"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fa9134eb-4e84-4a1e-811d-bb742afe79d2">
+                    <propertyInstance
+                      Id="bfeb9a43-0a7e-4a9a-a546-b814038530ed"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1743a66c-be21-4529-8dbf-59c989f0076e">
+                    <propertyInstance
+                      Id="20d4dc36-f9b1-4231-b7b9-ad1ba4ba86ca"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="f6e1384e-fbc8-43f8-a0d8-ff68ad09f518"
+                LastKnownName="Dictionary&lt;Int64‎, Syncdto‎&gt;"
+                LastKnownLocation="Package20_1451.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="1055e54c-416b-4095-9817-e7ca4d914ee6"
+            name="syncController"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="8d01dc59-3895-4a43-96b4-24249bf685ae"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DSyncRepository Member%3DsyncController"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4989cab5-c947-4813-84f0-76df981c3b47"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3c4ed8f3-bd29-4e3f-9cc3-2fb6be997d74">
+                    <propertyInstance
+                      Id="c165feaa-bab5-421c-9f05-04a58589667c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a321b628-c3c6-466e-b6fa-3533fc87796d">
+                    <propertyInstance
+                      Id="17951666-5df1-46bf-ae2c-9c628c2d8883"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1b8b88f7-07c6-44e6-b2c2-eaa2c15831ea">
+                    <propertyInstance
+                      Id="706eb3e3-cece-47fd-9a5b-336d5d99efaa"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a5be0a6d-8d37-4558-801d-4b13d3b9f2b4">
+                    <propertyInstance
+                      Id="9a87615d-f46e-4b29-a6bb-b1a1b0a377f7"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1c4b2590-7c31-41be-939c-6518d6e9c1aa">
+                    <propertyInstance
+                      Id="f05cd75d-e644-4a59-a281-4f58aed09410"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="ce0142f8-5271-476c-a43e-1ddc7d9de41f"
+                LastKnownName="Controller"
+                LastKnownLocation="Package4_1451.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="8e83ea19-b130-43d7-897a-0a4816e9f7d5"
+            name="SyncRepository"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="bbcbf875-9994-4d37-9bce-bcba8b7c4e99"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DSyncRepository Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f52b70c9-b255-44c7-a6be-faf890d56ea2"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="48dcbdac-3525-401e-a10f-a4ac8cf0560e">
+                    <propertyInstance
+                      Id="9f92508f-6853-4239-a8de-a7ab166bf2da"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="38e9bb9f-f8cf-4dfb-b628-26c67918c606">
+                    <propertyInstance
+                      Id="c27c98f7-709d-4101-b532-e44971ef91f4"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c1633942-fff7-4605-80cb-ec67ed298923">
+                    <propertyInstance
+                      Id="02cb438f-511a-41ff-bff1-979479eabfd0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="033c1af6-c29a-49f3-9a69-8cb800435ab1">
+                    <propertyInstance
+                      Id="42c2ced0-ec68-4b90-9234-888491859b64"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7aea6a75-8b49-4c54-a058-ee0f25b97d14">
+                    <propertyInstance
+                      Id="876eb09b-ce04-4fa7-ba33-a48d86f27659"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8548a772-2bbb-498f-8a4a-6250d4766a2a">
+                    <propertyInstance
+                      Id="f00f6940-8069-4f81-b035-8e9974183252"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="5629df4c-a770-4584-ad53-59271de67e4e"
+            name="Get"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3b4a157b-3120-46ae-864e-17341c09d5de"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DSyncRepository Member%3D(Name%3DGet OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt64)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a862d1ae-1ed9-4e49-8243-d9b7652874d4"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="47644b7e-5531-4ebe-9452-145143b9e956">
+                    <propertyInstance
+                      Id="c37035be-6a27-4eb3-b2ee-8883433572da"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="879a30ed-6427-4896-9635-9afe3c465855">
+                    <propertyInstance
+                      Id="be5c3311-05c5-4582-8f88-c0a43a586df6"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="20271747-7dfa-4b2e-a334-fabb93ffc6c6">
+                    <propertyInstance
+                      Id="267fb060-5d93-4742-97a0-b662f9f62fd0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ee981a3b-653a-4c0d-8724-a3c69f7bbd70">
+                    <propertyInstance
+                      Id="9e1cdae4-4268-4496-9232-58724e3f334f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e2209eed-933e-4380-a154-ddb7f13f3288">
+                    <propertyInstance
+                      Id="375f423a-e5bc-4a15-89b1-b4654c032e9c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1b724920-791d-4fa9-9829-b4930b5e6d54">
+                    <propertyInstance
+                      Id="0ab4aad3-052c-4706-abef-85585676ff95"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="49bc5dfd-f790-4e1a-bcd5-8d154f9d095f"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="337d685e-d96b-4222-a5e8-0f45050501e7"
+                      LastKnownName="Syncdto"
+                      LastKnownLocation="Package5_1451.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4efd8d65-a5f2-4505-b038-a59e9161b02e"
+                  name="controller"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="8442b110-6005-44ab-a47f-57a285ab56b6"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DSyncRepository Member%3D(Name%3DGet OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt64)]) ParameterIdentifier%3Dcontroller"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="c0ce4ba3-0891-4064-86c7-fdc657ed1aa4"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1451.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4859aa08-b5c9-4c9f-afad-d323c17907cb"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7a08fe06-df5f-4be1-a522-8c635d1bbb7e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DSyncRepository Member%3D(Name%3DGet OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt64)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2f56854d-a03d-4d8b-9c35-2fb70eb5c42e"
+                      LastKnownName="Int64"
+                      LastKnownLocation="Package2_1451.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e5fcaf28-8be2-4673-ac21-900cf293caa8"
+            name="Save"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="7344a66e-3732-4b3c-8ddb-0c86c88bf9b4"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DSyncRepository Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models Type%3DSyncdto)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fb17b79b-d7ad-4a74-aa75-1d8354889bde"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f3aaf172-e9bc-47df-b330-7022ba435b0d">
+                    <propertyInstance
+                      Id="fdb676d5-ed3a-47db-bf15-75598ba9657c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="164f9a9a-63fe-406b-b62f-3d247ccff4b9">
+                    <propertyInstance
+                      Id="1095c82e-888e-4653-b036-01a3f941c865"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f5a466a6-a894-46a8-9423-4d47cfbf6ea9">
+                    <propertyInstance
+                      Id="6be51eee-6532-4d67-af73-3d3b15c28150"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fd235373-573d-4cae-9aab-e56470c7a8ed">
+                    <propertyInstance
+                      Id="a5ab42d4-36cf-44c8-bf33-3f7e21a4f162"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="499a5aab-9bf8-4ec4-8eba-c9309af91be8">
+                    <propertyInstance
+                      Id="28e1f744-86df-4007-884c-1d4965fed434"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eeef743f-d2cb-4bc7-8f72-509b91a09f9d">
+                    <propertyInstance
+                      Id="bae5627f-4922-403c-b0c7-753f3f81695f"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8c504c95-4297-404a-9e75-467b00edc0b3"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="337d685e-d96b-4222-a5e8-0f45050501e7"
+                      LastKnownName="Syncdto"
+                      LastKnownLocation="Package5_1451.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bd003383-9c7f-4bf4-bf3b-9f90cb60a191"
+                  name="controller"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="59310691-dcfd-454e-af34-1158c374d0b9"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DSyncRepository Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models Type%3DSyncdto)]) ParameterIdentifier%3Dcontroller"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="c0ce4ba3-0891-4064-86c7-fdc657ed1aa4"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1451.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="05e3d9c4-f40a-40ed-96cf-724fac783bea"
+                  name="syncObjects"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="e6172d06-0de2-47b6-8dfa-212df441ff2a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DSyncRepository Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models Type%3DSyncdto)]) ParameterIdentifier%3DsyncObjects"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="337d685e-d96b-4222-a5e8-0f45050501e7"
+                      LastKnownName="Syncdto"
+                      LastKnownLocation="Package5_1451.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="fa5e4e46-5ab4-41e3-8459-a46c5b52cc5e"
+        name="InvoiceRepository"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="e8476e56-c0ae-42ea-b392-b35792b06dd8"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DInvoiceRepository"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="6c9cb583-f754-4b40-a97b-fa8840c6d44f"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cc38dc87-f61d-4381-884c-10584673e5ca">
+                <propertyInstance
+                  Id="3fca4f3e-97af-4b22-b4d4-957db68bc6c0"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0a81d933-3c34-43ea-a895-ce0be7aa08fc">
+                <propertyInstance
+                  Id="e573d43a-da1b-461f-8f72-c3973abe43a1"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5e21d9a7-7ecd-4e4e-b259-aef74e58f5b8">
+                <propertyInstance
+                  Id="c2b01b9a-ddfe-4a0a-bd6f-113dfeda2063"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b243f8b2-554d-4d7a-81a9-75cb54ac2a0d">
+                <propertyInstance
+                  Id="86d42242-7185-47c0-a053-ee5cb85a6857"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3fdc058e-1cc5-4f8e-979c-92f4a34ab1de">
+                <propertyInstance
+                  Id="7a824750-cf29-4d0b-9e79-135d1edd1ac2"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="0f0c1955-e509-4c9a-9cfd-ac9a23a7c938"
+            name="invoiceRepository"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="bccb44e9-3ba5-4896-a05c-1afbea6cf5bf"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DInvoiceRepository Member%3DinvoiceRepository"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="34fc0b05-153b-48df-b45a-822b68836e51"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="44a76426-e549-4c64-ba30-b6dbb7c8eb5d">
+                    <propertyInstance
+                      Id="0ec5b382-fd37-418e-b471-32070ae1d218"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="614e769f-75a5-4f7f-8ab6-b0db5954c42f">
+                    <propertyInstance
+                      Id="58cf6840-3a46-41d5-9731-b2bf548139f9"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0f986faf-f444-4bfa-9a4b-30ed90ce4c2f">
+                    <propertyInstance
+                      Id="7bc229af-3e56-4fe4-b042-f90b036f9b8f"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="81bb4b5f-ac49-4f8f-a802-7d9135cd7696">
+                    <propertyInstance
+                      Id="1303a6d8-c1ea-4e9b-b85e-ddef4d7962c7"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0792d13b-e3e8-4363-a045-14f27c347205">
+                    <propertyInstance
+                      Id="3e70c1d4-0a98-40f8-829b-88d3fa64c42d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="a0c413c7-0b31-4920-b384-a581c394e840"
+                LastKnownName="Dictionary&lt;Int64‎, Invoicedto‎&gt;"
+                LastKnownLocation="Package20_1451.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="5432f390-1014-4c3e-93cf-c5884c7deba0"
+            name="invoiceController"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="d810d37b-d526-4e87-88d9-f2a186f55d94"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DInvoiceRepository Member%3DinvoiceController"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3671fa06-ec6c-43d4-ac69-3c350f0eb9d5"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="de31dcc2-24a5-4f21-9c3f-59c5a5144613">
+                    <propertyInstance
+                      Id="d26901bd-4cf4-436d-9ea9-564c35233324"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0225523b-8dec-411c-96b4-a38e5833517e">
+                    <propertyInstance
+                      Id="4c88df90-abea-4aca-a04f-91f5182e4b6f"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="77992a7a-f3be-431f-b1e0-bf22c93b1004">
+                    <propertyInstance
+                      Id="071e7b3d-3c92-427d-b2e9-dea1f8335189"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6af1e6b7-b362-4465-b099-b755b4ba3a08">
+                    <propertyInstance
+                      Id="f6c86bed-ffaf-4e5d-8e04-4c7b9cc844cb"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bc1e2f43-4061-4c6a-a89c-6b8a80e67af6">
+                    <propertyInstance
+                      Id="a070e3da-5024-431f-b94e-2deb9378ed19"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="ce0142f8-5271-476c-a43e-1ddc7d9de41f"
+                LastKnownName="Controller"
+                LastKnownLocation="Package4_1451.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="28105894-ce45-405b-9479-837ebc40d5cb"
+            name="InvoiceRepository"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="516352dd-610f-4a3b-ac8e-3ad8d8beeddd"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DInvoiceRepository Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f4575128-1119-43e2-9d52-c2b91dcedbb7"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c62aec99-d601-469c-9cf3-e779bacfbea3">
+                    <propertyInstance
+                      Id="be4a0504-2dc7-4298-b238-05fba999e9f3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="194d0ec5-2a76-4e1e-ab9e-6afde3ed6c95">
+                    <propertyInstance
+                      Id="5c456c88-1ee8-4b8a-8647-6c5bc3cdebcb"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1abee401-28c6-4528-89eb-810aeb472c38">
+                    <propertyInstance
+                      Id="780b5f13-0e59-4555-ab1e-29e6e5ed521b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="12223bb0-cdb8-4289-aa5d-c1eb5db58952">
+                    <propertyInstance
+                      Id="3756d68d-76a5-4640-9166-7c0e24e5cd30"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9d8386c9-4448-43ba-af2c-c64883868dd5">
+                    <propertyInstance
+                      Id="4aa51cb5-0cf1-43b7-bfd9-a750bfaf1099"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9e164113-42a1-447d-98ae-641d4baf2e8d">
+                    <propertyInstance
+                      Id="56c5d7fa-274e-449c-9e4b-2d40803a091c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="f8cc40be-50d1-416d-ae6c-528c53efe870"
+            name="Save"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="cdd487e2-9c4c-428b-9d16-d5026fc1fd61"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DInvoiceRepository Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.DTO Type%3DInvoicedto)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="94d051a3-5d58-4227-82d8-25b98b9e80f0"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a822c6c6-2518-4b84-b52f-3fb196fc702d">
+                    <propertyInstance
+                      Id="b3643f12-7ce6-4d78-8695-01d75ffaa77b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8d03bdbc-7bd3-4026-b0fa-e5e30ed8fba8">
+                    <propertyInstance
+                      Id="e54cd992-2f97-4843-9ca8-ab270430b4d6"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4c6fe572-672c-4306-bb4d-e0cb0df41c4e">
+                    <propertyInstance
+                      Id="2ee9b43a-fddf-4cd6-8721-e26ea2ec329a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9d2d6c5d-e9fb-4734-a270-b7711dd16eae">
+                    <propertyInstance
+                      Id="dd7ce231-4697-43bf-9bab-09103d7c5922"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="731c1b44-1846-4a64-9fa5-773a3f7175cc">
+                    <propertyInstance
+                      Id="648567b7-e345-4520-94b9-df9d79d565fb"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="65d73e78-d4b4-48a0-a446-e8c7a5f877be">
+                    <propertyInstance
+                      Id="5b7e9f13-fec8-4cfa-989f-09e18eb0d328"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1d3e24a2-2c92-4e90-930c-44f3c331a461"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="91e5faca-ddb8-490e-8b82-90cb9dee099d"
+                      LastKnownName="Invoicedto"
+                      LastKnownLocation="Package8_1451.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="53433442-93c4-4698-962d-8252e33364a6"
+                  name="controller"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="a9914b1e-0ef1-4aec-805a-872b51956bf6"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DInvoiceRepository Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.DTO Type%3DInvoicedto)]) ParameterIdentifier%3Dcontroller"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="c0ce4ba3-0891-4064-86c7-fdc657ed1aa4"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1451.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e6e8abc8-575f-480e-a956-f36fca447ece"
+                  name="invoicedto"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="cfb3a0b6-b69a-41c8-bada-1b83e1fcfb2c"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DInvoiceRepository Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.DTO Type%3DInvoicedto)]) ParameterIdentifier%3Dinvoicedto"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="91e5faca-ddb8-490e-8b82-90cb9dee099d"
+                      LastKnownName="Invoicedto"
+                      LastKnownLocation="Package8_1451.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="951f7f12-d452-4127-a08d-db37a3d7d50a"
+            name="Get"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="e72864e4-297d-4afe-b67b-0f3993d821d4"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DInvoiceRepository Member%3D(Name%3DGet OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt64)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f23cefb4-cddb-4f13-a273-15d758d0b294"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a4fb1d08-9a73-4179-867f-1a8488ac0a2a">
+                    <propertyInstance
+                      Id="b21445ad-35d5-4889-a518-dcfa2bcff0c9"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e7fc7104-a774-46a8-8fa0-dc9c0a451b03">
+                    <propertyInstance
+                      Id="a6d58962-cd18-4d74-9c45-77f45b76c24a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="368671fa-abd9-4535-97ff-90f096fc9238">
+                    <propertyInstance
+                      Id="ff03f319-89c1-4695-a259-f70b9c6a7f38"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="130fd8a5-02bf-40a2-a006-033f856854d9">
+                    <propertyInstance
+                      Id="e56805a3-2764-4602-9bd6-ceea0ab3d9f7"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a9093cdc-7d8c-42e6-bc79-ac457ec0b0f3">
+                    <propertyInstance
+                      Id="2421619a-ded8-4de3-bd58-3271a0744570"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d1f08274-4cd4-4446-aa65-8d066568619f">
+                    <propertyInstance
+                      Id="a5f236b6-6d52-40aa-9c9f-acc8236d7764"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="257396b8-b6ca-4d82-b72c-a82e1364771c"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="91e5faca-ddb8-490e-8b82-90cb9dee099d"
+                      LastKnownName="Invoicedto"
+                      LastKnownLocation="Package8_1451.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="62fe7a1e-793f-4109-82d4-02a4bd60c34c"
+                  name="controller"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="380d7bd1-e45d-453b-804e-c5343e95d03e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DInvoiceRepository Member%3D(Name%3DGet OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt64)]) ParameterIdentifier%3Dcontroller"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="c0ce4ba3-0891-4064-86c7-fdc657ed1aa4"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1451.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d5c33d95-3bcc-4b4b-8301-d829731ef817"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="b214502d-6b79-48ec-be8a-9d8186154e07"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DInvoiceRepository Member%3D(Name%3DGet OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt64)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2f56854d-a03d-4d8b-9c35-2fb70eb5c42e"
+                      LastKnownName="Int64"
+                      LastKnownLocation="Package2_1451.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="953f8366-7cfb-4f1a-a855-b5d24c6bee42"
+        name="TimeActivityRepository"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="9d5b36a9-854a-4eed-aeb0-f3938a3daac5"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DTimeActivityRepository"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a25596aa-975a-426d-bb58-33b50e96c938"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="92836005-0292-4456-804f-97ec97072689">
+                <propertyInstance
+                  Id="70ec564e-9f4f-440d-9984-2fbef30d3f84"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="758ed2e1-dcf2-4bee-bb00-237eee35d2be">
+                <propertyInstance
+                  Id="9e9e2ce3-57fa-4629-a2fe-1265234f1c35"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ab419db9-f277-4e93-8d00-b8a1dffc33ba">
+                <propertyInstance
+                  Id="c230c7b9-f2a7-48a9-a983-7cf4b0cc10e0"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e4f63760-027c-45dd-8942-0e7a748e3851">
+                <propertyInstance
+                  Id="265983d3-751c-41ee-8673-7b07e51710ea"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f55b4f14-71a2-4c50-b22c-9d7795b7a476">
+                <propertyInstance
+                  Id="7112b9cb-02fb-4eac-ac91-18d007354cae"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="b6110d54-4059-4681-899a-de163339ff1a"
+            name="timeActivityRepository"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="05b1efaf-12d6-4bd2-8aeb-6db10cd3e527"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DTimeActivityRepository Member%3DtimeActivityRepository"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5c8a4699-ba43-4e24-9afe-52ff225bd69b"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e4c8dd5b-e50b-413f-909d-494e516e6aab">
+                    <propertyInstance
+                      Id="671375eb-6241-4ca5-a327-37daf589eeba"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="17073ffc-385b-477d-94a2-cf023d8766cb">
+                    <propertyInstance
+                      Id="4e80df50-8b4f-45ce-b8c0-c1c9ee82bd55"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="50bd010f-7fa3-40ec-bf66-3e8f805ad233">
+                    <propertyInstance
+                      Id="3c977649-0f6e-469d-a853-94568e0b845c"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="458e28ec-50ea-4b94-a78d-e995a28a1e09">
+                    <propertyInstance
+                      Id="a4e0a13b-5a3e-44b6-ac5f-09527a297153"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8c67f8d0-25d4-49a6-82b0-bf89127dee24">
+                    <propertyInstance
+                      Id="e7a030ac-b63f-4805-afdd-dd860d15d05b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="dcc4e78c-efd4-495d-b85b-d15d653b29c1"
+                LastKnownName="Dictionary&lt;Int64‎, TimeActivitydto‎&gt;"
+                LastKnownLocation="Package20_1451.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="6efe96f9-a74c-4d2e-bcae-9c6f4ca80727"
+            name="timeController"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="452ed3f3-2151-45ef-8a42-6831b6291785"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DTimeActivityRepository Member%3DtimeController"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a9636b05-8ceb-4c00-ba97-5e907ca1c564"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6788d222-ddef-468b-bff1-49d1153dfaf1">
+                    <propertyInstance
+                      Id="d6741a09-0e4b-491e-9bb8-424188101edf"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5f79688f-acef-4bcb-a448-69f0799d8b98">
+                    <propertyInstance
+                      Id="47d3dae3-cd35-4065-986a-00d15470fe8e"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eb96552e-047b-412d-bb0f-cb7436efe481">
+                    <propertyInstance
+                      Id="5a8c5290-0152-4b9f-bdcf-90aff8d97d9b"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0d533555-052d-4722-9ee5-48621bbe3cca">
+                    <propertyInstance
+                      Id="08cfe57a-ba7a-489a-82cf-8feb6bb7d4e3"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b5a56a62-38d4-45a6-9ef8-f07de9dca36f">
+                    <propertyInstance
+                      Id="8497558b-eff1-471f-b4e0-b30db4bad5ed"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="ce0142f8-5271-476c-a43e-1ddc7d9de41f"
+                LastKnownName="Controller"
+                LastKnownLocation="Package4_1451.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="479fbd83-03f4-48b5-97e3-12a52fed7533"
+            name="TimeActivityRepository"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3ab7c8b6-2ece-4ce0-ae3e-0b149b81cc80"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DTimeActivityRepository Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8ca331d2-fd74-497c-a2d1-6e08f03d7945"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fc4a7ed9-91fd-46da-a091-46d17dcb4038">
+                    <propertyInstance
+                      Id="34736c6f-f223-4549-ba63-27127d1b15cd"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d4b80a7f-fd9d-40dc-aed3-6866213dc533">
+                    <propertyInstance
+                      Id="091ae73c-6047-4a4d-adf2-cc24f4bdae19"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9b7d5046-1f81-4c99-85f3-93a29e596c1b">
+                    <propertyInstance
+                      Id="4b778f1d-311f-4049-8aef-d399655366b6"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="10849157-221c-4c81-bf23-55f0e2ea39ee">
+                    <propertyInstance
+                      Id="94998bfe-08c7-4528-9c92-f0006b0e189e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="515ce3f9-f628-40c9-9945-8c2d0eeb8dd0">
+                    <propertyInstance
+                      Id="6af21498-1ef6-45df-81f9-124f3fb718ba"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0031cb2c-c2e6-4411-b15e-07b825c862a7">
+                    <propertyInstance
+                      Id="8fb9f715-3e10-4852-98b6-f81e2b4b419e"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="7308747a-0aa1-4a6c-bc82-0f657ca382c3"
+            name="Get"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="07a3c512-6345-44e7-a762-71cfb50fc2e5"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DTimeActivityRepository Member%3D(Name%3DGet OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt64)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3ee26247-15da-4202-b6c0-4d5498509941"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8a175c46-83ec-41bc-9d66-7f3e941e8f6f">
+                    <propertyInstance
+                      Id="834ad6a5-0391-41e0-baa9-d4d3548009ec"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9e01a91c-bbab-4fb9-b79e-9fff46ee429f">
+                    <propertyInstance
+                      Id="9f450b6f-9d5f-469a-bc12-b7d11cfc7d35"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0cb647b2-7560-4062-a8e8-e50e98256b7d">
+                    <propertyInstance
+                      Id="c7b8630c-b122-4f8c-b8ca-daedf8ad7972"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="33f263e4-ac82-4d8a-9085-925394ea3d51">
+                    <propertyInstance
+                      Id="55b9e143-878d-4f1b-9112-661c23282a78"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d215ae98-9413-4ff3-9449-8db08906f015">
+                    <propertyInstance
+                      Id="75cba8f9-15e6-441e-abb7-791fa303a47d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ef2581d6-bf20-4833-87ef-e24d2eaf67a1">
+                    <propertyInstance
+                      Id="683ccadd-4010-463b-b40f-2661ac16e717"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5825ff95-adda-45a1-9144-b785fde477d8"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="0dbe2202-2c8f-49da-8da6-2b94d7cf54cb"
+                      LastKnownName="TimeActivitydto"
+                      LastKnownLocation="Package8_1451.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c405e646-51af-45ec-9c6c-6884b6b26eeb"
+                  name="controller"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7a5dbfbc-f020-4911-abf7-56367155691d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DTimeActivityRepository Member%3D(Name%3DGet OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt64)]) ParameterIdentifier%3Dcontroller"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="c0ce4ba3-0891-4064-86c7-fdc657ed1aa4"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1451.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f9d89135-69b9-4cbc-ae8b-d245045af44b"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="c3699b38-242f-4690-bc51-2b90b3ad34b8"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DTimeActivityRepository Member%3D(Name%3DGet OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt64)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2f56854d-a03d-4d8b-9c35-2fb70eb5c42e"
+                      LastKnownName="Int64"
+                      LastKnownLocation="Package2_1451.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="62403d94-a07f-432f-9a05-ecf9caf46a10"
+            name="Save"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="6725bbfe-c13d-42ce-a760-9e0b0903302f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DTimeActivityRepository Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.DTO Type%3DTimeActivitydto)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="71db58e5-5fc6-4994-ac3f-2780bfbf2764"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4dacb53c-51ef-46c4-9518-ca6b2e092a10">
+                    <propertyInstance
+                      Id="450c8234-8c1f-4250-8ec5-29bfbda02b43"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="16a7b237-e247-419c-8a70-f0ca7bc06a35">
+                    <propertyInstance
+                      Id="baae5dc5-2a80-44b1-8a3a-19e636213712"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="71f73c4a-0fc8-4a78-99c9-771131331409">
+                    <propertyInstance
+                      Id="703bae3c-1fd5-4bb2-8e83-d5ea4de16c8c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ded7bfde-e136-4eb2-85a1-4c4b8ae14c32">
+                    <propertyInstance
+                      Id="8b1ecd3e-0c17-4dc5-8967-1c517c923f49"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bbfc3c6f-ae91-4ade-a2fa-c80cd62aff19">
+                    <propertyInstance
+                      Id="793408c7-4c6c-4895-b3e8-56b5cb094a70"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="037213ff-fef5-424c-9524-8c96fb7cd556">
+                    <propertyInstance
+                      Id="02f2c298-9a92-4626-a362-63d34e227be7"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a74419f2-0d27-49e7-96bf-ef210b641be5"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="0dbe2202-2c8f-49da-8da6-2b94d7cf54cb"
+                      LastKnownName="TimeActivitydto"
+                      LastKnownLocation="Package8_1451.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d461e50c-e9e1-42cc-a1de-f863e48b8615"
+                  name="controller"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f8eda8ab-02b1-4fa7-9a2d-005743f4f41c"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DTimeActivityRepository Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.DTO Type%3DTimeActivitydto)]) ParameterIdentifier%3Dcontroller"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="c0ce4ba3-0891-4064-86c7-fdc657ed1aa4"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1451.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="488f5691-c7ca-4fd0-9a37-ce3168b7f53e"
+                  name="timeActivity"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="99c4c243-f910-44ae-9de2-407be9334b1a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DTimeActivityRepository Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.DTO Type%3DTimeActivitydto)]) ParameterIdentifier%3DtimeActivity"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="0dbe2202-2c8f-49da-8da6-2b94d7cf54cb"
+                      LastKnownName="TimeActivitydto"
+                      LastKnownLocation="Package8_1451.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9975cb00-4d54-4547-a731-19231750da8f"
+            name="ReturnListItem"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="1c1c78b4-e2d8-47e7-8218-777bb238728a"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DTimeActivityRepository Member%3D(Name%3DReturnListItem OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.DTO Type%3DTimeActivitydto)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="636bd8a5-3315-49fe-b54b-a7f8b0e0fff2"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c430d4b9-1ae0-47a2-a590-5d882150c4aa">
+                    <propertyInstance
+                      Id="be6c98a4-f8ee-45ed-90ab-7470da85939c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="244a1e06-5d2c-4d78-b3b8-6ef65eb2cd89">
+                    <propertyInstance
+                      Id="d711641c-a5ac-4dd2-a9fc-fa40c19819eb"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="67a79fca-af74-4d51-af5b-ea679589c665">
+                    <propertyInstance
+                      Id="5be3c673-fbe9-479a-890b-ac7c42217b82"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="19d85093-6837-4f2a-8cb3-c045267b5c34">
+                    <propertyInstance
+                      Id="a5ed68b4-b4c3-47bd-b923-36e5fc39a305"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3dbe9e66-bccf-4526-a93d-f45cfc6731b8">
+                    <propertyInstance
+                      Id="806c22c9-6703-4212-b624-5d8100b0553b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="864aac3c-2cd1-40a2-b384-1a4995727e86">
+                    <propertyInstance
+                      Id="e8b06c3f-83f6-45b4-aca0-39e2fac05b84"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4a369b65-a203-4e3b-acd9-8184d3affc22"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="c0ce4ba3-0891-4064-86c7-fdc657ed1aa4"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1451.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="35bd4c51-1eaa-4245-aa75-3388ea4cd4fb"
+                  name="timeActivitydto"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f87b4e1f-654e-4153-9472-7cd5b8135867"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DTimeActivityRepository Member%3D(Name%3DReturnListItem OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.DTO Type%3DTimeActivitydto)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DtimeActivitydto"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="0dbe2202-2c8f-49da-8da6-2b94d7cf54cb"
+                      LastKnownName="TimeActivitydto"
+                      LastKnownLocation="Package8_1451.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="808ddc96-0150-465b-8364-1d23987bc655"
+                  name="caseString"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="42af780a-94ad-4c53-bf13-247d8996843d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DTimeActivityRepository Member%3D(Name%3DReturnListItem OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.DTO Type%3DTimeActivitydto)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DcaseString"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Timetracking-Modelling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9a5ff020-0f09-4605-9e28-d5e50abf71b7"
+            name="SavetoDb"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="47f2f918-e462-4598-8c50-f12dfef40ccf"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DTimeActivityRepository Member%3D(Name%3DSavetoDb OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.DTO Type%3DTimeActivitydto)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="043470e0-851d-4cdc-8501-d4286f6d1e2e"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="82b8cf81-5782-4ad3-b755-f1426e280139">
+                    <propertyInstance
+                      Id="94933071-fa8b-4677-bf5e-a089434a2a4a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cac13e62-6271-44ce-acb1-5afc42d70c1d">
+                    <propertyInstance
+                      Id="b8436fb3-15e1-459b-bb57-2cbefecba661"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ace83274-7419-4375-a473-2829551709fc">
+                    <propertyInstance
+                      Id="f07f9b54-846e-4b20-953a-abcefa85fdbe"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f594d1c1-2cc4-4a87-be48-1cb6b6a9747d">
+                    <propertyInstance
+                      Id="5c0423cd-e6fd-476d-8f30-e9b3cebf5e71"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c0222ea5-a032-4dd8-a74c-d150aff4be0a">
+                    <propertyInstance
+                      Id="de1b31c7-2dd6-41d1-88fe-bf7fa6284dc4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dce92c13-9139-41d8-a5d5-9df1f4604728">
+                    <propertyInstance
+                      Id="784f86d0-5e68-454b-901d-de890204f1a1"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1aede0a8-e877-47bc-af43-6189b7f18081"
+                  name="conString"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="723fb354-6a5c-4f82-a7c0-aee5310958e8"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DTimeActivityRepository Member%3D(Name%3DSavetoDb OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.DTO Type%3DTimeActivitydto)]) ParameterIdentifier%3DconString"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Timetracking-Modelling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6b40489f-5a1e-4657-a9ac-91178d0b327f"
+                  name="timeActivity"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="e29d3a0b-140d-410f-974d-5775696ba35a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DTimeActivityRepository Member%3D(Name%3DSavetoDb OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.DTO Type%3DTimeActivitydto)]) ParameterIdentifier%3DtimeActivity"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="0dbe2202-2c8f-49da-8da6-2b94d7cf54cb"
+                      LastKnownName="TimeActivitydto"
+                      LastKnownLocation="Package8_1451.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="04769388-56ab-43bc-b825-f157044a2b01"
+        name="OAuthRepository"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="64bd6bbd-d00d-4d84-a35d-74761c8de8b3"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DOAuthRepository"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b9140e18-a0b7-4bd8-b7e2-af11d3ff8f1c"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0fbbe0fd-3a2e-48f1-87d3-4b3f259c6fcd">
+                <propertyInstance
+                  Id="c78e1053-5242-451e-b43e-c61a45b8dc19"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="776c460e-43b0-4855-9a2a-e280cc4b0c34">
+                <propertyInstance
+                  Id="86592ef5-34af-47e7-aba6-09a712b7414c"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1d371b6a-a59f-4326-b493-25c6ec2aa714">
+                <propertyInstance
+                  Id="22b7bd0f-08c5-4f41-ad68-2c9ed8429dd1"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c913ada4-59ca-4948-b00f-39df81f12e3c">
+                <propertyInstance
+                  Id="c06a8a60-2a02-4ec0-aedb-a57768e255be"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="887a1b3b-e079-4618-bd6c-233cdd0fe0bb">
+                <propertyInstance
+                  Id="31258762-d335-4415-abbf-e252f20fc01d"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="d518fff3-e192-42d2-89d6-06bf34852c3b"
+            name="oAuthRepo"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="bb8d6413-6c2f-4a20-9355-25e607b76621"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DOAuthRepository Member%3DoAuthRepo"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="685b11d8-7508-49f1-bedc-fbda0c36a2cf"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3ca9e6b0-789c-462e-8a56-f46135b3cf08">
+                    <propertyInstance
+                      Id="3f74b3fe-8883-470b-9d3c-32b10400e9b4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e49e53d1-e178-46c2-ab39-537b6cdf1104">
+                    <propertyInstance
+                      Id="c54df039-10f7-4f01-b970-7d6f187a954c"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6c802bc0-5762-4b73-afef-3aa83e956052">
+                    <propertyInstance
+                      Id="ba1d5f37-34b3-440e-a2dd-bf21c2eb15bc"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d0544368-d86c-4b57-84a0-8ff8ddb5bdff">
+                    <propertyInstance
+                      Id="925a250d-c288-4975-adfd-b966f21ba656"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7527f4da-d519-493c-86ce-e23be5a522d7">
+                    <propertyInstance
+                      Id="169e8044-67a4-4aa0-93dc-84b45fbae785"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="62b77bfe-94de-42a6-8af7-ad0223cb52a7"
+                LastKnownName="Dictionary&lt;String‎, OAuthorizationdto‎&gt;"
+                LastKnownLocation="Package20_1451.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="5aacfc56-1cb1-4e0a-a562-a4e97a076d38"
+            name="oAuthcontroller"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="ee5ec429-4165-49fb-bc7b-756cc9358f49"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DOAuthRepository Member%3DoAuthcontroller"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f72386bc-e5f7-4cd3-990e-c73cda0143c5"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="defa9b82-b1b5-4acb-9d89-e87b300d62b9">
+                    <propertyInstance
+                      Id="ed9f799a-94ba-4033-915d-3d4678cec868"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ce916bb9-2ca7-43e5-b061-c8921ab8aaa6">
+                    <propertyInstance
+                      Id="087e15f6-f931-4e0d-a14f-ca059bf2010c"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1c3e6462-8a5b-4589-b575-8b3ebeffd4fd">
+                    <propertyInstance
+                      Id="4efa98e8-04e9-406d-beaf-930a7e08ed9a"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2e6fefe7-7fd1-4005-a56a-13515b82093d">
+                    <propertyInstance
+                      Id="033a3991-a46f-4d97-8ca8-4aee03e85c1d"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a1f059ce-b7fa-474e-8343-4d8410f20b51">
+                    <propertyInstance
+                      Id="7e975b6f-5063-4052-90ab-0f223d64286f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="ce0142f8-5271-476c-a43e-1ddc7d9de41f"
+                LastKnownName="Controller"
+                LastKnownLocation="Package4_1451.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="f1b1c5be-498a-46e2-8be8-5e073d2e9a73"
+            name="OAuthRepository"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="65913ddb-414b-4c73-a72c-97448bb5b7d2"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DOAuthRepository Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="45f9e693-f3d2-4c37-8d9e-53769826b381"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="17a12f61-96ce-46b2-8eb7-c65392e07e18">
+                    <propertyInstance
+                      Id="7b9d089b-4513-4a2d-9b92-8ccf5a3b131e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="42b024cb-c734-4150-8e47-822a31539d66">
+                    <propertyInstance
+                      Id="76fc6736-88e7-4b76-998f-67467f850476"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1ce60eda-5a54-4413-8172-3d351b6f21da">
+                    <propertyInstance
+                      Id="adfb0f68-19f7-4113-8d7f-e9f78f65e308"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e2bd9b4d-2a61-4355-9664-bc40ff1b32bd">
+                    <propertyInstance
+                      Id="8baebec6-452a-42ca-929c-f9f89a486ae5"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0afae458-bd4c-4289-936e-b11ae8277b75">
+                    <propertyInstance
+                      Id="e72368d8-d43c-4f65-bd27-d9cdea26892b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="140d5a96-ddfc-4fdb-9c5b-c26f85ba3685">
+                    <propertyInstance
+                      Id="eaf24992-edd0-4c14-8dd2-89d21791645c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="4d83332e-ccb8-42ec-ba9d-26b894edfbde"
+            name="Get"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="76ee20cc-8a6f-4849-8820-dc742d1d9411"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DOAuthRepository Member%3D(Name%3DGet OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a906ac2c-819e-4ce7-8513-66cecab8d8e9"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6e9e8cbb-2cd6-4ff1-a3ca-c152ee3c1352">
+                    <propertyInstance
+                      Id="6be8ad5f-19d6-43c7-8287-6e6b1a58752a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b9f23e45-7ab7-4a7b-9731-b85635e53921">
+                    <propertyInstance
+                      Id="ef40a229-9269-4114-bfcb-9cc15bf96277"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f2a47287-2362-4956-8473-8065d65e9e12">
+                    <propertyInstance
+                      Id="639f8dc9-503e-4471-bc89-729c239d632d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="88799d01-d596-445d-a120-67e9302926e7">
+                    <propertyInstance
+                      Id="68ff67e7-2a98-470a-8624-be2db84f625d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f69cccca-26ac-45d7-901e-1cf4c5720f22">
+                    <propertyInstance
+                      Id="2095646f-b4b0-4d3e-9bf9-09b6c71d9a05"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9349cb20-65d1-4e3c-952d-9a2c511fc2f3">
+                    <propertyInstance
+                      Id="afa7633c-7293-444c-b5ee-e7e5160d2ff6"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8a6e62de-90cd-46db-b6fe-6671a509469d"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="e333b0c4-7a46-4a73-813b-af85147278d5"
+                      LastKnownName="OAuthorizationdto"
+                      LastKnownLocation="Package5_1451.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ad581901-8912-4d62-9e4a-dffe160b79e0"
+                  name="controller"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9a807fa5-8cad-4b05-b89c-fa179b9ecb5b"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DOAuthRepository Member%3D(Name%3DGet OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]) ParameterIdentifier%3Dcontroller"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="c0ce4ba3-0891-4064-86c7-fdc657ed1aa4"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1451.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="73e3c846-d05c-4bff-aee7-e12b9eeda0d1"
+            name="Save"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="54f5f113-cf65-4a6b-870f-c45544ffaecf"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DOAuthRepository Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models Type%3DOAuthorizationdto)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ba1344b7-bcfb-4c1f-90ec-15df2a564157"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2a268bd8-36b7-4343-995a-d7f189237e3c">
+                    <propertyInstance
+                      Id="3431918d-05b5-402b-8d46-d2979c87ae19"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ad42691d-f0ee-4ba8-81c7-ed2da5956dfe">
+                    <propertyInstance
+                      Id="419190e9-419f-4adc-b571-466b6e7a6311"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ae80e769-1bf8-4567-bb99-e44cdc3b8e73">
+                    <propertyInstance
+                      Id="3ea00ff8-2a1c-46fc-9ff4-81cd96c53fa8"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c8860cf6-357a-4d03-934a-4fee3a5f456e">
+                    <propertyInstance
+                      Id="c9cfa817-e1d9-4885-bf36-b86a8f9970aa"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3d37ba39-9e0d-403b-a548-0f1d21257f23">
+                    <propertyInstance
+                      Id="b8bc3ea2-b98e-4c7f-988b-9e9e0f95fe22"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="07f09a0c-273e-4ad4-bba8-8828337a253e">
+                    <propertyInstance
+                      Id="d38545fb-ac10-4138-a2e4-9261b81ddbc8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="21db6ac8-1b54-4610-ac5d-7d55a184406c"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="Timetracking-Modelling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6d5e3134-4f04-4b5a-a0da-5db8a3362daf"
+                  name="controller"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="610ae54c-300b-48fe-be39-03eeaf6d43d3"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DOAuthRepository Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models Type%3DOAuthorizationdto)]) ParameterIdentifier%3Dcontroller"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="c0ce4ba3-0891-4064-86c7-fdc657ed1aa4"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1451.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5d1ecf13-46e3-462d-b5b3-a4540dcbf613"
+                  name="oAuthorizationdto"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="110d7166-5685-48b2-bd44-ea2a4f97a26a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models.Repository Type%3DOAuthRepository Member%3D(Name%3DSave OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fsmadhavan%2FSource%2FRepos%2FSampleApp-TimeTracking_Invoicing-DotNet%2FTimeTracking%2Fbin%2FTimeTracking.dll Namespace%3DTimeTracking.Models Type%3DOAuthorizationdto)]) ParameterIdentifier%3DoAuthorizationdto"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="e333b0c4-7a46-4a73-813b-af85147278d5"
+                      LastKnownName="OAuthorizationdto"
+                      LastKnownLocation="Package5_1451.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
