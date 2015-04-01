@@ -54,12 +54,12 @@ namespace TimeTracking.Models.Service
             invoice.TxnDate = timeActivity.TxnDate;
             invoice.Line = new Line[]
             {
-                new Line{LineNum="1",AmountSpecified=true,Description=timeActivity.Description,Amount=25,DetailType=LineDetailTypeEnum.SalesItemLineDetail,DetailTypeSpecified=true,AnyIntuitObject = new SalesItemLineDetail{Qty=Convert.ToDecimal(3.5),TaxCodeRef=new ReferenceType{Value="NON"},ItemRef=new ReferenceType{Value=timeActivity.ItemRef.Value}}},
+                new Line{AmountSpecified=true,Description=timeActivity.Description,Amount=25,DetailType=LineDetailTypeEnum.SalesItemLineDetail,DetailTypeSpecified=true,AnyIntuitObject = new SalesItemLineDetail{Qty=Convert.ToDecimal(3.5),TaxCodeRef=new ReferenceType{Value="NON"},ItemRef=new ReferenceType{Value=timeActivity.ItemRef.Value}}},
                 new Line{Amount=25,AmountSpecified=true,DetailType=LineDetailTypeEnum.SubTotalLineDetail,DetailTypeSpecified=true,AnyIntuitObject = new SubTotalLineDetail{}}
             };
             invoice.TxnTaxDetail = new TxnTaxDetail { TotalTax = 0 };
             invoice.CustomerRef = new ReferenceType { Value = timeActivity.CustomerRef.Value };
-            invoice.SalesTermRef = new ReferenceType { Value = timeActivity.ItemRef.Value };
+            //invoice.SalesTermRef = new ReferenceType { Value = timeActivity.ItemRef.Value };
             invoice.DueDate = DateTime.Now;
             invoice.TotalAmt = 25;
             invoice.ApplyTaxAfterDiscount = false;

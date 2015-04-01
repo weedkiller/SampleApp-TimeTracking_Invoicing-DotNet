@@ -139,7 +139,7 @@ namespace TimeTracking.Models.Service
 
             timeActivity.HoursSpecified = true;
             timeActivity.Minutes = 0;
-
+            timeActivity.Description = timeActivitydto.Description;
             timeActivity.MinutesSpecified = true;
             timeActivity = dataService.Add<TimeActivity>(timeActivity);
             timeActivitydto.QboId = timeActivity.Id;
