@@ -44,7 +44,9 @@ In order to successfully run this sample app you need a few things:
 4. Open the project from Visual Studio 
 5. Populate the data in to tables from /Scripts folder
 
+## Sync Tables
 ![Alt text](images/Sync.png "Configurations")
+
 ## Configuration
 
 ![Alt text](images/Config.JPG "Configurations")
@@ -81,7 +83,7 @@ Once the sample app code is on your computer, you can do the following steps to 
 
 ## Project Structure
 
-Pending....
+![Alt text](images/Project.JPG "Project Structure")
 
 ## How To Guides
 
