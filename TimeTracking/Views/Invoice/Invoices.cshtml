@@ -98,8 +98,8 @@
                                         <td>@Model.InvoiceModel.InvoicePendingList[i].Item</td>
                                         <td>@Model.InvoiceModel.InvoicePendingList[i].Date</td>
                                         <td>@Model.InvoiceModel.InvoicePendingList[i].Hours</td>
-                                        @*<td>@Html.ActionLink("Generate", "Save", "Invoice", new { id = invoiceId, qboId = @Model.InvoiceModel.InvoicePendingList[i].QboId }, new { @class = "btn btn-default btn-sm ng-binding" })</td>*@
-                                        <td><a class="btn btn-default btn-sm ng-binding" href="#" onclick="GenerateInvoice(@invoiceId,@Model.InvoiceModel.InvoicePendingList[i].QboId);">Generate</a></td>
+                                        <td><button type="button" class="btn btn-default btn-sm" onclick="GenerateInvoice(@invoiceId,@Model.InvoiceModel.InvoicePendingList[i].QboId);"><span class="glyphicon glyphicon-send"> </span> Generate
+</button></td>
                                     </tr>
                                 }
 
