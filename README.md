@@ -31,7 +31,7 @@ Time Tracking and Invoicing DotNet Sample App
 
 In order to successfully run this sample app you need a few things:
 
-1. Visual Studio 2013
+1. ![Visual Studio 2013] (images/studio.jpg "Visual Studio Version")
 2. A [developer.intuit.com](http://developer.intuit.com) account
 3. An app on [developer.intuit.com](http://developer.intuit.com) and the associated app token, consumer key, and consumer secret.
 4. QuickBooks .NET SDK (already included in the project folder) 
