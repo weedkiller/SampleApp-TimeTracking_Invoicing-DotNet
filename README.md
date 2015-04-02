@@ -44,9 +44,12 @@ In order to successfully run this sample app you need a few things:
 4. Open the project from Visual Studio 
 5. Populate the data in to tables from /Scripts folder
 
-Screenshots
+## Sync Tables
+![Alt text](images/Sync.png "Configurations")
 
-[Config](images/Config.jpg)
+## Configuration
+
+![Alt text](images/Config.JPG "Configurations")
 
 ## Running the code
 
@@ -67,21 +70,20 @@ Once the sample app code is on your computer, you can do the following steps to 
   <li>customersâ€”so time can be recorded as billable to a specific customer, </li>
   <li>itemsâ€”the list of billable services.</li>
 </ul>
-<p align="center"><img src="https://github.com/IntuitDeveloper/SampleApp-TimeTracking_Invoicing-Java/wiki/images/timetrackingstep1b.png" alt="Sync Entities" height="168" width="250"></p>
 </li>
 
 <li>Create and push approved time activity objects to QuickBooks Online company for payroll and billing purposes.
-	<p align="center"><img src="https://github.com/IntuitDeveloper/SampleApp-TimeTracking_Invoicing-Java/wiki/images/timetrackingstep2.png" alt="Sync Entities" height="243" width="250"></p>
+<p align="center"><img src="https://github.com/IntuitDeveloper/SampleApp-TimeTracking_Invoicing-DotNet/blob/Timetracking-V1/images/Time.JPG" alt="Sync Entities" height="168" width="250"></p>
 </li>
 
 <li>Create and push invoice objects to QuickBooks Online company for billing purposes.
-<p align="center"><img src="https://github.com/IntuitDeveloper/SampleApp-TimeTracking_Invoicing-Java/wiki/images/timetrackingstep3.png" alt="Sync Entities" height="84" width="500"></p>
+<p align="center"><img src="https://github.com/IntuitDeveloper/SampleApp-TimeTracking_Invoicing-DotNet/blob/Timetracking-V1/images/Invoice.JPG" alt="Sync Entities" height="84" width="500"></p>
 </li>
 </ol>
 
 ## Project Structure
 
-Pending....
+![Alt text](images/Project.JPG "Project Structure")
 
 ## How To Guides
 
