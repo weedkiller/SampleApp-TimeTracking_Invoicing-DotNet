@@ -64,16 +64,17 @@ Once the sample app code is on your computer, you can do the following steps to 
 <p align="center"><img src="https://github.com/IntuitDeveloper/SampleApp-TimeTracking_Invoicing-Java/wiki/images/timetrackingstep1a.png" alt="Connect to Quickbooks" height="250" width="250"/></p>
 </li>
 
-<li>Setupâ€”sync the following from the local database to the QuickBooks Online company.
+<li>Setup—sync the following from the local database to the QuickBooks Online company.
 <ul>
-  <li>employeesâ€”so time can be recorded against a specific service,</li>
-  <li>customersâ€”so time can be recorded as billable to a specific customer, </li>
-  <li>itemsâ€”the list of billable services.</li>
+  <li>employees—so time can be recorded against a specific service,</li>
+  <li>customers—so time can be recorded as billable to a specific customer, </li>
+  <li>items—the list of billable services.</li>
 </ul>
+<p align="center"><img src="https://github.com/IntuitDeveloper/SampleApp-TimeTracking_Invoicing-Java/wiki/images/timetrackingstep1b.png" alt="Sync Entities" height="168" width="250"></p>
 </li>
 
 <li>Create and push approved time activity objects to QuickBooks Online company for payroll and billing purposes.
-<p align="center"><img src="https://github.com/IntuitDeveloper/SampleApp-TimeTracking_Invoicing-DotNet/blob/Timetracking-V1/images/Time.JPG" alt="Sync Entities" height="168" width="250"></p>
+	<p align="center"><img src="https://github.com/IntuitDeveloper/SampleApp-TimeTracking_Invoicing-DotNet/blob/Timetracking-V1/images/Time.JPG" alt="Sync Entities" height="243" width="250"></p>
 </li>
 
 <li>Create and push invoice objects to QuickBooks Online company for billing purposes.
@@ -113,30 +114,3 @@ Your feed back is appreciated and it will motivate us to improve the app. Please
  V2 - Introduction of Angulars/Knock-out JS with MVC 5
  
  V3 - Introduction of Self Host WEB API with Angular/Knock-out JS and MVC 5
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
