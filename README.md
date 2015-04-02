@@ -83,7 +83,7 @@ Once the sample app code is on your computer, you can do the following steps to 
 
 ## Project Structure
 
-![Alt text](images/Project.JPG "Project Structure")
+![Alt text](images/Project.jpg "Project Structure")
 
 ## How To Guides
 
