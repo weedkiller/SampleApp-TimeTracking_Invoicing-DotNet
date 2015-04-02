@@ -3,6 +3,12 @@
 
     ViewBag.Title = "Invoice";
     long invoiceId = Model.InvoiceModel.Id;
+    long qboId = Model.InvoiceModel.InvoiceQboId;
+    if (qboId <= 0)
+    {
+        qboId = 0;
+    }
+   
 }
 @Scripts.Render("~/Scripts/jquery-1.10.2.min.js")
 <script type="text/javascript">
@@ -14,6 +20,7 @@
             data: { id: id, qboId: qboId },
             success: function (data) {
                 debugger;
+                
                 window.location.href = "/Invoice/View/" + data.Id;
             }
         });
@@ -24,6 +31,14 @@
     $(document).ready(function () {
         
         debugger;
+        if (@qboId>0) {
+            debugger;
+            $("#showAlert").show();
+        }
+        else {
+            $("#showAlert").hide();
+        }
+       
         $("#viewItem").click(function () {
             var entityid = @Model.InvoiceModel.CompanyId;
             if (@Model.InvoiceModel.InvoiceQboId>0) {
@@ -40,7 +55,7 @@
     };
 </script>
 
-<div ng-class="row">
+<div ng-class="row" id="showAlert">
     <div class="alert alert-success alert-dismissible" role="alert" ng-show="showAlert">
         <button type="button" class="close" data-dismiss="alert">
             <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
