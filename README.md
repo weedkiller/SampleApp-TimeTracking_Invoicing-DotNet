@@ -89,16 +89,31 @@ Once the sample app code is on your computer, you can do the following steps to 
 
 The following How-To guides related to implementation tasks necessary to produce a production-ready Intuit Partner Platform app (e.g. OAuth, OpenId, etc) are available:
 
-* [OAuth How To Guide (DotNet)](Pending)
-
+* [OAuth How To Guide](https://developer.intuit.com/blog/2015/02/19/oauth-for-intuit-demystified)
 
 ## Watch & Learn
 
-Need to be implemented.
+[Wait for this space]
 
 ## More Information
 
-More detailed information for this sample app can be found here [http://developer.intuit.com/v2/sampleapps/details/timetracking_details](http://developer.intuit.com/v2/sampleapps/details/timetracking_details).
+More detailed information can be found here 
+[Intuit Developer](https://github.com/IntuitDeveloper).
+
+## Feedback
+
+Your feed back is appreciated and it will motivate us to improve the app. Please send your valuable feedback to sumod_madhavan@intuit.com. I will try my best to incorporate the valid requests.
+
+## Current Release
+
+ V1 - Basic MVC 5 with Razor engine/AJAX.
+
+## Upcoming Release
+
+ V2 - Introduction of Angulars/Knock-out JS with MVC 5
+ 
+ V3 - Introduction of Self Host WEB API with Angular/Knock-out JS and MVC 5
+
 
 
 
