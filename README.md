@@ -39,9 +39,14 @@ In order to successfully run this sample app you need a few things:
 ## First Use Instructions
 
 1. Clone the GitHub repo to your computer
-2. Fill in your Configuration file values ( consumer key, consumer secret, ServiceRequestLoggingLocation) by copying over from the keys section for your app.
-3. Open the project from Visual Studio 
-4. Populate the data in to tables from /Scripts folder
+2. Fill in your Configuration file values ( consumer key, consumer secret) by copying over from the keys section for your app.
+3. Enable logging in the config file by updating the path.
+4. Open the project from Visual Studio 
+5. Populate the data in to tables from /Scripts folder
+
+Screenshots
+
+[Config](images/Config.jpg)
 
 ## Running the code
 
