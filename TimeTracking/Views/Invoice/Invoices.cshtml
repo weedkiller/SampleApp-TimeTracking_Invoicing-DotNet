@@ -19,33 +19,30 @@
             type: 'POST',
             data: { id: id, qboId: qboId },
             success: function (data) {
-                debugger;
+                
                 
                 window.location.href = "/Invoice/View/" + data.Id;
             }
         });
+    }
+    function ViewQuickBooks(entityid,qboid)
+    {
+        
+        OpenInQbo(getSingleEntityUrl("invoice",entityid,qboid));
     }
     function OpenInQbo(url) {
         window.open(url, "popupWindow", "width=600,height=600,scrollbars=yes");
     }
     $(document).ready(function () {
         
-        debugger;
+        
         if (@qboId>0) {
-            debugger;
+            
             $("#showAlert").show();
         }
         else {
             $("#showAlert").hide();
         }
-       
-        $("#viewItem").click(function () {
-            var entityid = @Model.InvoiceModel.CompanyId;
-            if (@Model.InvoiceModel.InvoiceQboId>0) {
-                var qboid = @Model.InvoiceModel.InvoiceQboId;
-            }
-            OpenInQbo(getSingleEntityUrl("invoice",entityid,qboid));
-        });
     });
     var getQboDeepLinkURLRoot = function () {
         return "https://" + "@Model.SyncObjectsModel.DeepLink" + "/login?";
@@ -137,19 +134,19 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @for (int i = 0; i < @Model.InvoiceModel.InvoiceCreated.Count; i++)
+                                @foreach (var item in @Model.InvoiceModel.InvoiceCreated)
                                 {
-                                    <tr >
-                                        <td>@Model.InvoiceModel.InvoiceCreated[i].Employee</td>
-                                        <td>@Model.InvoiceModel.InvoiceCreated[i].Item</td>
-                                        <td>@Model.InvoiceModel.InvoiceCreated[i].Date</td>
-                                        <td>@Model.InvoiceModel.InvoiceCreated[i].Hours</td>
+                                    <tr>
+                                        <td>@item.Employee</td>
+                                        <td>@item.Item</td>
+                                        <td>@item.Date</td>
+                                        <td>@item.Hours</td>
                                         <td>
                                             <button type="button" class="btn btn-default btn-xs" style="margin-top: 10px"
-                                                    id="viewItem">
+                                                    onclick="ViewQuickBooks(@Model.InvoiceModel.CompanyId,@item.QboId);">
                                                 <span class="glyphicon glyphicon-eye-open"></span> View in QuickBooks
                                             </button>
-                                            
+
                                         </td>
                                     </tr>
                                 }

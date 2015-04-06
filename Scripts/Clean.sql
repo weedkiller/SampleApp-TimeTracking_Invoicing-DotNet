@@ -28,5 +28,7 @@ Go
 Alter Table Employee Drop Column ID
 Go
 Exec sp_rename 'Employee.Id_new', 'ID', 'Column'
+
 --Insert temporary data for testing.
 
+select * from TimeActivity where Invoice_QboId is not null

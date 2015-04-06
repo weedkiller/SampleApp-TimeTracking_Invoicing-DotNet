@@ -13,7 +13,7 @@
     var controlId = "";
     $(document).ready(function () {
         
-        debugger;
+        
         var emp = $("#TimeActivityModel_Employee option:selected").val();
         var cust = $("#TimeActivityModel_Customer option:selected").val();
         var item = $("#TimeActivityModel_Item option:selected").val();
@@ -55,7 +55,7 @@
                 type: 'POST',
                 data: { id: controlId, empSelect: emp, cusSelect: cust, itemSelect:item, description: $("#description").val() },
                 success: function(data){
-                    debugger;
+                    
                     LoadResult(data);
                 }
             });
@@ -67,7 +67,7 @@
         });
         function LoadResult(data)
         {
-            debugger;
+            
             var result = data;
             controlId = result.ControlId;
             timeIdentifierScript = controlId;

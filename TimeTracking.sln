@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTracking", "TimeTrackin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTracking.Tests", "TimeTracking.Tests\TimeTracking.Tests.csproj", "{A6FF1D45-BC17-4FC9-8AFA-1B8BC29428E0}"
 EndProject
-Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Timetracking-Modelling", "Timetracking-Modelling\Timetracking-Modelling.modelproj", "{F3A6B467-8CA1-4158-BE3A-AB27F780A2A1}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{A6FF1D45-BC17-4FC9-8AFA-1B8BC29428E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6FF1D45-BC17-4FC9-8AFA-1B8BC29428E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6FF1D45-BC17-4FC9-8AFA-1B8BC29428E0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F3A6B467-8CA1-4158-BE3A-AB27F780A2A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F3A6B467-8CA1-4158-BE3A-AB27F780A2A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F3A6B467-8CA1-4158-BE3A-AB27F780A2A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F3A6B467-8CA1-4158-BE3A-AB27F780A2A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -22,7 +22,15 @@ namespace TimeTracking.Models.Repository
             syncController = controller as System.Web.Mvc.Controller;
             Dictionary<Int64, Syncdto> syncRepo = syncController.TempData["Sync"] as Dictionary<Int64, Syncdto>;
             syncController.TempData.Keep();
-            return syncRepo[id];
+            if (syncRepo.ContainsKey(id))
+            {
+                return syncRepo[id];
+            }
+            else
+            {
+
+                return syncRepo[syncRepo.First().Key];
+            }
         }
         /// <summary>
         /// 

@@ -198,5 +198,39 @@ namespace TimeTracking.Models.Service
             invoicedto.InvoiceListLength = invoiceCreatedList.Count;
             return invoicedto;
         }
+
+        internal Invoicedto LoadInvoiced(Invoicedto invoicedto)
+        {
+            List<InvoiceCreated> invoiceCreatedList = new List<InvoiceCreated>();
+            using (SqlConnection sqlConnection = new SqlConnection(invoicedto.ConnectionString))
+            {
+                string oString = string.Format("select * from TimeActivity where RealmId='{0}' and Invoice_QboId is not null", invoicedto.CompanyId);
+                SqlCommand oCmd = new SqlCommand(oString, sqlConnection);
+                sqlConnection.Open();
+                using (SqlDataReader oReader = oCmd.ExecuteReader())
+                {
+                    while (oReader.Read())
+                    {
+                        InvoiceCreated nvoiceCreated = new InvoiceCreated();
+                        nvoiceCreated.Employee = oReader["Employee"].ToString();
+                        nvoiceCreated.Customer = oReader["Customer"].ToString();
+                        nvoiceCreated.Item = oReader["Item"].ToString();
+                        nvoiceCreated.Date = Convert.ToDateTime(oReader["Date"].ToString()).ToShortDateString();
+                        nvoiceCreated.Hours = oReader["Hours"].ToString();
+                        nvoiceCreated.QboId = oReader["Invoice_QboId"].ToString();
+                        invoiceCreatedList.Add(nvoiceCreated);
+                    }
+                    sqlConnection.Close();
+                }
+            }
+            if (invoicedto.InvoiceCreated == null)
+            {
+                invoicedto.InvoiceCreated = new List<InvoiceCreated>();
+            }
+            invoicedto.InvoiceStatus = "Invoiced";
+            invoicedto.InvoiceListLength = invoiceCreatedList.Count;
+            invoicedto.InvoiceCreated = invoiceCreatedList;
+            return invoicedto;
+        }
     }
 }

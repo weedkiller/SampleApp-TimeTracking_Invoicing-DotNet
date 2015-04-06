@@ -34,12 +34,17 @@ namespace TimeTracking.Controllers
             invoicedto.TimeActivityDto = timeActivitydto;
             invoiceService = new InvoiceService(invoicedto);
             invoicedto = invoiceService.LoadPending(invoicedto);
+            invoicedto = invoiceService.LoadInvoiced(invoicedto);
             invoiceRepository = new InvoiceRepository();
             invoicedto = invoiceRepository.Save(this, invoicedto);
             multiplemodels = new Multiplemodels();
             multiplemodels.TimeActivityModel = timeActivitydto;
             multiplemodels.InvoiceModel = invoicedto;
             multiplemodels.SyncObjectsModel = invoicedto.TimeActivityDto.Syncdto;
+            multiplemodels.IsConnected = timeActivitydto.oAuthTokens.IsConnected;
+            multiplemodels.IsReadyTimeentry = true;
+            multiplemodels.IsReadytoInvoice = true;
+            multiplemodels.IsReadySync = false;
             return View("Invoices", multiplemodels);
         }
         /// <summary>
@@ -56,7 +61,7 @@ namespace TimeTracking.Controllers
             invoiceService = new InvoiceService(invoicedto);
             invoicedto = invoiceService.GenerateInvoice(invoicedto);
             invoicedto = invoiceService.UpdateDatabase(invoicedto);
-            invoicedto = invoiceService.FillCreatedInvoice(invoicedto);
+            //invoicedto = invoiceService.FillCreatedInvoice(invoicedto);
             invoiceRepository = new InvoiceRepository();
             invoicedto = invoiceRepository.Save(this, invoicedto);
             object data = new
@@ -75,10 +80,14 @@ namespace TimeTracking.Controllers
             Invoicedto invoicedto = id > 0 ? new InvoiceRepository().Get(this, id) : new Invoicedto();
             invoiceService = new InvoiceService(invoicedto);
             invoicedto = invoiceService.LoadPending(invoicedto);
+            invoicedto = invoiceService.LoadInvoiced(invoicedto);
             multiplemodels = new Multiplemodels();
             multiplemodels.TimeActivityModel = invoicedto.TimeActivityDto;
             multiplemodels.InvoiceModel = invoicedto;
             multiplemodels.SyncObjectsModel = invoicedto.TimeActivityDto.Syncdto;
+            multiplemodels.IsReadySync = multiplemodels.SyncObjectsModel.IsEmployeeSync | multiplemodels.SyncObjectsModel.IsCustomerSync | multiplemodels.SyncObjectsModel.IsServiceItemSync;
+            multiplemodels.IsReadyTimeentry = true;
+            multiplemodels.IsReadytoInvoice = false;
             return View("Invoices", multiplemodels);
         }
     }

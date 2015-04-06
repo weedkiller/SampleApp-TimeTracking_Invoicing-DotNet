@@ -24,10 +24,13 @@ namespace TimeTracking.Controllers
             multiplemodels.SyncObjectsModel = new Syncdto();
             multiplemodels.OAuthorizationModel = new OAuthorizationdto();
             multiplemodels.TimeActivityModel = new TimeActivitydto();
+            multiplemodels.IsReadySync = false;
             var oAuthModel = new OAuthService(multiplemodels.OAuthorizationModel).IsTokenAvailable(this);
             if (oAuthModel.IsConnected)
             {
+                multiplemodels.IsReadySync = true;
                 multiplemodels.OAuthorizationModel = oAuthModel;
+                multiplemodels.IsConnected = oAuthModel.IsConnected;
                 var syncService = new SyncService(oAuthModel);
                 multiplemodels.SyncObjectsModel.OauthToken = oAuthModel;
                 multiplemodels.SyncObjectsModel = syncService.IsEmpSync(multiplemodels.SyncObjectsModel, syncService);
@@ -35,6 +38,8 @@ namespace TimeTracking.Controllers
                 multiplemodels.SyncObjectsModel = syncService.IsServiceItemSync(multiplemodels.SyncObjectsModel, syncService);
                 multiplemodels.SyncObjectsModel.CompanyId = oAuthModel.Realmid;
                 multiplemodels.SyncObjectsModel = syncRepo.Save(this, multiplemodels.SyncObjectsModel);
+                multiplemodels.IsReadyTimeentry = multiplemodels.SyncObjectsModel.IsEmployeeSync || multiplemodels.SyncObjectsModel.IsCustomerSync || multiplemodels.SyncObjectsModel.IsServiceItemSync;
+                multiplemodels.IsReadytoInvoice = false;
                 return View(multiplemodels);
             }
             else
@@ -75,6 +80,7 @@ namespace TimeTracking.Controllers
                 multiplemodels.OAuthorizationModel = new OAuthorizationdto();
                 multiplemodels.OAuthorizationModel.IsConnected = isConnected;
                 multiplemodels.TimeActivityModel = new TimeActivitydto();
+                multiplemodels.IsReadyTimeentry = true;
                 return View("Index", multiplemodels);
             }
             else

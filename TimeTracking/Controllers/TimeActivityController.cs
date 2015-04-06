@@ -43,6 +43,8 @@ namespace TimeTracking.Controllers
             multiplemodels = new Multiplemodels();
             multiplemodels.TimeActivityModel = timeActivity;
             multiplemodels.SyncObjectsModel = syncDetails;
+            multiplemodels.IsConnected = syncDetails.OauthToken.IsConnected;
+            multiplemodels.IsReadytoInvoice = true;
             return View("TimeActivity", multiplemodels);
         }
         /// <summary>

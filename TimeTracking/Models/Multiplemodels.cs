@@ -14,8 +14,10 @@ namespace TimeTracking.Models
         public OAuthorizationdto OAuthorizationModel { get; set; }
         public Syncdto SyncObjectsModel { get; set; }
         public TimeActivitydto TimeActivityModel { get; set; }
-        public bool IsTimeentry { get; set; }
-        public bool IsInvoice { get; set; }
+        public bool IsReadyTimeentry { get; set; }
+        public bool IsReadytoInvoice { get; set; }
+        public bool IsReadySync { get; set; }
+        public bool IsConnected { get; set; }
         public Invoicedto InvoiceModel { get; set; }
     }
 }

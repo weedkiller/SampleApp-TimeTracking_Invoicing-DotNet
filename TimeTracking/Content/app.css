@@ -13,7 +13,10 @@ body {
 .nav, .pagination, .carousel, .panel-title a {
     cursor: pointer;
 }
-
+.not-active {
+   pointer-events: none;
+   cursor: default;
+}
 .voffset  { margin-top: 2px; }
 .voffset1 { margin-top: 5px; }
 .voffset2 { margin-top: 10px; }
