@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * Author : Sumod Madhavan
+ * Date : 4/9/2015
+ * **/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,7 +11,7 @@ using System.Web.Mvc;
 namespace TimeTracking.Models.Repository
 {
     /// <summary>
-    /// 
+    /// Repository to save Sync specific objects
     /// </summary>
     public class SyncRepository
     {
@@ -17,6 +21,12 @@ namespace TimeTracking.Models.Repository
         {
             syncRepo = new Dictionary<Int64, Syncdto>();
         }
+        /// <summary>
+        /// Retrieve the object from dictionary
+        /// </summary>
+        /// <param name="controller"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
         internal Syncdto Get(object controller, Int64 id)
         {
             syncController = controller as System.Web.Mvc.Controller;
@@ -33,7 +43,7 @@ namespace TimeTracking.Models.Repository
             }
         }
         /// <summary>
-        /// 
+        /// Save the object to dictionary
         /// </summary>
         /// <param name="controller"></param>
         /// <param name="syncObjects"></param>

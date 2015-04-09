@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * Author : Sumod Madhavan
+ * Date : 4/9/2015
+ * **/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -19,9 +23,9 @@ namespace TimeTracking.Controllers
         
         // GET: Invoice
         /// <summary>
-        /// 
+        /// Load the Invoice with Pending/Created state.
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">repo identifier</param>
         /// <returns></returns>
         [HttpGet]
         public ActionResult Load(Int64 id)
@@ -48,7 +52,7 @@ namespace TimeTracking.Controllers
             return View("Invoices", multiplemodels);
         }
         /// <summary>
-        /// 
+        /// Save the invoice to the qbo
         /// </summary>
         /// <param name="id"></param>
         /// <param name="qboId"></param>
@@ -71,7 +75,7 @@ namespace TimeTracking.Controllers
             return Json(data, JsonRequestBehavior.AllowGet);
         }
         /// <summary>
-        /// 
+        /// render the view post invoice generation.
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>

@@ -1,4 +1,8 @@
-﻿using Intuit.Ipp.Core;
+﻿/*
+ * Author : Sumod Madhavan
+ * Date : 4/9/2015
+ * **/
+using Intuit.Ipp.Core;
 using Intuit.Ipp.Data;
 using Intuit.Ipp.DataService;
 using Intuit.Ipp.QueryFilter;
@@ -13,7 +17,7 @@ using TimeTracking.Models.Repository;
 namespace TimeTracking.Models
 {
     /// <summary>
-    /// 
+    /// This class is responsible for sync events
     /// </summary>
     public class SyncService
     {
@@ -22,7 +26,7 @@ namespace TimeTracking.Models
         Syncdto syncObjects = null;
         private SyncRepository syncRepository = null;
         /// <summary>
-        /// 
+        /// Fire up the repos and service context in the constructor.
         /// </summary>
         /// <param name="oAuthorization"></param>
         public SyncService(OAuthorizationdto oAuthorization)
@@ -38,7 +42,7 @@ namespace TimeTracking.Models
         //
         #region <<DB>>
         /// <summary>
-        /// 
+        /// return the sync objects from repo.
         /// </summary>
         /// <param name="controller"></param>
         /// <param name="id"></param>
@@ -48,7 +52,7 @@ namespace TimeTracking.Models
             return syncRepository.Get(controller, id);
         }
         /// <summary>
-        /// 
+        /// return the employee details from sql
         /// </summary>
         /// <param name="syncObjects"></param>
         /// <returns></returns>
@@ -81,7 +85,7 @@ namespace TimeTracking.Models
             return syncObjects;
         }
         /// <summary>
-        /// 
+        /// return the customer details from sql
         /// </summary>
         /// <param name="syncObjects"></param>
         /// <returns></returns>
@@ -112,7 +116,7 @@ namespace TimeTracking.Models
             return syncObjects;
         }
         /// <summary>
-        /// 
+        /// return the item details from sql
         /// </summary>
         /// <param name="syncObjects"></param>
         /// <returns></returns>
@@ -143,6 +147,12 @@ namespace TimeTracking.Models
         #endregion
         //
         #region <<Sync>>
+        /// <summary>
+        /// Sync the employees in to QBO.
+        /// </summary>
+        /// <param name="controller"></param>
+        /// <param name="syncObjects"></param>
+        /// <returns></returns>
         public Syncdto SyncEmployees(object controller, Syncdto syncObjects)
         {
             for (int i = 0; i < syncObjects.EmployeeList.Count; i++)
@@ -165,7 +175,7 @@ namespace TimeTracking.Models
             return syncObjects;
         }
         /// <summary>
-        /// 
+        /// Sync the customer in to QBO
         /// </summary>
         /// <param name="controller"></param>
         /// <param name="syncObjects"></param>
@@ -192,7 +202,7 @@ namespace TimeTracking.Models
             return syncObjects;
         }
         /// <summary>
-        /// 
+        /// Sync the items in to QBO.
         /// </summary>
         /// <param name="controller"></param>
         /// <param name="syncObjects"></param>
@@ -215,7 +225,7 @@ namespace TimeTracking.Models
             return syncObjects;
         }
         /// <summary>
-        /// 
+        /// Check for service item.
         /// </summary>
         /// <param name="syncObjects"></param>
         /// <param name="service"></param>
@@ -259,7 +269,7 @@ namespace TimeTracking.Models
             return itemDataInDb;
         }
         /// <summary>
-        /// 
+        /// check for customer
         /// </summary>
         /// <param name="syncObjects"></param>
         /// <param name="service"></param>
@@ -302,7 +312,7 @@ namespace TimeTracking.Models
             return custDataInDb;
         }
         /// <summary>
-        /// 
+        /// check for employees
         /// </summary>
         /// <param name="syncObjects"></param>
         /// <param name="service"></param>

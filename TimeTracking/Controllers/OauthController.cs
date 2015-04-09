@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * Author : Sumod Madhavan
+ * Date : 4/9/2015
+ * **/
+using System;
 using System.Configuration;
 using System.Web.Mvc;
 using DevDefined.OAuth.Consumer;
@@ -36,7 +40,9 @@ namespace TimeTracking.Controllers
             return Redirect(oAuthService.GrantUrl(this));
         }
         /// <summary>
-        /// 
+        /// OAuth response and retrieve the access token.
+        /// Save the data post encrypt.
+        /// Entityframework updated.
         /// </summary>
         /// <returns></returns>
         public ActionResult Response()
@@ -52,10 +58,12 @@ namespace TimeTracking.Controllers
                 oAuthorizationDB.datasource = Request.QueryString["dataSource"].ToString();
                 oAuthorizationdto.DataSource = oAuthorizationDB.datasource;
                 oAuthorizationdto = oAuthService.GetAccessTokenFromServer(this,oAuthorizationdto);
+                //encrypt the tokens
                 oAuthorizationDB.access_secret = Utility.Encrypt(oAuthorizationdto.AccessTokenSecret, oAuthorizationdto.SecurityKey);
                 oAuthorizationDB.access_token = Utility.Encrypt(oAuthorizationdto.AccessToken, oAuthorizationdto.SecurityKey);
                 using (var oAuthorizationDBContext = new OAuthdataContext("DBContext"))
                 {
+                    //store the encrypted tokens to DB.
                     oAuthorizationDBContext.Tokens.Add(oAuthorizationDB);
                     oAuthorizationDBContext.SaveChanges();
                 }

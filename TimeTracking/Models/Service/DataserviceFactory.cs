@@ -1,4 +1,8 @@
-﻿using Intuit.Ipp.Core;
+﻿/*
+ * Author : Sumod Madhavan
+ * Date : 4/9/2015
+ * **/
+using Intuit.Ipp.Core;
 using Intuit.Ipp.DataService;
 using Intuit.Ipp.Security;
 using System;
@@ -10,7 +14,8 @@ using System.Web;
 namespace TimeTracking.Models
 {
     /// <summary>
-    /// /
+    /// This class is responsible for instantiating the service context
+    /// for QBO.
     /// </summary>
     public class DataserviceFactory
     {
@@ -20,7 +25,7 @@ namespace TimeTracking.Models
         private ServiceContext serviceContext = null;
         public ServiceContext getServiceContext { get; set; }
         /// <summary>
-        /// 
+        /// allocate memory for service context objects
         /// </summary>
         /// <param name="oAuthorization"></param>
         public DataserviceFactory(OAuthorizationdto oAuthorization)
@@ -47,7 +52,7 @@ namespace TimeTracking.Models
             }
         }
         /// <summary>
-        /// 
+        /// return the current data service
         /// </summary>
         /// <returns></returns>
         public DataService getDataService()

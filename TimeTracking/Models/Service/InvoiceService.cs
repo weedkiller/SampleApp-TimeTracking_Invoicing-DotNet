@@ -1,4 +1,8 @@
-﻿using Intuit.Ipp.Data;
+﻿/*
+ * Author : Sumod Madhavan
+ * Date : 4/9/2015
+ * **/
+using Intuit.Ipp.Data;
 using Intuit.Ipp.DataService;
 using Intuit.Ipp.QueryFilter;
 using System;
@@ -13,7 +17,7 @@ using TimeTracking.Models.Repository;
 namespace TimeTracking.Models.Service
 {
     /// <summary>
-    /// 
+    /// The service help in generating invoice. 
     /// </summary>
     public class InvoiceService
     {
@@ -27,7 +31,9 @@ namespace TimeTracking.Models.Service
             invoiceRepository = new InvoiceRepository();
         }
         /// <summary>
-        /// 
+        /// this function generate invoice by receiving customer id
+        /// create instance of invoice object
+        /// push to QBO
         /// </summary>
         /// <param name="invoicedto"></param>
         /// <returns></returns>
@@ -42,7 +48,8 @@ namespace TimeTracking.Models.Service
             return invoicedto;
         }
         /// <summary>
-        /// 
+        /// This function is responsible for populating the
+        /// parameters required for generating a invoice.
         /// </summary>
         /// <param name="invoicedto"></param>
         /// <param name="timeActivity"></param>
@@ -59,7 +66,6 @@ namespace TimeTracking.Models.Service
             };
             invoice.TxnTaxDetail = new TxnTaxDetail { TotalTax = 0 };
             invoice.CustomerRef = new ReferenceType { Value = timeActivity.CustomerRef.Value };
-            //invoice.SalesTermRef = new ReferenceType { Value = timeActivity.ItemRef.Value };
             invoice.DueDate = DateTime.Now;
             invoice.TotalAmt = 25;
             invoice.ApplyTaxAfterDiscount = false;
@@ -82,7 +88,7 @@ namespace TimeTracking.Models.Service
             return invoice;
         }
         /// <summary>
-        /// 
+        /// Return the customer id from timeactivity.
         /// </summary>
         /// <param name="invoicedto"></param>
         /// <returns></returns>
@@ -94,7 +100,7 @@ namespace TimeTracking.Models.Service
             return resultFound;
         }
        /// <summary>
-       /// 
+       /// return the term from the term service
        /// </summary>
        /// <param name="type"></param>
        /// <param name="dueDays"></param>
@@ -105,7 +111,7 @@ namespace TimeTracking.Models.Service
             return terms.Where(x => x.Type == type && x.ItemsElementName.Contains(ItemsChoiceType.DueDays) && x.AnyIntuitObjects.Contains(dueDays)).First().Id;
         }
         /// <summary>
-        /// 
+        /// Populate the invoice left for pending.
         /// </summary>
         /// <param name="invoicedto"></param>
         /// <returns></returns>
@@ -143,7 +149,7 @@ namespace TimeTracking.Models.Service
             return invoicedto;
         }
         /// <summary>
-        /// 
+        /// Update the invoice to sql
         /// </summary>
         /// <param name="invoicedto"></param>
         /// <returns></returns>
@@ -165,8 +171,7 @@ namespace TimeTracking.Models.Service
             return invoicedto;
         }
         /// <summary>
-        /// 
-        /// </summary>
+        /// This method is not used but can be used to populate single invoice qbo id.
         /// <param name="invoicedto"></param>
         /// <returns></returns>
         internal Invoicedto FillCreatedInvoice(Invoicedto invoicedto)
@@ -198,7 +203,11 @@ namespace TimeTracking.Models.Service
             invoicedto.InvoiceListLength = invoiceCreatedList.Count;
             return invoicedto;
         }
-
+        /// <summary>
+        /// Pull all the invoiced records from DB.
+        /// </summary>
+        /// <param name="invoicedto"></param>
+        /// <returns></returns>
         internal Invoicedto LoadInvoiced(Invoicedto invoicedto)
         {
             List<InvoiceCreated> invoiceCreatedList = new List<InvoiceCreated>();

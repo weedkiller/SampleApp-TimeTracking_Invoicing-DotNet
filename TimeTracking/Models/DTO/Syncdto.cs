@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * Author : Sumod Madhavan
+ * Date : 4/9/2015
+ * **/
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -8,7 +12,7 @@ using Intuit.Ipp.QueryFilter;
 namespace TimeTracking.Models
 {
     /// <summary>
-    /// 
+    /// Data transferable object for Sync operation
     /// </summary>
     public class Syncdto
     {

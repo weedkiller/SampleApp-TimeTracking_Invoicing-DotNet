@@ -1,4 +1,8 @@
-﻿using Intuit.Ipp.Data;
+﻿/*
+ * Author : Sumod Madhavan
+ * Date : 4/9/2015
+ * **/
+using Intuit.Ipp.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,9 +26,9 @@ namespace TimeTracking.Controllers
         TimeActivityRepository timeActivityRepository = null;
         Multiplemodels multiplemodels = null;
         /// <summary>
-        /// 
+        /// Load the timeentry from the backend.
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">repo identifier</param>
         /// <returns></returns>
         [HttpGet]
         public ActionResult Load(Int64 id)
@@ -48,13 +52,13 @@ namespace TimeTracking.Controllers
             return View("TimeActivity", multiplemodels);
         }
         /// <summary>
-        /// 
+        /// Save the data collected to QBO
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="empSelect"></param>
-        /// <param name="cusSelect"></param>
-        /// <param name="itemSelect"></param>
-        /// <param name="description"></param>
+        /// <param name="id">repo identifier</param>
+        /// <param name="empSelect">employee selected</param>
+        /// <param name="cusSelect">customer selected</param>
+        /// <param name="itemSelect">Item selected</param>
+        /// <param name="description">description selected</param>
         /// <returns></returns>
         [HttpPost]
         public JsonResult Save(Int64 id, string empSelect, string cusSelect, string itemSelect, string description)
@@ -71,7 +75,7 @@ namespace TimeTracking.Controllers
             return GetJsonObject(timeActivity, timeActivityRepository); 
         }
         /// <summary>
-        /// Time and Space complexity to be updated
+        /// retueve the list item based on the entity type
         /// </summary>
         /// <param name="timeActivitydto"></param>
         /// <param name="caseString"></param>
@@ -90,7 +94,7 @@ namespace TimeTracking.Controllers
             return null;
         }
         /// <summary>
-        /// 
+        /// Retrieve the JSON object to be passed to client.
         /// </summary>
         /// <param name="timeActivity"></param>
         /// <param name="timeActivityRepository"></param>

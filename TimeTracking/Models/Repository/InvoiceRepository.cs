@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * Author : Sumod Madhavan
+ * Date : 4/9/2015
+ * **/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,7 +12,7 @@ using TimeTracking.Models.DTO;
 namespace TimeTracking.Models.Repository
 {
     /// <summary>
-    /// 
+    /// Repository to save Invoice specific objects
     /// </summary>
     public class InvoiceRepository
     {
@@ -19,7 +23,7 @@ namespace TimeTracking.Models.Repository
             invoiceRepository = new Dictionary<Int64, Invoicedto>();
         }
         /// <summary>
-        /// 
+        /// Save the object to dictionary
         /// </summary>
         /// <param name="controller"></param>
         /// <param name="invoicedto"></param>
@@ -35,7 +39,7 @@ namespace TimeTracking.Models.Repository
             return invoicedto;
         }
         /// <summary>
-        /// 
+        /// Retrieve the object from dictionary
         /// </summary>
         /// <param name="controller"></param>
         /// <param name="id"></param>

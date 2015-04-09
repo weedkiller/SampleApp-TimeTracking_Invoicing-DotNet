@@ -1,4 +1,8 @@
-﻿using DevDefined.OAuth.Consumer;
+﻿/*
+ * Author : Sumod Madhavan
+ * Date : 4/9/2015
+ * **/
+using DevDefined.OAuth.Consumer;
 using DevDefined.OAuth.Framework;
 using System;
 using System.Collections.Generic;
@@ -12,7 +16,7 @@ using System.Security.Cryptography;
 namespace TimeTracking.Models
 {
     /// <summary>
-    /// 
+    /// Data transferable object for OAuth
     /// </summary>
     public class OAuthorizationdto
     {

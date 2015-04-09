@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * Author : Sumod Madhavan
+ * Date : 4/9/2015
+ * **/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,7 +11,7 @@ using System.Web.Mvc;
 namespace TimeTracking.Models.Repository
 {
     /// <summary>
-    /// 
+    /// Repository to save OAuth specific objects
     /// </summary>
     public class OAuthRepository
     {
@@ -18,7 +22,7 @@ namespace TimeTracking.Models.Repository
             oAuthRepo = new Dictionary<string, OAuthorizationdto>();
         }
         /// <summary>
-        /// 
+        /// Save the object to dictionary
         /// </summary>
         /// <param name="controller"></param>
         /// <returns></returns>
@@ -32,7 +36,7 @@ namespace TimeTracking.Models.Repository
 
         }
         /// <summary>
-        /// 
+        /// Retrieve the object from dictionary
         /// </summary>
         /// <param name="controller"></param>
         /// <param name="oAuthorizationdto"></param>

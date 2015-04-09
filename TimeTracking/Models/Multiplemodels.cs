@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * Author : Sumod Madhavan
+ * Date : 4/9/2015
+ * **/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,7 +11,7 @@ using TimeTracking.Models.DTO;
 namespace TimeTracking.Models
 {
     /// <summary>
-    /// Need to optimize the algo. This is not a efficient approach
+    /// Need to optimize the algo. This is not a efficient approach.
     /// </summary>
     public class Multiplemodels
     {

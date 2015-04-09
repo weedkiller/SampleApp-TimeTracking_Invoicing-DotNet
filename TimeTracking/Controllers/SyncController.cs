@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * Author : Sumod Madhavan
+ * Date : 4/9/2015
+ * **/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,7 +17,11 @@ namespace TimeTracking.Controllers
         // GET: Sync
         SyncService syncService = null;
         Syncdto syncObjects = null;
-
+        /// <summary>
+        /// Sync the employee from backend to the QBO server
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ActionResult Employee(Int64 id)
         {
             OAuthorizationdto oAuthDetails = new OAuthService(new OAuthorizationdto()).GetAccessToken(this);
@@ -32,6 +40,11 @@ namespace TimeTracking.Controllers
             }
             return RedirectToAction("Sync", "Home", new { id = syncObjects.Id, isConnected = oAuthDetails.IsConnected });
         }
+        /// <summary>
+        /// Sync the Customer from backend to the QBO server
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ActionResult Customer(Int64 id)
         {
             OAuthorizationdto oAuthDetails = new OAuthService(new OAuthorizationdto()).GetAccessToken(this);
@@ -50,6 +63,11 @@ namespace TimeTracking.Controllers
             }
             return RedirectToAction("Sync", "Home", new { id = syncObjects.Id, isConnected = oAuthDetails.IsConnected });
         }
+        /// <summary>
+        /// Sync the item from backend to the QBO server
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ActionResult ServiceItem(Int64 id)
         {
             OAuthorizationdto oAuthDetails = new OAuthService(new OAuthorizationdto()).GetAccessToken(this);

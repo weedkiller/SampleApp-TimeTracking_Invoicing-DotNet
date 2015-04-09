@@ -1,4 +1,8 @@
-﻿using Intuit.Ipp.Data;
+﻿/*
+ * Author : Sumod Madhavan
+ * Date : 4/9/2015
+ * **/
+using Intuit.Ipp.Data;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -10,7 +14,7 @@ using TimeTracking.Models.DTO;
 namespace TimeTracking.Models.Repository
 {
     /// <summary>
-    /// 
+    ///  Repository to save Sync specific objects
     /// </summary>
     public class TimeActivityRepository
     {
@@ -21,7 +25,7 @@ namespace TimeTracking.Models.Repository
             timeActivityRepository = new Dictionary<Int64, TimeActivitydto>();
         }
         /// <summary>
-        /// 
+        /// Retrieve the object from dictionary
         /// </summary>
         /// <param name="controller"></param>
         /// <param name="id"></param>
@@ -35,7 +39,7 @@ namespace TimeTracking.Models.Repository
 
         }
         /// <summary>
-        /// 
+        /// Save the object to dictionary
         /// </summary>
         /// <param name="controller"></param>
         /// <param name="timeActivity"></param>
@@ -50,7 +54,12 @@ namespace TimeTracking.Models.Repository
             timeController.TempData.Keep();
             return timeActivity;
         }
-    
+        /// <summary>
+        /// Retrieve based on entity type.
+        /// </summary>
+        /// <param name="timeActivitydto"></param>
+        /// <param name="caseString"></param>
+        /// <returns></returns>
         private object ReturnListItem(TimeActivitydto timeActivitydto, string caseString)
         {
             switch (caseString)
@@ -64,6 +73,11 @@ namespace TimeTracking.Models.Repository
             }
             return null;
         }
+        /// <summary>
+        /// Save the objects to SQL
+        /// </summary>
+        /// <param name="conString"></param>
+        /// <param name="timeActivity"></param>
         internal void SavetoDb(string conString, TimeActivitydto timeActivity)
         {
             var employeeObj = ReturnListItem(timeActivity, "emp") as Employee;

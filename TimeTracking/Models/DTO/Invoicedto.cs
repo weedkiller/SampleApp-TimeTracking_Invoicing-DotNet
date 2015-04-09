@@ -1,4 +1,8 @@
-﻿using Intuit.Ipp.Data;
+﻿/*
+ * Author : Sumod Madhavan
+ * Date : 4/9/2015
+ * **/
+using Intuit.Ipp.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +11,7 @@ using System.Web;
 namespace TimeTracking.Models.DTO
 {
     /// <summary>
-    /// 
+    /// Data transferable object for Invoice
     /// </summary>
     public class Invoicedto
     {

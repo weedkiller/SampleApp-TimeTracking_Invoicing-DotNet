@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Author : Sumod Madhavan
+ * Date : 4/9/2015
+ * 
+ * 
+ * **/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,12 +16,15 @@ using TimeTracking.Models.Service;
 
 namespace TimeTracking.Controllers
 {
+    /// <summary>
+    /// Home controller is responsible for OAuth and Sync operation.
+    /// </summary>
     public class HomeController : BaseController
     {
         Multiplemodels multiplemodels = null;
         SyncRepository syncRepo = new SyncRepository();
         /// <summary>
-        /// 
+        /// Intitalise multiple models and kick start oauth/sync
         /// </summary>
         /// <returns></returns>
         public ActionResult Index()
@@ -47,18 +56,7 @@ namespace TimeTracking.Controllers
                 return View(multiplemodels);
             }
         }
-      /// <summary>
-      /// 
-      /// </summary>
-      /// <returns></returns>
-        public ActionResult Invoices()
-        {
-            multiplemodels = new Multiplemodels();
-            multiplemodels.OAuthorizationModel = new OAuthorizationdto();
-            multiplemodels.SyncObjectsModel = new Syncdto();
-            multiplemodels.TimeActivityModel = new TimeActivitydto();
-            return View(multiplemodels);
-        }
+      
         /// <summary>
         /// Changes made
         /// </summary>
@@ -71,6 +69,12 @@ namespace TimeTracking.Controllers
             multiplemodels.TimeActivityModel = new TimeActivitydto();
             return View(multiplemodels);
         }
+        /// <summary>
+        /// Render the sync operations.
+        /// </summary>
+        /// <param name="id">identifier for repo</param>
+        /// <param name="isConnected">oauth status</param>
+        /// <returns></returns>
         public ActionResult Sync(int id, bool isConnected)
         {
             multiplemodels = new Multiplemodels();

@@ -1,4 +1,8 @@
-﻿using DevDefined.OAuth.Framework;
+﻿/*
+ * Author : Sumod Madhavan
+ * Date : 4/9/2015
+ * **/
+using DevDefined.OAuth.Framework;
 using DevDefined.OAuth.Consumer;
 using System;
 using System.Collections.Generic;
@@ -9,14 +13,14 @@ using TimeTracking.Models.Repository;
 namespace TimeTracking.Models.Service
 {
     /// <summary>
-    /// 
+    /// This class is responsible for authenticating users.
     /// </summary>
     public class OAuthService
     {
         private OAuthorizationdto oAuthorizationdto = null;
         private OAuthRepository oAuthRepository = null;
         /// <summary>
-        /// 
+        /// Constructor instantiate the repository
         /// </summary>
         /// <param name="oAuthDto"></param>
         public OAuthService(OAuthorizationdto oAuthDto)
@@ -26,7 +30,8 @@ namespace TimeTracking.Models.Service
             oAuthRepository = new OAuthRepository();
         }
         /// <summary>
-        /// 
+        /// This method generates grant url and save the request 
+        /// in to the repository
         /// </summary>
         /// <param name="oauthController"></param>
         /// <returns></returns>
@@ -41,7 +46,7 @@ namespace TimeTracking.Models.Service
             return oAuthorizationdto.ResponseLink;
         }
         /// <summary>
-        /// 
+        /// This function checks whether the token is present.
         /// </summary>
         /// <param name="oauthController"></param>
         /// <returns></returns>
@@ -65,7 +70,8 @@ namespace TimeTracking.Models.Service
             return oAuthDetails;
         }
         /// <summary>
-        /// 
+        /// This function retrieve the request token from the
+        /// repository
         /// </summary>
         /// <param name="oauthController"></param>
         /// <returns></returns>
@@ -74,7 +80,7 @@ namespace TimeTracking.Models.Service
             return oAuthRepository.Get(oauthController);
         }
         /// <summary>
-        /// 
+        /// Retrieve the access token from the repository
         /// </summary>
         /// <param name="oauthController"></param>
         /// <returns></returns>
@@ -83,7 +89,7 @@ namespace TimeTracking.Models.Service
             return oAuthRepository.Get(oauthController);
         }
         /// <summary>
-        /// 
+        /// Retrieve the access token from the server.
         /// </summary>
         /// <param name="oauthController"></param>
         /// <param name="oAuthorizationdto"></param>

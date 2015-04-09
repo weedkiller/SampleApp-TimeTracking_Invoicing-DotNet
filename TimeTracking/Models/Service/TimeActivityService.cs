@@ -1,4 +1,8 @@
-﻿using Intuit.Ipp.Data;
+﻿/*
+ * Author : Sumod Madhavan
+ * Date : 4/9/2015
+ * **/
+using Intuit.Ipp.Data;
 using Intuit.Ipp.DataService;
 using System;
 using System.Collections.Generic;
@@ -12,7 +16,7 @@ using TimeTracking.Models.Repository;
 namespace TimeTracking.Models.Service
 {
     /// <summary>
-    /// 
+    /// This class is responsible for creating time activity
     /// </summary>
     public class TimeActivityService
     {
@@ -21,7 +25,7 @@ namespace TimeTracking.Models.Service
         DataService dataService = null;
         private TimeActivityRepository timeActivityRepository = null;
         /// <summary>
-        /// 
+        /// Fire up service context and repository
         /// </summary>
         /// <param name="timeActivity"></param>
         public TimeActivityService(TimeActivitydto timeActivity)
@@ -31,7 +35,7 @@ namespace TimeTracking.Models.Service
             timeActivityRepository = new TimeActivityRepository();
         }
         /// <summary>
-        /// 
+        /// Load the drop down list
         /// </summary>
         /// <param name="timeActivitydto"></param>
         /// <returns></returns>
@@ -68,7 +72,7 @@ namespace TimeTracking.Models.Service
             return timeActivitydto;
         }
         /// <summary>
-        /// 
+        /// return the time activity from sql
         /// </summary>
         /// <param name="timeActivitydto"></param>
         /// <returns></returns>
@@ -99,7 +103,7 @@ namespace TimeTracking.Models.Service
             return fillList;
         }
         /// <summary>
-        /// 
+        /// Push the time activity to QBO
         /// </summary>
         /// <param name="timeActivitydto"></param>
         /// <returns></returns>
@@ -133,6 +137,7 @@ namespace TimeTracking.Models.Service
             timeActivity.BillableStatusSpecified = true;
             timeActivity.Taxable = false;
             timeActivity.TaxableSpecified = true;
+            //Time
             timeActivity.HourlyRate = new Decimal(0.00);
             timeActivity.HourlyRateSpecified = true;
             timeActivity.Hours = 10;
@@ -149,7 +154,7 @@ namespace TimeTracking.Models.Service
             return timeActivitydto;
         }
         /// <summary>
-        /// 
+        /// return the selected value
         /// </summary>
         /// <param name="enumerable"></param>
         /// <param name="p"></param>
@@ -161,7 +166,7 @@ namespace TimeTracking.Models.Service
             return selected;
         }
         /// <summary>
-        /// 
+        /// this function is used to get rate.
         /// </summary>
         /// <param name="list"></param>
         /// <param name="id"></param>

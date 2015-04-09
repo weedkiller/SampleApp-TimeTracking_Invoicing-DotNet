@@ -1,4 +1,8 @@
-﻿using Intuit.Ipp.Data;
+﻿/*
+ * Author : Sumod Madhavan
+ * Date : 4/9/2015
+ * **/
+using Intuit.Ipp.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -9,7 +13,7 @@ using System.Web.Mvc;
 namespace TimeTracking.Models.DTO
 {
     /// <summary>
-    /// 
+    /// Data transferable object for Timeactivity
     /// </summary>
     public class TimeActivitydto
     {
