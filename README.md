@@ -46,12 +46,15 @@ In order to successfully run this sample app you need a few things:
 
 ## Sync Tables
 
-1. Connect to MDF file "tokens.mdf" using Server Explorer >> Connect to Database.![Alt text](images/mdf.jpg "MDF File")
+1. Refer Figure 2 and connect to database file "tokens.mdf" using server explorer >> connect to database.
 2. You should be in a position to view tables as displayed in Figure 1
 3. Execute sql script "InsertScript.sql" under Root\Script folder.
 
 ####Figure 1:
 ![Alt text](images/Sync.png "Configurations")
+
+####Figure 2:
+![Alt text](images/mdf.JPG "MDF File")
 
 ## Configuration
 
@@ -70,11 +73,11 @@ Once the sample app code is on your computer, you can do the following steps to 
 <p align="center"><img src="https://github.com/IntuitDeveloper/SampleApp-TimeTracking_Invoicing-Java/wiki/images/timetrackingstep1a.png" alt="Connect to Quickbooks" height="250" width="250"/></p>
 </li>
 
-<li>Setup—sync the following from the local database to the QuickBooks Online company.
+<li>Setupâ€”sync the following from the local database to the QuickBooks Online company.
 <ul>
-  <li>employees—so time can be recorded against a specific service,</li>
-  <li>customers—so time can be recorded as billable to a specific customer, </li>
-  <li>items—the list of billable services.</li>
+  <li>employeesâ€”so time can be recorded against a specific service,</li>
+  <li>customersâ€”so time can be recorded as billable to a specific customer, </li>
+  <li>itemsâ€”the list of billable services.</li>
 </ul>
 <p align="center"><img src="https://github.com/IntuitDeveloper/SampleApp-TimeTracking_Invoicing-Java/wiki/images/timetrackingstep1b.png" alt="Sync Entities" height="168" width="250"></p>
 </li>
