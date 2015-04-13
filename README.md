@@ -45,6 +45,12 @@ In order to successfully run this sample app you need a few things:
 5. Populate the data in to tables from /Scripts folder
 
 ## Sync Tables
+
+1. Connect to MDF file "tokens.mdf" using Server Explorer >> Connect to Database.![Alt text](images/mdf.jpg "MDF File")
+2. You should be in a position to view tables as displayed in Figure 1
+3. Execute sql script "InsertScript.sql" under Root\Script folder.
+
+####Figure 1:
 ![Alt text](images/Sync.png "Configurations")
 
 ## Configuration
@@ -64,11 +70,11 @@ Once the sample app code is on your computer, you can do the following steps to 
 <p align="center"><img src="https://github.com/IntuitDeveloper/SampleApp-TimeTracking_Invoicing-Java/wiki/images/timetrackingstep1a.png" alt="Connect to Quickbooks" height="250" width="250"/></p>
 </li>
 
-<li>Setupâ€”sync the following from the local database to the QuickBooks Online company.
+<li>Setup—sync the following from the local database to the QuickBooks Online company.
 <ul>
-  <li>employeesâ€”so time can be recorded against a specific service,</li>
-  <li>customersâ€”so time can be recorded as billable to a specific customer, </li>
-  <li>itemsâ€”the list of billable services.</li>
+  <li>employees—so time can be recorded against a specific service,</li>
+  <li>customers—so time can be recorded as billable to a specific customer, </li>
+  <li>items—the list of billable services.</li>
 </ul>
 <p align="center"><img src="https://github.com/IntuitDeveloper/SampleApp-TimeTracking_Invoicing-Java/wiki/images/timetrackingstep1b.png" alt="Sync Entities" height="168" width="250"></p>
 </li>
@@ -114,3 +120,4 @@ Your feed back is appreciated and it will motivate us to improve the app. Please
  V2 - Introduction of Angulars/Knock-out JS with MVC 5
  
  V3 - Introduction of Self Host WEB API with Angular/Knock-out JS and MVC 5
+
