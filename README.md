@@ -45,16 +45,7 @@ In order to successfully run this sample app you need a few things:
 5. Populate the data in to tables from /Scripts folder
 
 ## Sync Tables
-
-1. Refer Figure 2 and connect to database file "tokens.mdf" using server explorer >> connect to database.
-2. You should be in a position to view tables as displayed in Figure 1
-3. Execute sql script "InsertScript.sql" under Root\Script folder.
-
-####Figure 1:
 ![Alt text](images/Sync.png "Configurations")
-
-####Figure 2:
-![Alt text](images/mdf.JPG "MDF File")
 
 ## Configuration
 
@@ -123,4 +114,3 @@ Your feed back is appreciated and it will motivate us to improve the app. Please
  V2 - Introduction of Angulars/Knock-out JS with MVC 5
  
  V3 - Introduction of Self Host WEB API with Angular/Knock-out JS and MVC 5
-
