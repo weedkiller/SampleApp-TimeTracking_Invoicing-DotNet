@@ -39,13 +39,20 @@ namespace TimeTracking.Models.Service
         /// <returns></returns>
         internal Invoicedto GenerateInvoice(Invoicedto invoicedto)
         {
-            TimeActivity timeActivity = GetCustomerId(invoicedto);
-            Invoice invoice = PopulateInvoiceParam(invoicedto, timeActivity);
-            invoice = dataService.Add<Invoice>(invoice);
-            invoicedto.Invoice = invoice;
-            invoicedto.InvoiceQboId = Convert.ToInt64(invoice.Id);
-            invoicedto.AlertMessage = string.Format("Invoice successfully created and pushed to QBO (QBO ID = {0})", invoice.Id);
-            return invoicedto;
+            try
+            {
+                TimeActivity timeActivity = GetCustomerId(invoicedto);
+                Invoice invoice = PopulateInvoiceParam(invoicedto, timeActivity);
+                invoice = dataService.Add<Invoice>(invoice);
+                invoicedto.Invoice = invoice;
+                invoicedto.InvoiceQboId = Convert.ToInt64(invoice.Id);
+                invoicedto.AlertMessage = string.Format("Invoice successfully created and pushed to QBO (QBO ID = {0})", invoice.Id);
+                return invoicedto;
+            }
+            catch (Intuit.Ipp.Exception.FaultException ex)
+            {
+                throw ex;
+            }
         }
         /// <summary>
         /// This function is responsible for populating the
