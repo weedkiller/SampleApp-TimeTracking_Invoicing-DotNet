@@ -109,7 +109,9 @@ namespace TimeTracking.Models.Service
         /// <returns></returns>
         internal TimeActivitydto Save(TimeActivitydto timeActivitydto)
         {
-            TimeActivity timeActivity = new TimeActivity();
+            try
+            {
+                TimeActivity timeActivity = new TimeActivity();
             timeActivity.TxnDate = timeActivitydto.Date;
             SelectListItem selectedCustom = GetSelectedItem(timeActivitydto.Customer,timeActivitydto.CustomerSelected);
             timeActivity.CustomerRef = new ReferenceType
@@ -152,6 +154,19 @@ namespace TimeTracking.Models.Service
             timeActivitydto.TxnDate = timeActivity.TxnDate;
             timeActivitydto.AlertMessage = string.Format("Time Activity successfully created and pushed to QBO (QBO ID = {0})", timeActivity.Id);
             return timeActivitydto;
+            }
+            catch (Intuit.Ipp.Exception.FaultException ex)
+            {
+                throw ex;
+            }
+            catch (Intuit.Ipp.Exception.InvalidTokenException ex)
+            {
+                throw ex;
+            }
+            catch (Intuit.Ipp.Exception.SdkException ex)
+            {
+                throw ex;
+            }
         }
         /// <summary>
         /// return the selected value

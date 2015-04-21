@@ -37,13 +37,28 @@ namespace TimeTracking.Models.Service
         /// <returns></returns>
         public string GrantUrl(object oauthController)
         {
-            oAuthorizationdto.Token = oAuthorizationdto.OAuthSession.GetRequestToken();
-            oAuthorizationdto.ResponseLink = string.Format(oAuthorizationdto.ResponseFormat,
-                oAuthorizationdto.AuthorizeUrl,
-                oAuthorizationdto.Token.Token,
-                UriUtility.UrlEncode(oAuthorizationdto.CallBackUrl));
-            oAuthRepository.Save(oauthController, oAuthorizationdto);
-            return oAuthorizationdto.ResponseLink;
+            try
+            {
+                oAuthorizationdto.Token = oAuthorizationdto.OAuthSession.GetRequestToken();
+                oAuthorizationdto.ResponseLink = string.Format(oAuthorizationdto.ResponseFormat,
+                    oAuthorizationdto.AuthorizeUrl,
+                    oAuthorizationdto.Token.Token,
+                    UriUtility.UrlEncode(oAuthorizationdto.CallBackUrl));
+                oAuthRepository.Save(oauthController, oAuthorizationdto);
+                return oAuthorizationdto.ResponseLink;
+            }
+            catch (Intuit.Ipp.Exception.FaultException ex)
+            {
+                throw ex;
+            }
+            catch (Intuit.Ipp.Exception.InvalidTokenException ex)
+            {
+                throw ex;
+            }
+            catch (Intuit.Ipp.Exception.SdkException ex)
+            {
+                throw ex;
+            }
         }
         /// <summary>
         /// This function checks whether the token is present.
@@ -105,9 +120,16 @@ namespace TimeTracking.Models.Service
                 oAuthRepository.Save(oauthController, oAuthorizationdto);
                 return oAuthorizationdto;
             }
-            catch (Exception ex)
+            catch (Intuit.Ipp.Exception.FaultException ex)
             {
-                //Handle Exception if token is rejected or exchange of Request Token for Access Token failed.
+                throw ex;
+            }
+            catch (Intuit.Ipp.Exception.InvalidTokenException ex)
+            {
+                throw ex;
+            }
+            catch (Intuit.Ipp.Exception.SdkException ex)
+            {
                 throw ex;
             }
         }

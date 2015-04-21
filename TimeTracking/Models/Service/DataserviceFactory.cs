@@ -45,9 +45,8 @@ namespace TimeTracking.Models
             getServiceContext = serviceContext;
             dataService = new DataService(serviceContext);
             }
-            catch (Exception ex)
+            catch (Intuit.Ipp.Exception.FaultException ex)
             {
-                
                 throw ex;
             }
         }
