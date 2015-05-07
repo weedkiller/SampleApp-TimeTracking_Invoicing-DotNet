@@ -49,6 +49,7 @@ In order to successfully run this sample app you need a few things:
 1. Refer Figure 2 and connect to database file "tokens.mdf" using server explorer >> connect to database.
 2. You should be in a position to view tables as displayed in Figure 1
 3. Execute sql script "InsertScript.sql" under Root\Script folder.
+4. Refer Figure 4 to make sure you have connected to mdf file before executing the scripts.
 
 ####Figure 1:
 ![Alt text](images/Sync.png "Configurations")
@@ -56,16 +57,28 @@ In order to successfully run this sample app you need a few things:
 ####Figure 2:
 ![Alt text](images/mdf.JPG "MDF File")
 
+####Figure 3:
+![Alt text](images/browserLink.JPG "BrowserLink File")
+
+
+####Figure 4:
+![Alt text](images/ConnectToDB.JPG "Connect to DB")
+
 ## Configuration
 
 ![Alt text](images/Config.JPG "Configurations")
+
+## Known Issue.
+
+1. When you are trying to run the solution targetting Internet explorer there is a probability of facing the error seen in Figure 3.
+2. You can refer the following link http://blogs.msdn.com/b/webdev/archive/2013/06/28/browser-link-feature-in-visual-studio-preview-2013.aspx for solution.
 
 ## Running the code
 
 Once the sample app code is on your computer, you can do the following steps to run the app:
 
-1. Hit F5 or > key</li>
-
+1. Ctrl + Shift + B to build the solution</li>
+2. F5 to Run the solution</li>
 ## High Level Workflow
 <ol>
 
