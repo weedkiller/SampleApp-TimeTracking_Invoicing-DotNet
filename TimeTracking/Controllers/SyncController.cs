@@ -12,16 +12,26 @@ using TimeTracking.Models.Service;
 
 namespace TimeTracking.Controllers
 {
+    /// <summary>
+    /// SyncController is responsible for following opearion
+    /// -->Employee Sync
+    /// -->Customer Sync
+    /// -->Item     Sync
+    /// </summary>
     public class SyncController : BaseController
     {
         // GET: Sync
         SyncService syncService = null;
         Syncdto syncObjects = null;
         /// <summary>
-        /// Sync the employee from backend to the QBO server
+        /// Sequence :
+        /// -->Get Token
+        /// -->Get data to be pushed to QBO
+        /// -->Call the service
+        /// 
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>RedirectToAction</returns>
         public ActionResult Employee(Int64 id)
         {
             OAuthorizationdto oAuthDetails = new OAuthService(new OAuthorizationdto()).GetAccessToken(this);
@@ -41,10 +51,14 @@ namespace TimeTracking.Controllers
             return RedirectToAction("Sync", "Home", new { id = syncObjects.Id, isConnected = oAuthDetails.IsConnected });
         }
         /// <summary>
-        /// Sync the Customer from backend to the QBO server
+        /// Sequence :
+        /// -->Get Token
+        /// -->Get data to be pushed to QBO
+        /// -->Call the service
+        /// 
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>RedirectToAction</returns>
         public ActionResult Customer(Int64 id)
         {
             OAuthorizationdto oAuthDetails = new OAuthService(new OAuthorizationdto()).GetAccessToken(this);
@@ -64,10 +78,14 @@ namespace TimeTracking.Controllers
             return RedirectToAction("Sync", "Home", new { id = syncObjects.Id, isConnected = oAuthDetails.IsConnected });
         }
         /// <summary>
-        /// Sync the item from backend to the QBO server
+        /// Sequence :
+        /// -->Get Token
+        /// -->Get data to be pushed to QBO
+        /// -->Call the service
+        /// 
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>RedirectToAction</returns>
         public ActionResult ServiceItem(Int64 id)
         {
             OAuthorizationdto oAuthDetails = new OAuthService(new OAuthorizationdto()).GetAccessToken(this);

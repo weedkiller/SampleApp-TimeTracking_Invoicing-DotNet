@@ -23,7 +23,8 @@ namespace TimeTracking.Controllers
         
         // GET: Invoice
         /// <summary>
-        /// Load the Invoice with Pending/Created state.
+        /// Load function is responsible for loading the
+        /// Created/Pending state for generating an invoice.
         /// </summary>
         /// <param name="id">repo identifier</param>
         /// <returns></returns>
@@ -52,7 +53,8 @@ namespace TimeTracking.Controllers
             return View("Invoices", multiplemodels);
         }
         /// <summary>
-        /// Save the invoice to the qbo
+        /// Save operation is responsible for saving the generating invoice 
+        /// in to the backend.
         /// </summary>
         /// <param name="id"></param>
         /// <param name="qboId"></param>
@@ -75,7 +77,7 @@ namespace TimeTracking.Controllers
             return Json(data, JsonRequestBehavior.AllowGet);
         }
         /// <summary>
-        /// render the view post invoice generation.
+        /// View is resposible for rendering the final view
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>

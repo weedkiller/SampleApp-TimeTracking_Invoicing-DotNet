@@ -14,15 +14,15 @@ using TimeTracking.Models.Repository;
 namespace TimeTracking.Controllers
 {
     /// <summary>
-    /// An existing Customer when clicks Connect to QuickBooks button, this controller will initiate Autorization flow.
+    /// OauthController is responsible for connecting to quick books api
     /// 
     /// </summary>
     public class OauthController : BaseController
     {
         /// <summary>
+        /// Sequence : 
         /// CosumerSecret, ConsumerKey, OAuthLink, RequestToken, TokenSecret, OAuthCallbackUrl
         /// </summary>
-
         OAuthorizationdto oAuthorizationdto = null;
         OAuthTokens oAuthorizationDB = null;
         OAuthService oAuthService = null;
@@ -40,9 +40,12 @@ namespace TimeTracking.Controllers
             return Redirect(oAuthService.GrantUrl(this));
         }
         /// <summary>
-        /// OAuth response and retrieve the access token.
-        /// Save the data post encrypt.
-        /// Entityframework updated.
+        /// Sequence:
+        /// -->Retrieve the Request token
+        /// -->Retrieve the value from query string
+        /// -->Retrieve acces token
+        /// -->Retrieve acces secret
+        /// -->Redirect to close
         /// </summary>
         /// <returns></returns>
         public ActionResult Response()
