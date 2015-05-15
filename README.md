@@ -111,13 +111,21 @@ Once the sample app code is on your computer, you can do the following steps to 
 
 ![Alt text](images/Project.jpg "Project Structure")
 
+
 ## Class Diagram
 
 ![Alt text](images/classdiagram.jpg "Class Diagram")
 
+
 ## Sequence Diagram
 
 ![Alt text](images/sequence.jpg "Class Diagram")
+
+
+## Activity Diagram
+
+![Alt text](images/activity.jpg "Class Diagram")
+
 
 ## How To Guides
 
