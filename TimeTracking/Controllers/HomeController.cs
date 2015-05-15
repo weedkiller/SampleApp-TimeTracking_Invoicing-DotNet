@@ -17,7 +17,9 @@ using TimeTracking.Models.Service;
 namespace TimeTracking.Controllers
 {
     /// <summary>
-    /// Home controller is responsible for OAuth and Sync operation.
+    /// Home controller is responsible for the co-ordination of multiple models
+    /// and its operation.
+    /// Home Controller --> OAuth -->Sync
     /// </summary>
     public class HomeController : BaseController
     {
@@ -58,7 +60,7 @@ namespace TimeTracking.Controllers
         }
       
         /// <summary>
-        /// Changes made
+        /// Http Redirect happend post oauth to close the connection.
         /// </summary>
         /// <returns></returns>
         public ActionResult Close()
@@ -70,7 +72,7 @@ namespace TimeTracking.Controllers
             return View(multiplemodels);
         }
         /// <summary>
-        /// Render the sync operations.
+        /// Initiate the sync operation and instantiate time activity
         /// </summary>
         /// <param name="id">identifier for repo</param>
         /// <param name="isConnected">oauth status</param>

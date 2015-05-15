@@ -16,7 +16,7 @@ using TimeTracking.Models.Service;
 namespace TimeTracking.Controllers
 {
     /// <summary>
-    /// 
+    /// TimeActivityController is responsible for adding timeactivity.
     /// </summary>
     public class TimeActivityController : BaseController
     {
@@ -26,7 +26,8 @@ namespace TimeTracking.Controllers
         TimeActivityRepository timeActivityRepository = null;
         Multiplemodels multiplemodels = null;
         /// <summary>
-        /// Load the timeentry from the backend.
+        /// Populate the required fields
+        /// -->Customers/Employee/Item
         /// </summary>
         /// <param name="id">repo identifier</param>
         /// <returns></returns>
@@ -52,7 +53,7 @@ namespace TimeTracking.Controllers
             return View("TimeActivity", multiplemodels);
         }
         /// <summary>
-        /// Save the data collected to QBO
+        /// Push the time generate to QBO
         /// </summary>
         /// <param name="id">repo identifier</param>
         /// <param name="empSelect">employee selected</param>

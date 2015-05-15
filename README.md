@@ -111,6 +111,14 @@ Once the sample app code is on your computer, you can do the following steps to 
 
 ![Alt text](images/Project.jpg "Project Structure")
 
+## Class Diagram
+
+![Alt text](images/classdiagram.jpg "Class Diagram")
+
+## Sequence Diagram
+
+![Alt text](images/sequence.jpg "Class Diagram")
+
 ## How To Guides
 
 The following How-To guides related to implementation tasks necessary to produce a production-ready Intuit Partner Platform app (e.g. OAuth, OpenId, etc) are available:
