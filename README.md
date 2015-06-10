@@ -21,12 +21,22 @@ Time Tracking and Invoicing DotNet Sample App
 * [Requirements](#requirements)
 * [First Use Instructions](#first-use-instructions)
 * [Sync Tables](#sync-tables)
+* [Configuration](#configuration)
+* [Known Issue](#knowniissue)
 * [Running the code](#running-the-code)
 * [High Level Workflow](#high-level-workflow)
 * [Project Structure](#project-structure)
+* [Class Diagram](#class-diagram)
+* [Sequence Diagram](#sequence-diagram)
+* [Activity Diagram](#activity-diagram)
 * [How To Guides](#how-to-guides)
+* [Watch & Learn](#watch-&-learn)
 * [More Information](#more-information)
-
+* [Feedback](#feedback)
+* [Release](#release)
+* [Upcoming Release](#upcoming-release)
+* [Contributing to the Repository](#contributing-to-the-Repository)
+* [Reporting Issues](#reporting-issues)
 
 ## Requirements
 
