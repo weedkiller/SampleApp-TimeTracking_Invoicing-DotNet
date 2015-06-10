@@ -151,7 +151,7 @@ The following How-To guides related to implementation tasks necessary to produce
 ## More Information
 
 More detailed information can be found here 
-[Intuit Developer](https://github.com/IntuitDeveloper).
+[Intuit Developer](https://developer.intuit.com/docs/0000_about_intuit_developer/0045_developer_tools/0010_.net_tools).
 
 ## Feedback
 
