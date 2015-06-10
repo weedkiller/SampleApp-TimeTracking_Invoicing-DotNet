@@ -35,7 +35,7 @@ Time Tracking and Invoicing DotNet Sample App
 * [Feedback](#feedback)
 * [Release](#release)
 * [Upcoming Release](#upcoming-release)
-* [Contributing to the Repository](#contributing-to-the-Repository)
+* [Contributing to the Repository](#contributing-to-the-repository)
 * [Reporting Issues](#reporting-issues)
 
 ## Requirements
