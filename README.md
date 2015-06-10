@@ -30,7 +30,6 @@ Time Tracking and Invoicing DotNet Sample App
 * [Sequence Diagram](#sequence-diagram)
 * [Activity Diagram](#activity-diagram)
 * [How To Guides](#how-to-guides)
-* [Watch & Learn](#watch-&-learn)
 * [More Information](#more-information)
 * [Feedback](#feedback)
 * [Release](#release)
@@ -143,10 +142,6 @@ Once the sample app code is on your computer, you can do the following steps to 
 The following How-To guides related to implementation tasks necessary to produce a production-ready Intuit Partner Platform app (e.g. OAuth, OpenId, etc) are available:
 
 * [OAuth How To Guide](https://developer.intuit.com/blog/2015/02/19/oauth-for-intuit-demystified)
-
-## Watch & Learn
-
-[Wait for this space]
 
 ## More Information
 
