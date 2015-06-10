@@ -22,7 +22,7 @@ Time Tracking and Invoicing DotNet Sample App
 * [First Use Instructions](#first-use-instructions)
 * [Sync Tables](#sync-tables)
 * [Configuration](#configuration)
-* [Known Issue](#knowniissue)
+* [Known Issue](#known-issue)
 * [Running the code](#running-the-code)
 * [High Level Workflow](#high-level-workflow)
 * [Project Structure](#project-structure)
