@@ -19,6 +19,9 @@ namespace TimeTracking.Models
         public bool IsEmployeeSync { get; set; }
         public bool IsCustomerSync { get; set; }
         public bool IsServiceItemSync { get; set; }
+        public bool IsEmployeeNoData { get; set; }
+        public bool IsCustomerNodata { get; set; }
+        public bool IsServiceItemNodata { get; set; }
         public OAuthorizationdto OauthToken { get; set; }
         public string ConnectionString
         {
