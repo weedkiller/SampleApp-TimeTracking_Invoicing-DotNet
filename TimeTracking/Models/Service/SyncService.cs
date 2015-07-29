@@ -282,6 +282,7 @@ namespace TimeTracking.Models
 
             if (itemDataInDb.ItemList.Count>0)
             {
+                itemDataInDb.IsServiceItemNodata = false;
                 for (int i = 0; i < itemDataInDb.ItemList.Count; i++)
                 {
                     string EXISTING_ITEM_QUERY = string.Format("select * from Item where active = true and name = '{0}'", itemDataInDb.ItemList[i].Name.Trim());
@@ -309,6 +310,7 @@ namespace TimeTracking.Models
             }
             else
             {
+                itemDataInDb.IsServiceItemNodata = true;
                 itemDataInDb.IsServiceItemSync = false;
             }
             return itemDataInDb;
@@ -326,6 +328,7 @@ namespace TimeTracking.Models
 
             if (custDataInDb.CustomerList.Count > 0)
             {
+                custDataInDb.IsCustomerNodata = false;
                 for (int i = 0; i < custDataInDb.CustomerList.Count; i++)
                 {
                     string EXISTING_CUSTOMER_QUERY = string.Format("select * from customer where active = true and givenName = '{0}' and familyName = '{1}'", custDataInDb.CustomerList[i].GivenName.Trim(), custDataInDb.CustomerList[i].FamilyName.Trim());
@@ -352,6 +355,7 @@ namespace TimeTracking.Models
             }
             else
             {
+                custDataInDb.IsCustomerNodata = true;
                 custDataInDb.IsCustomerSync = false;
             }
             return custDataInDb;
@@ -368,6 +372,7 @@ namespace TimeTracking.Models
             var empDataInDb = service.GetDatafromDBEmployee(syncObjects);
             if (empDataInDb.EmployeeList.Count > 0)
             {
+                empDataInDb.IsEmployeeNoData = false;
                 for (int i = 0; i < empDataInDb.EmployeeList.Count; i++)
                 {
                     string EXISTING_EMPLOYEE_QUERY = string.Format("select * from employee where active = true and givenName='{0}' and familyName= '{1}'", empDataInDb.EmployeeList[i].GivenName.Trim(), empDataInDb.EmployeeList[i].FamilyName.Trim());
@@ -396,6 +401,7 @@ namespace TimeTracking.Models
             }
             else
             {
+                empDataInDb.IsEmployeeNoData = true;
                 empDataInDb.IsEmployeeSync = false;
             }
             return empDataInDb;

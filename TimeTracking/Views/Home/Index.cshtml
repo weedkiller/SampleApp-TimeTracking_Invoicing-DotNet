@@ -110,6 +110,10 @@ else
                         {
                             <span class="glyphicon glyphicon-transfer">Synced</span>
                         }
+                        else if (Model.SyncObjectsModel.IsEmployeeNoData)
+                        {
+                            <span class="glyphicon glyphicon-transfer"> No Data</span>
+                        }
                         else
                         {
                             @Html.ActionLink("Sync", "Employee", "Sync", new { id = syncIdentifier }, new { @class = "glyphicon glyphicon-transfer" })
@@ -126,6 +130,10 @@ else
                         {
                             <span class="glyphicon glyphicon-transfer">Synced</span>
                         }
+                        else if (Model.SyncObjectsModel.IsCustomerNodata)
+                        {
+                            <span class="glyphicon glyphicon-transfer"> No Data</span>
+                        }
                         else
                         {
                             @Html.ActionLink("Sync", "Customer", "Sync", new { id = syncIdentifier }, new { @class = "glyphicon glyphicon-transfer" })
@@ -141,6 +149,10 @@ else
                         if (Model.SyncObjectsModel.IsServiceItemSync)
                         {
                             <span class="glyphicon glyphicon-transfer">Synced</span>
+                        }
+                        else if (Model.SyncObjectsModel.IsServiceItemNodata)
+                        {
+                            <span class="glyphicon glyphicon-transfer"> No Data</span>
                         }
                         else
                         {
