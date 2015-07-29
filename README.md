@@ -20,12 +20,22 @@ Time Tracking and Invoicing DotNet Sample App
 
 * [Requirements](#requirements)
 * [First Use Instructions](#first-use-instructions)
+* [Sync Tables](#sync-tables)
+* [Configuration](#configuration)
+* [Known Issue](#known-issue)
 * [Running the code](#running-the-code)
 * [High Level Workflow](#high-level-workflow)
 * [Project Structure](#project-structure)
+* [Class Diagram](#class-diagram)
+* [Sequence Diagram](#sequence-diagram)
+* [Activity Diagram](#activity-diagram)
 * [How To Guides](#how-to-guides)
 * [More Information](#more-information)
-
+* [Feedback](#feedback)
+* [Release](#release)
+* [Upcoming Release](#upcoming-release)
+* [Contributing to the Repository](#contributing-to-the-repository)
+* [Reporting Issues](#reporting-issues)
 
 ## Requirements
 
@@ -133,14 +143,10 @@ The following How-To guides related to implementation tasks necessary to produce
 
 * [OAuth How To Guide](https://developer.intuit.com/blog/2015/02/19/oauth-for-intuit-demystified)
 
-## Watch & Learn
-
-[Wait for this space]
-
 ## More Information
 
 More detailed information can be found here 
-[Intuit Developer](https://github.com/IntuitDeveloper).
+[Intuit Developer](https://developer.intuit.com/docs/0000_about_intuit_developer/0045_developer_tools/0010_.net_tools).
 
 ## Feedback
 
