@@ -9,6 +9,7 @@ using Intuit.Ipp.QueryFilter;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -241,14 +242,14 @@ namespace TimeTracking.Models
         {
             try
             {
-                foreach (Item ItemItem in syncObjects.ItemList)
+                foreach (Item eachItem in syncObjects.ItemList)
                 {
-                    string EXISTING_ITEM_QUERY = string.Format("select * from Item where active = true and name = '{0}'", ItemItem.Name.Trim());
+                    string EXISTING_ITEM_QUERY = string.Format("select * from Item where active = true and name = '{0}'", eachItem.Name.Trim());
                     QueryService<Item> queryService = new QueryService<Item>(dataserviceFactory.getServiceContext);
                     Item resultFound = queryService.ExecuteIdsQuery(EXISTING_ITEM_QUERY).FirstOrDefault<Item>();
                     if (resultFound == null)
                     {
-                        Item entity = dataService.Add<Item>(ItemItem);
+                        Item entity = dataService.Add<Item>(AddItem(eachItem));
                         syncObjects.QboId = entity.Id;
                         syncObjects.IsServiceItemSync = true;
                     }
@@ -269,6 +270,257 @@ namespace TimeTracking.Models
                 throw ex;
             }
         }
+        private List<T> FindAll<T>(T entity, int startPosition = 1, int maxResults = 100) where T : IEntity
+        {
+            ReadOnlyCollection<T> entityList = dataService.FindAll(entity, startPosition, maxResults);
+            return entityList.ToList<T>();
+        }
+        private Account CreateAccount(AccountTypeEnum accountType, AccountClassificationEnum classification)
+        {
+            //Note: Have not removed comments because it will help in understanding the parameters.
+            //
+            Account account = new Account();
+            String guid = Guid.NewGuid().ToString("N");
+            account.Name = "Name_" + guid;
+            //account.SubAccount = true;
+            //account.SubAccountSpecified = true;
+            //account.ParentRef = new ReferenceType() 
+            //{ 
+            //name = 
+            //type = 
+            //Value = 
+            //};
+            //account.Description = "Description";
+            account.FullyQualifiedName = account.Name;
+            //account.Active = true;
+            //account.ActiveSpecified = true;
+            account.Classification = classification;
+            account.ClassificationSpecified = true;
+            account.AccountType = accountType;
+            account.AccountTypeSpecified = true;
+            //account.AccountSubType = "AccountSubType";
+            //account.AcctNum = "AcctNum";
+            //account.BankNum = "BankNum";
+            if (accountType != AccountTypeEnum.Expense && accountType != AccountTypeEnum.AccountsPayable && accountType != AccountTypeEnum.AccountsReceivable)
+            {
+                //TestComment:  Opening Balances not working for QBO Item tests
+                //account.OpeningBalance = new Decimal(100.00);
+                //account.OpeningBalanceSpecified = true;
+                //account.OpeningBalanceDate = DateTime.UtcNow.Date;
+                //account.OpeningBalanceDateSpecified = true;
+            }
+            //account.CurrentBalance = new Decimal(100.00);
+            //account.CurrentBalanceSpecified = true;
+            //account.CurrentBalanceWithSubAccounts = new Decimal(100.00);
+            //account.CurrentBalanceWithSubAccountsSpecified = true;
+            account.CurrencyRef = new ReferenceType()
+            {
+                name = "United States Dollar",
+                Value = "USD"
+            };
+            //account.TaxAccount = true;
+            //account.TaxAccountSpecified = true;
+            //account.TaxCodeRef = new ReferenceType() 
+            //{ 
+            //name = 
+            //type = 
+            //Value = 
+            //};
+            //account.AccountEx = 
+            return account;
+        }
+        private Account FindOrAddAccount(AccountTypeEnum accountType, AccountClassificationEnum classification)
+        {
+            Account typeOfAccount = null;
+            List<Account> listOfAccount = FindAll<Account>(new Account(), 1, 500);
+            if (listOfAccount.Count > 0)
+            {
+                foreach (Account acc in listOfAccount)
+                {
+                    if (acc.AccountType == accountType && acc.Classification == classification && acc.status != EntityStatusEnum.SyncError)
+                    {
+                        typeOfAccount = acc;
+                        break;
+                    }
+                }
+            }
+            if (typeOfAccount == null)
+            {
+                Account account;
+                account = CreateAccount(accountType, classification);
+                account.Classification = classification;
+                account.AccountType = accountType;
+                Account createdAccount = dataService.Add<Account>(account);
+                typeOfAccount = createdAccount;
+            }
+            return typeOfAccount;
+        }
+        private Item AddItem(Item eachItem)
+        {
+            Item item = new Item();
+            item.Name = eachItem.Name;
+            item.Description = "Description";
+            item.Active = true;
+            item.ActiveSpecified = true;
+            //item.SubItem = true;
+            //item.SubItemSpecified = true;
+            //item.ParentRef = new ReferenceType() 
+            //{ 
+            //name = 
+            //type = 
+            //Value = 
+            //};
+            //item.Level = int32;
+            //Int32 int32 = new Int32();
+            //item.LevelSpecified = true;
+            //item.FullyQualifiedName = "FullyQualifiedName";
+            item.Taxable = false;
+            item.TaxableSpecified = true;
+            //item.SalesTaxIncluded = true;
+            //item.SalesTaxIncludedSpecified = true;
+            //item.PercentBased = true;
+            //item.PercentBasedSpecified = true;
+            item.UnitPrice = eachItem.UnitPrice;
+            item.UnitPriceSpecified = true;
+            //item.RatePercent = new Decimal(100.00);
+            //item.RatePercentSpecified = true;
+            //item.Type = ItemTypeEnum.;
+            //item.TypeSpecified = true;
+            //item.PaymentMethodRef = new ReferenceType() 
+            //{ 
+            //name = 
+            //type = 
+            //Value = 
+            //};
+            //item.UOMSetRef = new ReferenceType() 
+            //{ 
+            //name = 
+            //type = 
+            //Value = 
+            //};
+            Account incomeAccount = FindOrAddAccount(AccountTypeEnum.Income, AccountClassificationEnum.Revenue);
+            item.IncomeAccountRef = new ReferenceType()
+            {
+                name = incomeAccount.Name,
+                Value = incomeAccount.Id
+            };
+            //item.PurchaseDesc = "PurchaseDesc";
+            //item.PurchaseTaxIncluded = true;
+            //item.PurchaseTaxIncludedSpecified = true;
+            item.PurchaseCost = new Decimal(100.00);
+            item.PurchaseCostSpecified = true;
+            Account expenseAccount = FindOrAddAccount(AccountTypeEnum.Expense, AccountClassificationEnum.Expense);
+            item.ExpenseAccountRef = new ReferenceType()
+            {
+                name = expenseAccount.Name,
+                Value = expenseAccount.Id
+            };
+            //item.COGSAccountRef = new ReferenceType() 
+            //{ 
+            //name = 
+            //type = 
+            //Value = 
+            //};
+            //item.AssetAccountRef = new ReferenceType() 
+            //{ 
+            //name = 
+            //type = 
+            //Value = 
+            //};
+            //item.PrefVendorRef = new ReferenceType() 
+            //{ 
+            //name = 
+            //type = 
+            //Value = 
+            //};
+            //item.AvgCost = new Decimal(100.00);
+            //item.AvgCostSpecified = true;
+            item.TrackQtyOnHand = false;
+            item.TrackQtyOnHandSpecified = true;
+            //item.QtyOnHand = new Decimal(100.00);
+            //item.QtyOnHandSpecified = true;
+            //item.QtyOnPurchaseOrder = new Decimal(100.00);
+            //item.QtyOnPurchaseOrderSpecified = true;
+            //item.QtyOnSalesOrder = new Decimal(100.00);
+            //item.QtyOnSalesOrderSpecified = true;
+            //item.ReorderPoint = new Decimal(100.00);
+            //item.ReorderPointSpecified = true;
+            //item.ManPartNum = "ManPartNum";
+            //item.DepositToAccountRef = new ReferenceType() 
+            //{ 
+            //name = 
+            //type = 
+            //Value = 
+            //};
+            //item.SalesTaxCodeRef = new ReferenceType() 
+            //{ 
+            //name = 
+            //type = 
+            //Value = 
+            //};
+            //item.PurchaseTaxCodeRef = new ReferenceType() 
+            //{ 
+            //name = 
+            //type = 
+            //Value = 
+            //};
+            //item.InvStartDate = DateTime.UtcNow.Date;
+            //item.InvStartDateSpecified = true;
+            //item.BuildPoint = new Decimal(100.00);
+            //item.BuildPointSpecified = true;
+            //item.PrintGroupedItems = true;
+            //item.PrintGroupedItemsSpecified = true;
+            //item.SpecialItem = true;
+            //item.SpecialItemSpecified = true;
+            //item.SpecialItemType = SpecialItemTypeEnum.;
+            //item.SpecialItemTypeSpecified = true;
+
+            //List<ItemComponentLine> itemGroupDetailList = new List<ItemComponentLine>();
+            //ItemComponentLine itemGroupDetail = new ItemComponentLine();
+            //itemGroupDetail.ItemRef = new ReferenceType() 
+            //{ 
+            //name = 
+            //type = 
+            //Value = 
+            //};
+            //itemGroupDetail.Qty = new Decimal(100.00);
+            //itemGroupDetail.QtySpecified = true;
+            //UOMRef uOMRef = new UOMRef();
+            //itemGroupDetail.uOMRef.Unit = "Unit";
+            //itemGroupDetail.uOMRef.UOMSetRef = new ReferenceType() 
+            //{ 
+            //name = 
+            //type = 
+            //Value = 
+            //};
+            //itemComponentLine.UOMRef = uOMRef;
+            //itemGroupDetailList.Add(itemGroupDetail);
+            //item.ItemGroupDetail = itemGroupDetailList.ToArray();
+
+            //List<ItemComponentLine> itemAssemblyDetailList = new List<ItemComponentLine>();
+            //ItemComponentLine itemAssemblyDetail = new ItemComponentLine();
+            //itemAssemblyDetail.ItemRef = new ReferenceType() 
+            //{ 
+            //name = 
+            //type = 
+            //Value = 
+            //};
+            //itemAssemblyDetail.Qty = new Decimal(100.00);
+            //itemAssemblyDetail.QtySpecified = true;
+            //UOMRef uOMRef = new UOMRef();
+            //itemAssemblyDetail.uOMRef.Unit = "Unit";
+            //itemAssemblyDetail.uOMRef.UOMSetRef = new ReferenceType() 
+            //{ 
+            //name = 
+            //type = 
+            //Value = 
+            //};
+            //itemComponentLine.UOMRef = uOMRef;
+            //itemAssemblyDetailList.Add(itemAssemblyDetail);
+            //item.ItemAssemblyDetail = itemAssemblyDetailList.ToArray();
+            //item.ItemEx = 
+            return item;
+        }
         /// <summary>
         /// Check for service item.
         /// </summary>
@@ -280,7 +532,7 @@ namespace TimeTracking.Models
             Dictionary<string, bool> isSync = new Dictionary<string, bool>();
             var itemDataInDb = service.GetDatafromDBItem(syncObjects);
 
-            if (itemDataInDb.ItemList.Count>0)
+            if (itemDataInDb.ItemList.Count > 0)
             {
                 itemDataInDb.IsServiceItemNodata = false;
                 for (int i = 0; i < itemDataInDb.ItemList.Count; i++)

@@ -123,7 +123,7 @@ namespace TimeTracking.Controllers
                 timeActivityRepository.SavetoDb(timeActivity.Syncdto.ConnectionString, timeActivity);
                 return Json(data,JsonRequestBehavior.AllowGet);
             }
-            catch (Exception ex)
+            catch 
             {
                 return null;
             }
