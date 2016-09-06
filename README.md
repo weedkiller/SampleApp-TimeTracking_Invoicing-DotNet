@@ -31,7 +31,6 @@ Time Tracking and Invoicing DotNet Sample App
 * [Activity Diagram](#activity-diagram)
 * [How To Guides](#how-to-guides)
 * [More Information](#more-information)
-* [Feedback](#feedback)
 * [Release](#release)
 * [Upcoming Release](#upcoming-release)
 * [Contributing to the Repository](#contributing-to-the-repository)
@@ -146,11 +145,7 @@ The following How-To guides related to implementation tasks necessary to produce
 ## More Information
 
 More detailed information can be found here 
-[Intuit Developer](https://developer.intuit.com/docs/0000_about_intuit_developer/0045_developer_tools/0010_.net_tools).
-
-## Feedback
-
-Your feed back is appreciated and it will motivate us to improve the app. Please send your valuable feedback to sumod_madhavan@intuit.com. I will try my best to incorporate the valid requests.
+[Intuit Developer](https://developer.intuit.com/docs/0100_quickbooks_online/0400_tools/0005_accounting/0010.net_tools).
 
 ## Release
 
