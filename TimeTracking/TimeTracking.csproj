@@ -39,52 +39,74 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevDefined.OAuth">
-      <HintPath>..\packages\DevDefined.OAuth.0.2\lib\DevDefined.OAuth.dll</HintPath>
+    <Reference Include="DevDefined.OAuth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a3261f5b4697e67d, processorArchitecture=MSIL">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.9.1\lib\DevDefined.OAuth.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="Intuit.Ipp.Core">
-      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.2.0\lib\Intuit.Ipp.Core.dll</HintPath>
+    <Reference Include="Intuit.Ipp.Core, Version=2.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.9.1\lib\Intuit.Ipp.Core.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Intuit.Ipp.Data">
-      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.2.0\lib\Intuit.Ipp.Data.dll</HintPath>
+    <Reference Include="Intuit.Ipp.Data, Version=2.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.9.1\lib\Intuit.Ipp.Data.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Intuit.Ipp.DataService">
-      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.2.0\lib\Intuit.Ipp.DataService.dll</HintPath>
+    <Reference Include="Intuit.Ipp.DataService, Version=2.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.9.1\lib\Intuit.Ipp.DataService.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Intuit.Ipp.Diagnostics">
-      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.2.0\lib\Intuit.Ipp.Diagnostics.dll</HintPath>
+    <Reference Include="Intuit.Ipp.Diagnostics, Version=2.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.9.1\lib\Intuit.Ipp.Diagnostics.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Intuit.Ipp.Exception">
-      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.2.0\lib\Intuit.Ipp.Exception.dll</HintPath>
+    <Reference Include="Intuit.Ipp.Exception, Version=2.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.9.1\lib\Intuit.Ipp.Exception.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Intuit.Ipp.GlobalTaxService">
-      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.2.0\lib\Intuit.Ipp.GlobalTaxService.dll</HintPath>
+    <Reference Include="Intuit.Ipp.GlobalTaxService, Version=2.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.9.1\lib\Intuit.Ipp.GlobalTaxService.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Intuit.Ipp.LinqExtender">
-      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.2.0\lib\Intuit.Ipp.LinqExtender.dll</HintPath>
+    <Reference Include="Intuit.Ipp.LinqExtender, Version=2.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.9.1\lib\Intuit.Ipp.LinqExtender.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Intuit.Ipp.PlatformService">
-      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.2.0\lib\Intuit.Ipp.PlatformService.dll</HintPath>
+    <Reference Include="Intuit.Ipp.PlatformService, Version=2.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.9.1\lib\Intuit.Ipp.PlatformService.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Intuit.Ipp.QueryFilter">
-      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.2.0\lib\Intuit.Ipp.QueryFilter.dll</HintPath>
+    <Reference Include="Intuit.Ipp.QueryFilter, Version=2.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.9.1\lib\Intuit.Ipp.QueryFilter.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Intuit.Ipp.ReportService">
-      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.2.0\lib\Intuit.Ipp.ReportService.dll</HintPath>
+    <Reference Include="Intuit.Ipp.ReportService, Version=2.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.9.1\lib\Intuit.Ipp.ReportService.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Intuit.Ipp.Retry">
-      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.2.0\lib\Intuit.Ipp.Retry.dll</HintPath>
+    <Reference Include="Intuit.Ipp.Retry, Version=2.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.9.1\lib\Intuit.Ipp.Retry.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Intuit.Ipp.Security">
-      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.2.0\lib\Intuit.Ipp.Security.dll</HintPath>
+    <Reference Include="Intuit.Ipp.Security, Version=2.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.9.1\lib\Intuit.Ipp.Security.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Intuit.Ipp.Utility">
-      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.2.0\lib\Intuit.Ipp.Utility.dll</HintPath>
+    <Reference Include="Intuit.Ipp.Utility, Version=2.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.9.1\lib\Intuit.Ipp.Utility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Intuit.Ipp.WebHooksService, Version=2.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.9.1\lib\Intuit.Ipp.WebHooksService.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.9.1\lib\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -149,11 +171,6 @@
     <Reference Include="Antlr3.Runtime">
       <Private>True</Private>
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
