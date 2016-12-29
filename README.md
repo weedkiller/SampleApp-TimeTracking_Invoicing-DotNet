@@ -147,19 +147,13 @@ The following How-To guides related to implementation tasks necessary to produce
 More detailed information can be found here 
 [Intuit Developer](https://github.com/IntuitDeveloper).
 
-## Feedback
 
-Your feed back is appreciated and it will motivate us to improve the app. Please send your valuable feedback to sumod_madhavan@intuit.com. I will try my best to incorporate the valid requests.
 
 ## Current Release
 
  V1 - Basic MVC 5 with Razor engine/AJAX.
 
-## Upcoming Release
 
- V2 - Introduction of Angulars/Knock-out JS with MVC 5
- 
- V3 - Introduction of Self Host WEB API with Angular/Knock-out JS and MVC 5
  
  
 ## Contributing to the Repository ###
