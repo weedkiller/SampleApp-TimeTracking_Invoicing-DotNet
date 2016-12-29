@@ -1,0 +1,1 @@
+C:\Users\DevAdmin\Desktop\SampleApp-TimeTracking_Invoicing-DotNet\TimeTracking.Tests\obj\Debug\TimeTracking.Tests.csprojResolveAssemblyReference.cache

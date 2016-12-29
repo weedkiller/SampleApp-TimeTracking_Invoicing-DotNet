@@ -1,0 +1,51 @@
+﻿CREATE TABLE [dbo].[Customer] (
+    [Id]               INT          NOT NULL,
+    [GivenName]        VARCHAR (50) NULL,
+    [FamilyName]       VARCHAR (50) NULL,
+    [PrimaryPhone]     VARCHAR (50) NULL,
+    [PrimaryEmailAddr] VARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+CREATE TABLE [dbo].[Employee] (
+    [Id]               INT          NOT NULL,
+    [GivenName]        VARCHAR (50) NULL,
+    [FamilyName]       VARCHAR (50) NULL,
+    [PrimaryPhone]     VARCHAR (50) NULL,
+    [PrimaryEmailAddr] VARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+CREATE TABLE [dbo].[Item] (
+    [Id]        INT          NOT NULL,
+    [Name]      VARCHAR (50) NOT NULL,
+    [UnitPrice] VARCHAR (50) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+CREATE TABLE [dbo].[OAuthTokens] (
+    [Id]            INT            IDENTITY (1, 1) NOT NULL,
+    [realmid]       INT            NOT NULL,
+    [access_token]  NVARCHAR (MAX) NULL,
+    [access_secret] NVARCHAR (MAX) NULL,
+    [datasource]    NVARCHAR (MAX) NULL,
+    CONSTRAINT [PK_dbo.OAuthTokens] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+CREATE TABLE [dbo].[TimeActivity] (
+    [id]            INT          IDENTITY (1, 1) NOT NULL,
+    [RealmId]       VARCHAR (50) NOT NULL,
+    [Employee]      VARCHAR (50) NULL,
+    [Customer]      VARCHAR (50) NULL,
+    [Item]          VARCHAR (50) NULL,
+    [Date]          VARCHAR (50) NULL,
+    [Hours]         VARCHAR (50) NULL,
+    [QboId]         INT          NULL,
+    [Invoice_QboId] INT          NULL,
+    PRIMARY KEY CLUSTERED ([id] ASC)
+);
+
+insert into [dbo].Employee ([Id],[GivenName],[FamilyName],[PrimaryPhone],[PrimaryEmailAddr]) VALUES (1,N'Emp1',N'Nash',N'345-567-3456',N'emp1@abc.com')
+insert into [dbo].Employee ([Id],[GivenName],[FamilyName],[PrimaryPhone],[PrimaryEmailAddr]) VALUES (2,N'Emp2',N'Wolf',N'345-567-3456',N'emp2@abc.com')
+insert into [dbo].Employee ([Id],[GivenName],[FamilyName],[PrimaryPhone],[PrimaryEmailAddr]) VALUES (1,N'Cust1',N'Nash',N'345-567-3456',N'cust1@abc.com')
+insert into [dbo].Employee ([Id],[GivenName],[FamilyName],[PrimaryPhone],[PrimaryEmailAddr]) VALUES (2,N'Cust2',N'Wolf',N'345-567-3456',N'cust2@abc.com')
+insert into [dbo].Item ([Id],[Name],[UnitPrice],[Type],[IncomeAccountRef]) VALUES (1,'Machines',N'100',N'Service',N'1') - correct to have Account, UnitPrice should be amt
