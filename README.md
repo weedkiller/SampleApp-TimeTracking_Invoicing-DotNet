@@ -67,8 +67,7 @@ In order to successfully run this sample app you need a few things:
 ![Alt text](images/browserLink.JPG "BrowserLink File")
 
 
-####Figure 4:
-![Alt text](images/ConnectToDB.JPG "Connect to DB")
+
 
 ## Configuration
 
