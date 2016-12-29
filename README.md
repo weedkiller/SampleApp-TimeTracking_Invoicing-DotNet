@@ -35,6 +35,8 @@ In order to successfully run this sample app you need a few things:
 2. A [developer.intuit.com](http://developer.intuit.com) account
 3. An app on [developer.intuit.com](http://developer.intuit.com) and the associated app token, consumer key, and consumer secret.
 4. QuickBooks .NET SDK (already included in the project folder) 
+5. SQL Server 2016
+6. Entity Framework 5. Do not update else you will get multiple issues which you will need to resolve on your own
  
 ## First Use Instructions
 
@@ -43,6 +45,10 @@ In order to successfully run this sample app you need a few things:
 3. Enable logging in the config file by updating the path.
 4. Open the project from Visual Studio 
 5. Populate the data in to tables from /Scripts folder
+6. If you make changes to DB then run Nuget Package Console run -> 
+	Add-Migration abc
+	Update-Database
+7. If you face DB issues, run Scripts for creating tables from Scripts->TimeTrackingTables.txt
 
 ## Sync Tables
 
@@ -89,11 +95,11 @@ Once the sample app code is on your computer, you can do the following steps to 
 <p align="center"><img src="https://github.com/IntuitDeveloper/SampleApp-TimeTracking_Invoicing-Java/wiki/images/timetrackingstep1a.png" alt="Connect to Quickbooks" height="250" width="250"/></p>
 </li>
 
-<li>Setup—sync the following from the local database to the QuickBooks Online company.
+<li>Setupâ€”sync the following from the local database to the QuickBooks Online company.
 <ul>
-  <li>employees—so time can be recorded against a specific service,</li>
-  <li>customers—so time can be recorded as billable to a specific customer, </li>
-  <li>items—the list of billable services.</li>
+  <li>employeesâ€”so time can be recorded against a specific service,</li>
+  <li>customersâ€”so time can be recorded as billable to a specific customer, </li>
+  <li>itemsâ€”the list of billable services.</li>
 </ul>
 <p align="center"><img src="https://github.com/IntuitDeveloper/SampleApp-TimeTracking_Invoicing-Java/wiki/images/timetrackingstep1b.png" alt="Sync Entities" height="168" width="250"></p>
 </li>
