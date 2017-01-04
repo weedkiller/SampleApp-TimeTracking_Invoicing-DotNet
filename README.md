@@ -44,7 +44,7 @@ In order to successfully run this sample app you need a few things:
 2. Fill in your Configuration file values ( consumer key, consumer secret) by copying over from the keys section for your app.
 3. Enable logging in the config file by updating the path.
 4. Open the project from Visual Studio 
-5. Populate the data in to tables from /Scripts folder
+5. Populate the data in to tables from /Scripts folder [https://github.com/IntuitDeveloper/SampleApp-TimeTracking_Invoicing-DotNet/blob/master/TimeTracking/Scripts/TimeTrackingTables.txt]
 6. If you make changes to DB then run Nuget Package Console run -> 
 	Add-Migration abc
 	Update-Database
