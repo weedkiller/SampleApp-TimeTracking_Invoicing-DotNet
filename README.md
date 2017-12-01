@@ -1,4 +1,4 @@
-Time Tracking and Invoicing DotNet Sample App
+[Deprecated] Time Tracking and Invoicing DotNet Sample App
 =====================================
 
 <p>Welcome to the Intuit Developer's Time Tracking and Invoicing .NET Sample App.</p>
